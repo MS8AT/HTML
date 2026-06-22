@@ -1,0 +1,307 @@
+:root{
+  --legacy-bg:#f3f7fc;
+  --legacy-bg-2:#f8fbff;
+  --legacy-card:#ffffff;
+  --legacy-card-soft:#f7faff;
+  --legacy-line:#d8e3f1;
+  --legacy-line-strong:#9bb8ff;
+  --legacy-text:#132033;
+  --legacy-muted:#5f7088;
+  --legacy-accent:#2f70ff;
+  --legacy-accent-dark:#163f9f;
+  --legacy-accent-soft:#edf3ff;
+  --legacy-shadow:0 18px 42px rgba(17,38,74,.08);
+}
+
+body{
+  background:
+    radial-gradient(circle at top left,rgba(47,112,255,.09),transparent 24%),
+    linear-gradient(180deg,var(--legacy-bg-2) 0%,var(--legacy-bg) 100%) !important;
+  color:var(--legacy-text) !important;
+}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:20;
+  padding:18px 24px 16px !important;
+  background:rgba(255,255,255,.92) !important;
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(207,220,236,.92) !important;
+  box-shadow:0 8px 24px rgba(17,38,74,.05);
+}
+
+.top-bar{
+  margin-bottom:14px !important;
+  gap:14px !important;
+}
+
+.logo img{
+  height:58px !important;
+  filter:none !important;
+}
+
+.logo span{
+  color:var(--legacy-accent-dark) !important;
+  text-shadow:none !important;
+  font-size:1.5rem !important;
+  letter-spacing:.08em !important;
+}
+
+.top-buttons,
+.nav-buttons,
+.filter-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+
+.top-buttons{
+  justify-content:flex-end;
+}
+
+.dealer-btn,
+.nav-buttons a,
+.filter-buttons button{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:42px;
+  padding:0 16px !important;
+  border-radius:999px !important;
+  border:1px solid var(--legacy-line) !important;
+  background:#fff !important;
+  color:var(--legacy-text) !important;
+  box-shadow:none !important;
+  text-shadow:none !important;
+  transition:.2s ease !important;
+}
+
+.dealer-btn:hover,
+.nav-buttons a:hover,
+.nav-buttons a.active,
+.filter-buttons button:hover,
+.filter-buttons button.active{
+  background:var(--legacy-accent-soft) !important;
+  border-color:var(--legacy-line-strong) !important;
+  color:var(--legacy-accent-dark) !important;
+}
+
+.nav-buttons{
+  justify-content:center;
+  margin-bottom:18px !important;
+}
+
+.nav-buttons a{
+  font-size:.92rem !important;
+}
+
+.nav-buttons a[href*="jet_future_mimipc"]{
+  background:#dbeafe !important;
+  color:#2563eb !important;
+  border-color:#93c5fd !important;
+}
+
+h1{
+  font-size:clamp(2.2rem,4.8vw,4.2rem) !important;
+  line-height:1.02 !important;
+  color:#1a2740 !important;
+  text-shadow:none !important;
+  letter-spacing:-.03em;
+}
+
+main{
+  width:min(1380px,calc(100% - 28px));
+  margin:0 auto;
+  padding:28px 0 60px !important;
+  text-align:initial !important;
+}
+
+.search-box{
+  max-width:680px !important;
+  margin:0 auto 24px !important;
+}
+
+.search-box input{
+  width:100%;
+  min-height:52px;
+  padding:0 18px !important;
+  border-radius:18px !important;
+  border:1px solid var(--legacy-line) !important;
+  background:#fff !important;
+  color:var(--legacy-text) !important;
+  box-shadow:var(--legacy-shadow) !important;
+  outline:none;
+}
+
+.search-box input::placeholder{
+  color:var(--legacy-muted) !important;
+}
+
+.filter-buttons{
+  justify-content:center;
+  margin-bottom:28px !important;
+}
+
+.cases-grid,
+.coolers-grid,
+.cpu-grid,
+.mb-grid,
+.minipc-grid,
+.monitor-grid,
+.printer-grid,
+.soft-grid,
+.svga-grid{
+  display:grid !important;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr)) !important;
+  gap:22px !important;
+  max-width:none !important;
+}
+
+.case-card,
+.cooler-card,
+.cpu-card,
+.mb-card,
+.minipc-card,
+.monitor-card,
+.printer-card,
+.soft-card,
+.svga-card{
+  background:var(--legacy-card) !important;
+  color:var(--legacy-text) !important;
+  border:1px solid var(--legacy-line) !important;
+  border-radius:24px !important;
+  box-shadow:var(--legacy-shadow) !important;
+  padding:20px !important;
+  overflow:hidden;
+}
+
+.case-card:hover,
+.cooler-card:hover,
+.cpu-card:hover,
+.mb-card:hover,
+.minipc-card:hover,
+.monitor-card:hover,
+.printer-card:hover,
+.soft-card:hover,
+.svga-card:hover{
+  transform:translateY(-4px);
+}
+
+.case-card img,
+.cooler-card img,
+.cpu-card img,
+.mb-card img,
+.minipc-card img,
+.monitor-card img,
+.printer-card img,
+.soft-card img,
+.svga-card img{
+  width:100%;
+  max-height:220px;
+  object-fit:contain;
+  border-radius:18px;
+  background:var(--legacy-card-soft) !important;
+  margin-bottom:14px !important;
+}
+
+.case-card h3,
+.cooler-card h3,
+.cpu-card h3,
+.mb-card h3,
+.minipc-card h3,
+.monitor-card h3,
+.printer-card h3,
+.soft-card h3,
+.svga-card h3{
+  color:var(--legacy-accent-dark) !important;
+  text-shadow:none !important;
+}
+
+.case-card p,
+.cooler-card p,
+.cpu-card p,
+.mb-card p,
+.minipc-card p,
+.monitor-card p,
+.printer-card p,
+.soft-card p,
+.svga-card p{
+  color:var(--legacy-muted) !important;
+  text-shadow:none !important;
+  box-shadow:none !important;
+}
+
+.empty-state{
+  grid-column:1 / -1;
+  padding:28px;
+  border-radius:24px;
+  background:var(--legacy-card);
+  border:1px dashed var(--legacy-line);
+  color:var(--legacy-muted);
+  text-align:center;
+}
+
+.modal{
+  background:rgba(15,24,38,.46) !important;
+}
+
+.modal-content{
+  background:var(--legacy-card) !important;
+  color:var(--legacy-text) !important;
+  border:1px solid var(--legacy-line) !important;
+  border-radius:26px !important;
+  box-shadow:0 28px 80px rgba(15,23,42,.18) !important;
+}
+
+.modal-content h3{
+  color:var(--legacy-accent-dark) !important;
+  text-shadow:none !important;
+}
+
+.modal-content img{
+  background:var(--legacy-card-soft) !important;
+}
+
+.modal-close{
+  color:var(--legacy-muted) !important;
+}
+
+footer{
+  margin-top:28px;
+  padding:18px !important;
+  color:var(--legacy-muted) !important;
+  border-top:1px solid var(--legacy-line) !important;
+  background:transparent !important;
+}
+
+@media (max-width: 900px){
+  header{
+    padding:16px 16px 14px !important;
+  }
+
+  .top-bar{
+    justify-content:center !important;
+  }
+
+  .top-buttons{
+    justify-content:center !important;
+  }
+
+  main{
+    width:min(100% - 20px,1380px);
+    padding:22px 0 48px !important;
+  }
+
+  .cases-grid,
+  .coolers-grid,
+  .cpu-grid,
+  .mb-grid,
+  .minipc-grid,
+  .monitor-grid,
+  .printer-grid,
+  .soft-grid,
+  .svga-grid{
+    grid-template-columns:1fr !important;
+  }
+}

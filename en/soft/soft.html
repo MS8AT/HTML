@@ -1,0 +1,1169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Software — MS8AT Global</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../light-theme.css">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      font-family: 'Roboto', sans-serif;
+      background: #0a0a0f;
+      color: #ffffff;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    header {
+      padding: 22px 24px 18px;
+      border-bottom: 1px solid rgba(28,239,224,.18);
+      background: rgba(5,12,18,.92);
+      backdrop-filter: blur(14px);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo img {
+      height: 42px;
+      filter: drop-shadow(0 0 12px rgba(28,239,224,.55));
+    }
+
+    .logo span {
+      font-family: 'Orbitron', sans-serif;
+      color: #1cefe0;
+      font-size: 1.08rem;
+      letter-spacing: 1px;
+      text-shadow: 0 0 12px rgba(28,239,224,.38);
+    }
+
+    .top-buttons,
+    .nav-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .dealer-btn,
+    .nav-buttons a {
+      border: 1px solid #1cefe0;
+      color: #1cefe0;
+      border-radius: 999px;
+      transition: .25s ease;
+      white-space: nowrap;
+    }
+
+    .dealer-btn {
+      padding: 10px 18px;
+      font-weight: 700;
+      background: rgba(6,16,24,.75);
+    }
+
+    .dealer-btn:hover,
+    .nav-buttons a:hover,
+    .nav-buttons a.active {
+      background: #1cefe0;
+      color: #071116;
+      box-shadow: 0 0 18px rgba(28,239,224,.35);
+    }
+
+    .nav-buttons {
+      justify-content: center;
+    }
+
+    .nav-buttons a {
+      padding: 9px 16px;
+      font-size: .92rem;
+      background: rgba(8,19,28,.72);
+    }
+
+    main {
+      flex: 1;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    .search-box {
+      max-width: 520px;
+      margin: 0 auto 35px;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 10px;
+      border: 2px solid #00ffe0;
+      background: rgba(0,0,0,0.4);
+      color: #00ffe0;
+      font-size: 1rem;
+      outline: none;
+    }
+
+    .soft-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .soft-card {
+      background: rgba(0,0,0,0.6);
+      border: 2px solid #00ffe0;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 0 12px #00ffe0;
+      cursor: pointer;
+      transition: 0.3s;
+      text-align: left;
+    }
+
+    .soft-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .soft-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: contain;
+      background: rgba(255,255,255,0.03);
+      border-radius: 10px;
+      margin-bottom: 14px;
+      border: 1px solid rgba(0,255,224,0.18);
+      padding: 8px;
+      display: block;
+    }
+
+    .soft-card h3 {
+      font-size: 1.08rem;
+      margin-bottom: 8px;
+      text-shadow: 0 0 6px #00ffe0;
+      color: #cffff8;
+      line-height: 1.35;
+    }
+
+    .soft-card p {
+      font-size: 0.95rem;
+      opacity: 0.92;
+      line-height: 1.45;
+      margin-bottom: 10px;
+    }
+
+    .soft-meta {
+      list-style: none;
+      padding-left: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .soft-meta li {
+      font-size: 0.9rem;
+      color: #c8fffa;
+      opacity: 0.95;
+      line-height: 1.4;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.82);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      padding: 20px;
+    }
+
+    .modal-content {
+      background: #111125;
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 900px;
+      width: 95%;
+      max-height: 88vh;
+      overflow-y: auto;
+      position: relative;
+      text-align: left;
+      border: 2px solid #00ffe0;
+      box-shadow: 0 0 18px rgba(0,255,224,0.4);
+    }
+
+    .modal-content h3 {
+      color: #00ffe0;
+      margin-bottom: 14px;
+      font-size: 1.35rem;
+      text-shadow: 0 0 8px rgba(0,255,224,0.5);
+    }
+
+    .modal-content p {
+      margin-bottom: 14px;
+      line-height: 1.55;
+      color: #e9fffc;
+    }
+
+    .modal-content h4 {
+      color: #00ffe0;
+      margin: 18px 0 10px;
+      font-size: 1rem;
+    }
+
+    .modal-content ul {
+      padding-left: 18px;
+      margin-bottom: 14px;
+    }
+
+    .modal-content li {
+      margin-bottom: 8px;
+      line-height: 1.45;
+      color: #d9fffb;
+    }
+
+    .modal-gallery {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 18px;
+    }
+
+    .modal-gallery img {
+      width: 140px;
+      height: 100px;
+      object-fit: contain;
+      border-radius: 10px;
+      border: 1px solid rgba(0,255,224,0.2);
+      background: rgba(255,255,255,0.03);
+      padding: 6px;
+      cursor: zoom-in;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .modal-gallery img:hover {
+      transform: scale(1.03);
+      box-shadow: 0 0 14px rgba(0,255,224,0.35);
+    }
+
+    .spec-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+      margin-bottom: 10px;
+    }
+
+    .spec-table tr {
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    .spec-table td {
+      padding: 10px 8px;
+      vertical-align: top;
+      line-height: 1.4;
+    }
+
+    .spec-table td:first-child {
+      width: 38%;
+      color: #b7fffa;
+    }
+
+    .spec-table td:last-child {
+      color: #ffffff;
+      font-weight: 500;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 10px;
+      right: 18px;
+      font-size: 28px;
+      cursor: pointer;
+      color: #00ffe0;
+      line-height: 1;
+    }
+
+    .image-viewer {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.92);
+      z-index: 2000;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+    }
+
+    .image-viewer.open {
+      display: flex;
+    }
+
+    .image-viewer-content {
+      position: relative;
+      max-width: 95vw;
+      max-height: 95vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .image-viewer img {
+      max-width: 92vw;
+      max-height: 88vh;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 14px;
+      border: 2px solid #00ffe0;
+      box-shadow: 0 0 30px rgba(0,255,224,0.45);
+      background: #0a0a0f;
+      padding: 10px;
+    }
+
+    .image-viewer-close {
+      position: absolute;
+      top: -14px;
+      right: -14px;
+      width: 40px;
+      height: 40px;
+      border: none;
+      border-radius: 50%;
+      background: #00ffe0;
+      color: #0a0a0f;
+      font-size: 1.5rem;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 0 18px rgba(0,255,224,0.8);
+    }
+
+    .image-viewer-caption {
+      margin-top: 14px;
+      color: #00ffe0;
+      text-align: center;
+      font-size: 0.95rem;
+    }
+
+    main {
+      flex: 1;
+      width: min(1360px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 36px 0 76px;
+      text-align: left;
+    }
+
+    .panel {
+      background: linear-gradient(180deg, rgba(13,26,35,.96), rgba(8,17,25,.96));
+      border: 1px solid rgba(46,235,225,.34);
+      border-radius: 26px;
+      box-shadow: 0 0 30px rgba(28,239,224,.15);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.45fr .95fr;
+      gap: 24px;
+      align-items: stretch;
+      margin-bottom: 24px;
+    }
+
+    .hero-copy,
+    .hero-side,
+    .section {
+      padding: 30px;
+    }
+
+    .hero-copy {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-copy::after {
+      content: "";
+      position: absolute;
+      inset: auto -40px -60px auto;
+      width: 220px;
+      height: 220px;
+      background: radial-gradient(circle, rgba(28,239,224,.18), transparent 70%);
+      pointer-events: none;
+    }
+
+    .eyebrow,
+    .kicker,
+    .hint,
+    .chip,
+    .soft-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(28,239,224,.45);
+      background: rgba(28,239,224,.08);
+      color: #051015;
+    }
+
+    .eyebrow,
+    .kicker {
+      margin-bottom: 16px;
+      padding: 8px 14px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .hint {
+      padding: 8px 14px;
+      font-size: 0.9rem;
+    }
+
+    .chip {
+      padding: 8px 12px;
+      border-color: rgba(159,180,196,.18);
+      background: rgba(255,255,255,.04);
+      color: #051015;
+      font-size: 0.86rem;
+    }
+
+    .soft-badge {
+      margin-bottom: 12px;
+      padding: 6px 11px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .hero h1,
+    .section h2,
+    .section h3,
+    .stat strong {
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.3rem, 5vw, 4.45rem);
+      line-height: 0.98;
+      margin-bottom: 18px;
+      color: #e9ffff;
+      text-shadow: 0 0 22px rgba(28,239,224,.16);
+    }
+
+    .lead {
+      font-size: 1.16rem;
+      line-height: 1.62;
+      color: #effbff;
+      margin-bottom: 14px;
+      max-width: 760px;
+    }
+
+    .hero-copy p,
+    .section-head p,
+    .series-card p,
+    .side-card p,
+    .side-card li,
+    .stat p {
+      color: #9fb4c4;
+      line-height: 1.65;
+      font-size: 1rem;
+    }
+
+    .hero-chips,
+    .chip-row,
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .hero-chips {
+      margin: 22px 0 24px;
+    }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 18px;
+      border-radius: 16px;
+      border: 1px solid rgba(159,180,196,.22);
+      color: #effbff;
+      background: rgba(255,255,255,.03);
+      font-weight: 700;
+      transition: .25s ease;
+    }
+
+    .cta-btn.primary {
+      border-color: #00ffe0;
+      background: linear-gradient(135deg, #00ffe0, #79fff2);
+      color: #051015;
+    }
+
+    .cta-btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 12px 26px rgba(0,0,0,.18);
+    }
+
+    .hero-side {
+      display: grid;
+      gap: 18px;
+      background: linear-gradient(180deg, rgba(7,16,24,.92), rgba(11,23,31,.96));
+    }
+
+    .side-card,
+    .series-card,
+    .stat {
+      border-radius: 22px;
+      border: 1px solid rgba(46,235,225,.34);
+      background: rgba(255,255,255,.03);
+    }
+
+    .side-card {
+      padding: 22px 22px 20px;
+    }
+
+    .side-card h3 {
+      color: #00ffe0;
+      margin-bottom: 12px;
+      font-size: 1.02rem;
+    }
+
+    .side-card ul {
+      padding-left: 18px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+      margin-bottom: 24px;
+    }
+
+    .stat {
+      padding: 22px 20px;
+    }
+
+    .stat strong {
+      display: block;
+      margin-bottom: 10px;
+      color: #00ffe0;
+      font-size: 1rem;
+    }
+
+    .section {
+      margin-bottom: 24px;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 24px;
+    }
+
+    .section-head > div {
+      max-width: 860px;
+    }
+
+    .section h2 {
+      font-size: clamp(1.5rem, 2.6vw, 2.3rem);
+      color: #eef8ff;
+      margin-bottom: 12px;
+    }
+
+    .series-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .series-card {
+      padding: 22px 20px;
+    }
+
+    .series-card h3 {
+      color: #00ffe0;
+      margin-bottom: 12px;
+      font-size: 1rem;
+    }
+
+    .chip-row {
+      margin-top: 16px;
+    }
+
+    .catalog-section .search-box {
+      max-width: none;
+      margin: 0 0 28px;
+    }
+
+    .catalog-section .search-box input {
+      border: 1px solid rgba(46,235,225,.34);
+      border-radius: 16px;
+      background: rgba(255,255,255,.03);
+      color: #effbff;
+      padding: 14px 16px;
+      box-shadow: none;
+    }
+
+    .catalog-section .search-box input::placeholder {
+      color: #8ea7b8;
+    }
+
+    .soft-grid {
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: none;
+      margin: 0;
+    }
+
+    .soft-card {
+      background: rgba(255,255,255,.03);
+      border: 1px solid rgba(46,235,225,.34);
+      border-radius: 22px;
+      padding: 18px;
+      box-shadow: none;
+    }
+
+    .soft-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 28px rgba(0,0,0,.18);
+    }
+
+    .soft-meta strong {
+      color: #e8ffff;
+      font-weight: 600;
+    }
+
+    .empty-state {
+      display: none;
+      border-radius: 18px;
+      border: 1px dashed rgba(46,235,225,.34);
+      padding: 22px 20px;
+      color: #9fb4c4;
+      text-align: center;
+      background: rgba(255,255,255,.02);
+    }
+
+    @media (max-width: 980px) {
+      .hero,
+      .series-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .section-head {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 640px) {
+      header {
+        padding: 20px 16px 24px;
+      }
+
+      main {
+        width: calc(100% - 24px);
+        padding: 24px 0 60px;
+      }
+
+      .hero-copy,
+      .hero-side,
+      .section {
+        padding: 22px;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    footer {
+      text-align: center;
+      padding: 18px;
+      font-size: 0.85rem;
+      color: #777;
+      border-top: 1px solid rgba(0,255,224,0.25);
+    }
+
+/* unified-nav */
+.nav-buttons,.header-nav{flex-wrap:nowrap;white-space:nowrap;overflow-x:auto}
+.nav-buttons a,.header-nav a{flex:0 0 auto}
+
+/* clickable-logo */
+.logo{text-decoration:none;cursor:pointer}
+.logo:hover{opacity:.86}
+
+/* emall-shop */
+.hero-shop{display:grid;gap:12px}
+.hero-shop-logo-text{display:inline-flex;align-items:center;justify-content:center;min-width:104px;height:42px;border-radius:8px;background:#f8fafc;border:1px solid #dbeafe;color:#2563eb;font-weight:900;letter-spacing:.02em}
+.btn-shop-emall{background:#111827}
+.btn-shop-emall:hover{background:#374151}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="top-bar">
+    <a class="logo" href="../index.html" aria-label="Go to homepage">
+      <img src="../images/logo.png" alt="MS8AT Global">
+      <span>MS8AT GLOBAL</span>
+    </a>
+
+    <div class="top-buttons">
+      <a href="../../ru/soft/soft.html" class="dealer-btn">RU</a>
+      <a href="../index.html" class="dealer-btn">Home</a>
+      <a href="https://future.shop.onliner.by/" class="dealer-btn" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:7px;padding:6px 14px 6px 8px;"><img src="../../logo-future.jpg" alt="Future" style="height:22px;width:auto;border-radius:4px;flex-shrink:0;">Shop</a>
+      <a href="https://9981.emall.by/" class="dealer-btn" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:7px;padding:6px 14px 6px 8px;"><img src="../../logo-future.jpg" alt="Future" style="height:22px;width:auto;border-radius:4px;flex-shrink:0;">Emall</a>
+    </div>
+  </div>
+
+  <div class="nav-buttons">
+    <a href="../cases/cases.html">Cases</a>
+    <a href="../minipc/minipc.html">Future Mini-PCs</a>
+    <a href="../monoblock/monoblock.html">Future Monoblocks</a>
+    <a href="../soft/soft.html" class="active">Software</a>
+    <a href="../news/news.html" class="news-link">IT News</a>
+    <a href="../jarvice/jarvice.html">Jarvice</a>
+  </div>
+
+</header>
+
+<main>
+  <section class="hero">
+    <article class="panel hero-copy">
+      <span class="eyebrow">Software for work PCs and business</span>
+      <h1>Software</h1>
+      <p class="lead">Licensed Windows Pro editions for office computers, workstations and corporate workplaces.</p>
+      <p>This section includes single-device perpetual licenses with a Russian-language interface and a clear delivery format for installation on a new or existing work PC.</p>
+      <div class="hero-chips">
+        <span class="chip">Windows 10 Pro</span>
+        <span class="chip">Windows 11 Pro</span>
+        <span class="chip">1 device</span>
+        <span class="chip">Perpetual license</span>
+        <span class="chip">DSP / OEI</span>
+        <span class="chip">Russian version</span>
+      </div>
+      <div class="hero-actions">
+        <a class="cta-btn primary" href="#catalog">View licenses</a>
+        <a class="cta-btn" href="https://t.me/viq4uat_bot?start=order" target="_blank" rel="noopener noreferrer">Request a license</a>
+      </div>
+    </article>
+
+    <div class="panel hero-side">
+      <article class="side-card">
+        <h3>How to choose a version</h3>
+        <ul>
+          <li>Windows 10 Pro works well when you want a familiar interface and installation on an existing office PC.</li>
+          <li>Windows 11 Pro is a more logical choice for new computers and modern hardware configurations.</li>
+          <li>The Pro edition is well suited for business, office and workstation use when stronger management and security functions matter.</li>
+        </ul>
+      </article>
+      <article class="side-card">
+        <h3>What to check before purchase</h3>
+        <ul>
+          <li>Each license is intended for 1 device.</li>
+          <li>The DSP / OEI format is purchased for a specific PC.</li>
+          <li>It is important to confirm hardware requirements and the correct edition before installation.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="stats">
+    <article class="panel stat">
+      <strong>2 Pro editions</strong>
+      <p>The selection includes Windows 10 Pro and Windows 11 Pro for work and corporate computers.</p>
+    </article>
+    <article class="panel stat">
+      <strong>1 device</strong>
+      <p>Each license is intended for installation on one computer.</p>
+    </article>
+    <article class="panel stat">
+      <strong>Perpetual license</strong>
+      <p>Designed for long-term use without a subscription model.</p>
+    </article>
+    <article class="panel stat">
+      <strong>Office and business</strong>
+      <p>A practical fit for workstations, office desktops, remote work and business environments.</p>
+    </article>
+  </section>
+
+  <section class="panel section">
+    <div class="section-head">
+      <div>
+        <span class="kicker">Assortment</span>
+        <h2>Licenses for different tasks</h2>
+        <p>The section includes Windows Pro editions for office PCs, workplace desktops, remote work, corporate environments and modern workstations.</p>
+      </div>
+      <span class="hint">For office, business and work computers</span>
+    </div>
+
+    <div class="series-grid">
+      <article class="series-card">
+        <h3>Windows 10 Pro</h3>
+        <p>A solid choice for work PCs where a familiar interface, stable daily operation and compatibility with current office workflows matter most.</p>
+        <div class="chip-row">
+          <span class="chip">Office PCs</span>
+          <span class="chip">Workstations</span>
+          <span class="chip">64-bit</span>
+          <span class="chip">1 device</span>
+        </div>
+      </article>
+
+      <article class="series-card">
+        <h3>Windows 11 Pro</h3>
+        <p>A good fit for new computers and modern configurations when you want a current interface, modern protection mechanisms and a stronger long-term platform.</p>
+        <div class="chip-row">
+          <span class="chip">New PCs</span>
+          <span class="chip">Modern platforms</span>
+          <span class="chip">Pro features</span>
+          <span class="chip">Business</span>
+        </div>
+      </article>
+
+      <article class="series-card">
+        <h3>What the buyer receives</h3>
+        <p>A licensed Windows Pro edition with a clear delivery format, Russian-language version, perpetual usage term and core specifications for quick comparison.</p>
+        <div class="chip-row">
+          <span class="chip">License</span>
+          <span class="chip">Key / media</span>
+          <span class="chip">Russian version</span>
+          <span class="chip">Professional edition</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="panel section catalog-section" id="catalog">
+    <div class="section-head">
+      <div>
+        <span class="kicker">Product Catalog</span>
+        <h2>Windows Licenses</h2>
+        <p>Open a card to view package photos, key benefits, use cases and specifications for each edition.</p>
+      </div>
+      <span class="hint">Search by version, edition or purpose</span>
+    </div>
+
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="Search by version, edition or purpose...">
+    </div>
+
+    <div class="soft-grid" id="softContainer"></div>
+    <div class="empty-state" id="emptyState">Nothing found. Try a different query or view all available Windows editions.</div>
+  </section>
+</main>
+
+<footer>
+  MS8AT Global LLC • All rights reserved
+</footer>
+
+<div class="modal" id="softModal">
+  <div class="modal-content">
+    <span class="modal-close" id="modalClose">×</span>
+    <div id="modalBody"></div>
+  </div>
+</div>
+
+<div class="image-viewer" id="imageViewer">
+  <div class="image-viewer-content">
+    <button class="image-viewer-close" id="imageViewerClose" aria-label="Close">×</button>
+    <img id="viewerImage" src="" alt="">
+    <div class="image-viewer-caption" id="viewerCaption"></div>
+  </div>
+</div>
+
+<script>
+const softData = [
+  {
+    model: "Microsoft Windows 10 Pro 64Bit Russian 1pk DSP (FQC-08909)",
+    badge: "Microsoft / OS",
+    category: "operating system",
+    licenseType: "perpetual, 1 device",
+    devices: "1 PC",
+    language: "Russian version",
+    image: "./photo/win10.jpg",
+    gallery: [
+      "./photo/win10.jpg",
+      "./photo/win10_1.jpg"
+    ],
+    shortDescription: "Professional Windows 10 edition in Russian for one device with a perpetual license.",
+    description: "Microsoft Windows 10 Pro 64-bit Russian DSP is a reliable operating system solution for workstations and corporate computers. It is intended for installation on one device and provides enhanced security, management and compatibility features for business and professional use.",
+    targetUse: [
+      "office computers and workplace desktops",
+      "workstations and corporate PCs",
+      "business tasks, documents, CRM and everyday work",
+      "systems where a familiar working environment matters"
+    ],
+    features: [
+      "Russian-language version of Windows 10 Pro 64-bit",
+      "DSP / OEI package for installation on 1 device",
+      "Perpetual license",
+      "Suitable for corporate and professional use",
+      "Advanced security and administration features",
+      "Stable operation on office and work PCs"
+    ],
+    important: [
+      "the license is intended for one computer",
+      "the Pro edition is suited for business and professional use",
+      "it is important to confirm PC requirements and delivery format before purchase"
+    ],
+    specs: [
+      ["Product type", "operating system"],
+      ["Edition", "Windows 10 Pro 64-bit Russian"],
+      ["Delivery version", "DSP / OEI"],
+      ["Purpose", "for corporate and professional use"],
+      ["Package type", "license key / OEM package"],
+      ["License term", "perpetual"],
+      ["Number of devices", "1"],
+      ["Minimum processor", "1 GHz or faster"],
+      ["Memory", "2 GB for 64-bit"],
+      ["Free disk space", "20 GB"],
+      ["Graphics", "DirectX 9 or higher with WDDM 1.0 driver"],
+      ["Display resolution", "800×600 or higher"]
+    ]
+  },
+  {
+    model: "Microsoft Windows 11 Pro 64bit Russian 1pk DSP OEI DVD (FQC-10547)",
+    badge: "Microsoft / OS",
+    category: "operating system",
+    licenseType: "perpetual, 1 device",
+    devices: "1 PC",
+    language: "Russian version",
+    image: "./photo/win11.jpg",
+    gallery: [
+      "./photo/win11.jpg"
+    ],
+    shortDescription: "Modern professional Windows 11 Pro operating system in Russian for one device.",
+    description: "Microsoft Windows 11 Pro 64-bit Russian DSP OEI DVD is a modern professional operating system for workstations, office PCs and corporate environments. It delivers an updated interface, modern security functions and convenient tools for productive everyday work.",
+    targetUse: [
+      "new office PCs and modern workstations",
+      "workplaces where current interface and security matter",
+      "corporate environments and business workflows",
+      "systems intended for modern software environments"
+    ],
+    features: [
+      "Russian-language version of Windows 11 Pro 64-bit",
+      "DSP / OEI DVD package for one device",
+      "Perpetual license",
+      "Suitable for business, office and corporate infrastructure",
+      "Modern interface and improved security mechanisms",
+      "Optimized for new PCs and workstations"
+    ],
+    important: [
+      "the license is intended for one computer",
+      "installation requires modern hardware requirements",
+      "it is important to confirm configuration compatibility before purchase"
+    ],
+    specs: [
+      ["Product type", "operating system"],
+      ["Edition", "Windows 11 Pro 64-bit Russian"],
+      ["Delivery version", "DSP / OEI DVD"],
+      ["Purpose", "for corporate use"],
+      ["Package type", "DVD / license key"],
+      ["License term", "perpetual"],
+      ["Number of devices", "1"],
+      ["Minimum processor", "1 GHz, 2 cores, 64-bit compatible"],
+      ["Memory", "4 GB"],
+      ["Free disk space", "64 GB"],
+      ["Graphics", "DirectX 12 or higher with WDDM 2.0 driver"],
+      ["Display resolution", "1280×720 (HD) or higher"]
+    ]
+  }
+];
+
+const softContainer = document.getElementById('softContainer');
+const searchInput = document.getElementById('searchInput');
+const emptyState = document.getElementById('emptyState');
+const modal = document.getElementById('softModal');
+const modalBody = document.getElementById('modalBody');
+const modalClose = document.getElementById('modalClose');
+
+const imageViewer = document.getElementById('imageViewer');
+const viewerImage = document.getElementById('viewerImage');
+const viewerCaption = document.getElementById('viewerCaption');
+const imageViewerClose = document.getElementById('imageViewerClose');
+
+function renderSoft(data) {
+  softContainer.innerHTML = '';
+  emptyState.style.display = data.length ? 'none' : 'block';
+
+  if (!data.length) {
+    return;
+  }
+
+  data.forEach((item, index) => {
+    const card = document.createElement('div');
+    card.className = 'soft-card';
+    card.innerHTML = `
+      <span class="soft-badge">${item.badge}</span>
+      <img src="${item.image}" alt="${item.model}" loading="lazy">
+      <h3>${item.model}</h3>
+      <p>${item.shortDescription}</p>
+      <ul class="soft-meta">
+        <li><strong>Type:</strong> ${item.category}</li>
+        <li><strong>License:</strong> ${item.licenseType}</li>
+        <li><strong>Format:</strong> ${item.language}, ${item.devices}</li>
+      </ul>
+    `;
+    card.addEventListener('click', () => openModal(index));
+    softContainer.appendChild(card);
+  });
+}
+
+function openModal(index) {
+  const item = softData[index];
+
+  modalBody.innerHTML = `
+    <h3>${item.model}</h3>
+
+    <div class="modal-gallery">
+      ${item.gallery.map((img, i) => `
+        <img
+          src="${img}"
+          alt="${item.model} — image ${i + 1}"
+          loading="lazy"
+          class="zoomable-soft-image"
+          data-full="${img}"
+          data-caption="${item.model}"
+        >
+      `).join('')}
+    </div>
+
+    <p>${item.description}</p>
+
+    <h4>Best for</h4>
+    <ul>
+      ${item.targetUse.map(f => `<li>${f}</li>`).join('')}
+    </ul>
+
+    <h4>Key features</h4>
+    <ul>
+      ${item.features.map(f => `<li>${f}</li>`).join('')}
+    </ul>
+
+    <h4>Important before purchase</h4>
+    <ul>
+      ${item.important.map(f => `<li>${f}</li>`).join('')}
+    </ul>
+
+    <h4>Specifications</h4>
+    <table class="spec-table">
+      ${item.specs.map(row => `
+        <tr>
+          <td>${row[0]}</td>
+          <td>${row[1]}</td>
+        </tr>
+      `).join('')}
+    </table>
+  `;
+
+  modal.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+  bindZoomableImages();
+}
+
+function closeModal() {
+  modal.style.display = 'none';
+  modalBody.innerHTML = '';
+  document.body.style.overflow = '';
+}
+
+function openImageViewer(src, caption) {
+  viewerImage.src = src;
+  viewerImage.alt = caption;
+  viewerCaption.textContent = caption;
+  imageViewer.classList.add('open');
+}
+
+function closeImageViewer() {
+  imageViewer.classList.remove('open');
+  viewerImage.src = '';
+  viewerImage.alt = '';
+  viewerCaption.textContent = '';
+}
+
+function bindZoomableImages() {
+  document.querySelectorAll('.zoomable-soft-image').forEach(img => {
+    img.addEventListener('click', function(e) {
+      e.stopPropagation();
+      openImageViewer(this.dataset.full || this.src, this.dataset.caption || this.alt);
+    });
+  });
+}
+
+searchInput.addEventListener('input', e => {
+  const q = e.target.value.toLowerCase().trim();
+  const filtered = !q ? softData : softData.filter(item =>
+    item.model.toLowerCase().includes(q) ||
+    item.badge.toLowerCase().includes(q) ||
+    item.category.toLowerCase().includes(q) ||
+    item.licenseType.toLowerCase().includes(q) ||
+    item.devices.toLowerCase().includes(q) ||
+    item.language.toLowerCase().includes(q) ||
+    item.shortDescription.toLowerCase().includes(q) ||
+    item.description.toLowerCase().includes(q) ||
+    item.targetUse.join(' ').toLowerCase().includes(q) ||
+    item.features.join(' ').toLowerCase().includes(q) ||
+    item.important.join(' ').toLowerCase().includes(q) ||
+    item.specs.flat().join(' ').toLowerCase().includes(q)
+  );
+  renderSoft(filtered);
+});
+
+modalClose.addEventListener('click', closeModal);
+
+modal.addEventListener('click', e => {
+  if (e.target === modal) closeModal();
+});
+
+imageViewerClose.addEventListener('click', closeImageViewer);
+
+imageViewer.addEventListener('click', e => {
+  if (e.target === imageViewer) closeImageViewer();
+});
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape' && imageViewer.classList.contains('open')) {
+    closeImageViewer();
+    return;
+  }
+
+  if (e.key === 'Escape' && modal.style.display === 'flex') {
+    closeModal();
+  }
+});
+
+renderSoft(softData);
+</script>
+
+</body>
+</html>

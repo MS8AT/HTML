@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<title>MS8AT Мини-ПК</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../light-theme.css">
+
+<style>
+
+*{margin:0;padding:0;box-sizing:border-box}
+
+body{
+font-family:'Inter','Roboto',sans-serif;
+background:radial-gradient(circle at top,#0b1220,#000);
+color:#fff;
+padding-bottom:46px;
+}
+
+a{color:inherit;text-decoration:none}
+
+/* HEADER */
+
+header{
+padding:22px 24px 18px;
+border-bottom:1px solid rgba(28,239,224,.18);
+background:rgba(5,12,18,.92);
+backdrop-filter:blur(14px);
+position:sticky;
+top:0;
+z-index:20;
+}
+
+.top-bar{
+display:flex;
+align-items:center;
+justify-content:space-between;
+flex-wrap:wrap;
+gap:14px;
+margin-bottom:16px;
+}
+
+.logo{
+display:flex;
+align-items:center;
+gap:12px;
+}
+
+.logo img{
+height:42px;
+filter:drop-shadow(0 0 12px rgba(28,239,224,.55));
+}
+
+.logo span{
+font-family:'Exo 2','Inter','Roboto',sans-serif;
+color:#1cefe0;
+font-size:1.08rem;
+letter-spacing:1px;
+text-shadow:0 0 12px rgba(28,239,224,.38);
+}
+
+.top-buttons,
+.nav-buttons{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+}
+
+.dealer-btn,
+.nav-buttons a{
+border:1px solid #1cefe0;
+color:#1cefe0;
+border-radius:999px;
+transition:.25s ease;
+white-space:nowrap;
+}
+
+.dealer-btn{
+padding:10px 18px;
+font-weight:700;
+background:rgba(6,16,24,.75);
+}
+
+.dealer-btn:hover,
+.nav-buttons a:hover,
+.nav-buttons a.active{
+background:#1cefe0;
+color:#071116;
+box-shadow:0 0 18px rgba(28,239,224,.35);
+}
+
+/* MAIN NAV */
+
+.nav-buttons{
+justify-content:center;
+}
+
+.nav-buttons a{
+padding:9px 16px;
+font-size:.92rem;
+background:rgba(8,19,28,.72);
+}
+
+/* CATEGORY BUTTONS */
+
+.category-buttons{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:12px;
+margin-top:20px;
+margin-bottom:15px;
+}
+
+.category-buttons a{
+padding:10px 18px;
+border:1.5px solid #00ffe0;
+border-radius:25px;
+color:#00ffe0;
+font-family:'Exo 2','Inter','Roboto',sans-serif;
+font-size:.9rem;
+transition:.3s;
+}
+
+.category-buttons a:hover{
+background:#00ffe0;
+color:#000;
+box-shadow:0 0 15px #00ffe0;
+}
+
+/* HERO */
+
+.hero{
+margin:10px 20px;
+border:1.5px solid #00ffe0;
+border-radius:18px;
+padding:14px;
+text-align:center;
+}
+
+.hero h1{
+font-family:'Exo 2','Inter','Roboto',sans-serif;
+color:#00ffe0;
+}
+
+/* GALLERY */
+
+.cpu-gallery{
+display:grid;
+grid-template-columns:1fr 2fr 1fr;
+gap:20px;
+padding:20px;
+max-width:1400px;
+margin:auto;
+}
+
+.cpu-box{
+border:1.5px solid rgba(0,255,224,.45);
+border-radius:14px;
+padding:15px;
+background:rgba(0,0,0,.45);
+font-size:0.9rem;
+line-height:1.6;
+}
+
+.cpu-box h3{
+text-align:center;
+font-family:'Exo 2','Inter','Roboto',sans-serif;
+color:#00ffe0;
+margin-bottom:12px;
+font-size:1.1rem;
+}
+
+.cpu-box h4{
+color:#00bcd4;
+margin:12px 0 8px;
+font-size:0.95rem;
+}
+
+.cpu-box p{
+margin-bottom:8px;
+}
+
+.cpu-box ul{
+margin-left:20px;
+margin-bottom:10px;
+}
+
+.cpu-box li{
+margin-bottom:4px;
+}
+
+.center-column{
+border:1.5px solid rgba(0,255,224,.45);
+border-radius:14px;
+padding:12px;
+background:rgba(0,0,0,.45);
+display:flex;
+flex-direction:column;
+}
+
+.carousel{
+flex:1;
+background:#fff;
+border-radius:12px;
+overflow:hidden;
+display:flex;
+align-items:center;
+justify-content:center;
+min-height:350px;
+}
+
+.carousel img{
+width:100%;
+height:100%;
+object-fit:contain;
+padding:20px;
+background:#fff;
+transition:opacity .6s ease;
+}
+
+@media (max-width:1100px){
+.cpu-gallery{
+grid-template-columns:1fr;
+gap:14px;
+padding:16px;
+}
+
+.center-column{
+order:-1;
+}
+
+.carousel{
+min-height:300px;
+}
+}
+
+@media (max-width:820px){
+header{
+padding:16px 14px 14px;
+}
+
+.top-bar{
+justify-content:center;
+}
+
+.top-buttons{
+width:100%;
+justify-content:center;
+}
+
+.nav-buttons{
+justify-content:flex-start;
+overflow-x:auto;
+flex-wrap:nowrap;
+padding-bottom:6px;
+}
+
+.category-buttons{
+justify-content:flex-start;
+overflow-x:auto;
+flex-wrap:nowrap;
+padding-bottom:4px;
+}
+
+.hero{
+margin:10px 12px;
+padding:12px;
+}
+
+.hero h1{
+font-size:1.55rem;
+}
+
+.cpu-gallery{
+padding:12px;
+}
+}
+
+@media (max-width:620px){
+.logo span{
+font-size:.96rem;
+}
+
+.dealer-btn,
+.nav-buttons a,
+.category-buttons a{
+font-size:.8rem;
+}
+
+.cpu-box{
+padding:12px;
+}
+
+.center-column{
+padding:8px;
+}
+
+.carousel{
+min-height:240px;
+}
+}
+
+
+/* unified-nav */
+.nav-buttons,.header-nav{flex-wrap:nowrap;white-space:nowrap;overflow-x:auto}
+.nav-buttons a,.header-nav a{flex:0 0 auto}
+
+/* clickable-logo */
+.logo{text-decoration:none;cursor:pointer}
+.logo:hover{opacity:.86}
+
+/* emall-shop */
+.hero-shop{display:grid;gap:12px}
+.hero-shop-logo-text{display:inline-flex;align-items:center;justify-content:center;min-width:104px;height:42px;border-radius:8px;background:#f8fafc;border:1px solid #dbeafe;color:#2563eb;font-weight:900;letter-spacing:.02em}
+.btn-shop-emall{background:#111827}
+.btn-shop-emall:hover{background:#374151}
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="top-bar">
+
+<a class="logo" href="../index.html" aria-label="На главную страницу">
+<img src="../images/logo.png">
+<span>MS8AT GLOBAL</span>
+</a>
+
+<div class="top-buttons">
+
+<a href="../../en/minipc/minipc.html" class="dealer-btn">ENG</a>
+
+<a href="../index.html" class="dealer-btn">Главная</a>
+
+<a href="https://future.shop.onliner.by/" class="dealer-btn" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:7px;padding:6px 14px 6px 8px;"><img src="../../logo-future.jpg" alt="Future" style="height:22px;width:auto;border-radius:4px;flex-shrink:0;">Магазин</a>
+      <a href="https://9981.emall.by/" class="dealer-btn" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:7px;padding:6px 14px 6px 8px;"><img src="../../logo-future.jpg" alt="Future" style="height:22px;width:auto;border-radius:4px;flex-shrink:0;">Emall</a>
+
+</div>
+
+</div>
+
+<div class="nav-buttons">
+    <a href="../cases/cases.html">Корпуса</a>
+    <a href="../minipc/minipc.html" class="active">Мини-ПК Future</a>
+    <a href="../monoblock/monoblock.html">Моноблоки Future</a>
+    <a href="../soft/soft.html">Софт</a>
+    <a href="../news/news.html" class="news-link">IT Новости</a>
+    <a href="../jarvice/jarvice.html">Jarvice</a>
+  </div>
+
+<!-- CATEGORY BUTTONS -->
+
+</header>
+
+
+
+<div class="hero">
+
+<h1>MS8AT Мини-ПК</h1>
+
+<p>Решения для промышленности, офиса, игр, серверов и AI</p>
+
+</div>
+
+
+
+<section class="cpu-gallery">
+
+<div class="cpu-box">
+
+<h3>Мини-ПК на Intel и AMD</h3>
+
+<p><strong>Мини-ПК / Компактный компьютер</strong> - разные процессоры и гибкая конфигурация</p>
+
+<p>Предлагаем компактные мини-ПК для дома, работы и офиса. Тихие, энергоэффективные и экономят место.</p>
+
+<h4>Доступные процессоры:</h4>
+<ul>
+<li>Intel Core i3-8100T</li>
+<li>Intel Core i5-8500T</li>
+<li>Intel Core i5-12460H</li>
+<li>AMD Ryzen 7 3700U</li>
+<li>Intel Celeron N100</li>
+<li>Intel Celeron N5090</li>
+<li>Intel Core i7-2760QM</li>
+<li>Intel Core i7-2820QM</li>
+<li>Intel Core i7-2670QM</li>
+</ul>
+
+</div>
+
+
+<div class="center-column">
+
+<div class="carousel">
+<img id="carouselImage" src="photo/pc1.webp" alt="MS8AT Mini-PC" loading="eager">
+</div>
+
+</div>
+
+
+<div class="cpu-box">
+
+<h3>Конфигурация и преимущества</h3>
+
+<h4>Гибкая настройка конфигурации:</h4>
+<p><strong>ОЗУ</strong> - любой объем по запросу</p>
+
+<h4>Варианты накопителей:</h4>
+<ul>
+<li>SSD (M.2 or SATA)</li>
+<li>HDD</li>
+</ul>
+<p><strong>Объем накопителя</strong> - на выбор (например, 256 ГБ / 512 ГБ / 1 ТБ и больше)</p>
+
+<h4>Подходит для:</h4>
+<ul>
+<li>рабочих и офисных задач</li>
+<li>интернета и обучения</li>
+<li>мультимедиа и фильмов</li>
+<li>домашнего сервера или компактной рабочей станции</li>
+</ul>
+
+<h4>Преимущества:</h4>
+<ul>
+<li>компактный размер</li>
+<li>низкое энергопотребление</li>
+<li>тихая работа</li>
+<li>гибкая конфигурация под ваш бюджет</li>
+</ul>
+
+<p>Доступна установка ОС и предпродажное тестирование.</p>
+
+<p style="margin-top:10px;color:#00ffe0;"><strong>Свяжитесь с нами, чтобы уточнить конфигурацию и цену.</strong></p>
+
+</div>
+
+</section>
+
+
+
+<script>
+
+const images=['photo/pc1.webp','photo/pc2.webp','photo/pc3.webp'];
+const fallbackImages=[
+  '../jet_future_minipc/MX-01/mx_01_front.png',
+  '../jet_future_minipc/MX-09/mx_09_front.png',
+  '../jet_future_minipc/monoblock/monoblock_front.png'
+];
+
+let index=0;
+
+const img=document.getElementById('carouselImage');
+
+function setFrame(frameIndex){
+  const fallback = fallbackImages[frameIndex] || fallbackImages[0];
+  img.onerror = () => {
+    img.onerror = null;
+    img.src = fallback;
+  };
+  img.src = images[frameIndex];
+}
+
+setFrame(index);
+
+setInterval(()=>{
+
+img.style.opacity=0;
+
+setTimeout(()=>{
+
+index=(index+1)%images.length;
+
+setFrame(index);
+
+img.style.opacity=1;
+
+},300);
+
+},4000);
+
+</script>
+
+<!-- === TELEGRAM BUTTON === -->
+<a href="https://t.me/viq4uat_bot?start=order"
+   target="_blank"
+   title="Оставить заявку в Telegram"
+   style="
+     position: fixed;
+     right: 22px;
+     bottom: 22px;
+     width: 58px;
+     height: 58px;
+     border-radius: 50%;
+     background: #00ffe0;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     box-shadow: 0 0 18px rgba(0,255,224,0.8);
+     z-index: 9999;
+     transition: transform 0.25s, box-shadow 0.25s;
+   "
+   onmouseover="this.style.transform='scale(1.12)'; this.style.boxShadow='0 0 30px rgba(0,255,224,1)'"
+   onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 18px rgba(0,255,224,0.8)'"
+>
+  <svg width="28" height="28" viewBox="0 0 240 240" fill="#0a0a0f" xmlns="http://www.w3.org/2000/svg">
+    <path d="M120 0C53.7 0 0 53.7 0 120s53.7 120 120 120 120-53.7 120-120S186.3 0 120 0zm58.3 82.1-19.9 93.8c-1.5 6.7-5.5 8.3-11.2 5.2l-31-22.9-14.9 14.3c-1.6 1.6-3 3-6.1 3l2.2-31.7 57.7-52.1c2.5-2.2-.5-3.4-3.9-1.2l-71.3 44.9-30.7-9.6c-6.7-2.1-6.8-6.7 1.4-9.9l119.9-46.2c5.6-2 10.5 1.3 8.8 9.4z"/>
+  </svg>
+</a>
+<!-- === /TELEGRAM BUTTON === -->
+<footer style="
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0,0,0,0.9);
+  color: #aaa;
+  text-align: center;
+  padding: 8px;
+  font-size: 0.8rem;
+  border-top: 1px solid rgba(0,255,224,0.2);
+  z-index: 9998;
+">
+  MS8AT Global LLC • Все права защищены
+</footer>
+
+</body>
+</html>

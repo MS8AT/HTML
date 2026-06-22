@@ -1,0 +1,634 @@
+/* =====================================================
+   LIGHT THEME OVERRIDE — v2
+   Applied to all catalog pages via <link> in <head>
+   ===================================================== */
+
+/* --- CSS Variables --- */
+:root{
+  --bg:#f9fafb !important;
+  --bg-deep:#f3f4f6 !important;
+  --panel:#ffffff !important;
+  --panel-strong:#f3f4f6 !important;
+  --border:rgba(0,0,0,.1) !important;
+  --border-strong:#2563eb !important;
+  --text:#111827 !important;
+  --muted:#6b7280 !important;
+  --accent:#2563eb !important;
+  --accent-soft:rgba(37,99,235,.1) !important;
+  --accent-soft2:#bfdbfe !important;
+  --shadow:0 2px 18px rgba(0,0,0,.08) !important;
+  --line:rgba(37,99,235,.18) !important;
+  --line-strong:rgba(37,99,235,.28) !important;
+}
+
+/* --- Body --- */
+body{
+  background:#f9fafb !important;
+  color:#111827 !important;
+}
+
+/* --- Header --- */
+header{
+  background:#ffffff !important;
+  border-bottom-color:#e5e7eb !important;
+  border-bottom-width:1px !important;
+  border-bottom-style:solid !important;
+  padding:6px 24px 4px !important;
+  backdrop-filter:none !important;
+  -webkit-backdrop-filter:none !important;
+  box-shadow:0 1px 4px rgba(0,0,0,.06) !important;
+}
+
+.top-bar{
+  margin-bottom:0 !important;
+  gap:10px !important;
+  align-items:center !important;
+}
+
+/* --- Logo --- */
+.logo{
+  gap:16px !important;
+  align-items:center !important;
+}
+.logo img{
+  filter:none !important;
+  height:58px !important;
+  width:auto !important;
+}
+.logo span{
+  color:#163f9f !important;
+  text-shadow:none !important;
+  font-weight:800 !important;
+  font-size:1.5rem !important;
+  letter-spacing:.08em !important;
+  font-family:'Orbitron','Inter','Roboto',sans-serif !important;
+}
+
+/* --- Top / nav buttons --- */
+.dealer-btn{
+  padding:7px 16px !important;
+  font-size:.82rem !important;
+  line-height:1.2 !important;
+  font-weight:700 !important;
+  font-family:'Inter','Roboto',sans-serif !important;
+  color:#374151 !important;
+  border-color:#d1d5db !important;
+  background:#fff !important;
+  box-shadow:none !important;
+}
+.dealer-btn:hover,
+.dealer-btn:focus-visible{
+  background:#2563eb !important;
+  color:#fff !important;
+  border-color:#2563eb !important;
+  box-shadow:none !important;
+  text-shadow:none !important;
+}
+
+.nav-buttons{
+  gap:2px !important;
+  align-items:center !important;
+  justify-content:center !important;
+  margin:0 !important;
+}
+
+.nav-buttons a{
+  padding:6px 12px !important;
+  border:none !important;
+  border-radius:999px !important;
+  background:transparent !important;
+  color:#4b5563 !important;
+  box-shadow:none !important;
+  font-size:.82rem !important;
+  font-weight:700 !important;
+  font-family:'Inter','Roboto',sans-serif !important;
+  line-height:1.2 !important;
+  white-space:nowrap !important;
+  transition:.18s !important;
+}
+
+.nav-buttons a:hover,
+.nav-buttons a.active,
+.nav-buttons a:focus-visible{
+  background:#eff6ff !important;
+  color:#2563eb !important;
+  border-color:transparent !important;
+  box-shadow:none !important;
+  text-shadow:none !important;
+}
+
+.nav-buttons a.news-link{
+  background:#dbeafe !important;
+  color:#2563eb !important;
+  border:1px solid #bfdbfe !important;
+  padding:6px 14px !important;
+}
+
+.nav-buttons a.news-link:hover,
+.nav-buttons a.news-link.active,
+.nav-buttons a.news-link:focus-visible{
+  background:#bfdbfe !important;
+  color:#1d4ed8 !important;
+  border-color:#93c5fd !important;
+}
+
+/* --- Category buttons (minipc sub-nav: Industrial, Office, Gaming…) --- */
+.category-buttons a{
+  background:#fff !important;
+  border-color:#d1d5db !important;
+  color:#374151 !important;
+  text-shadow:none !important;
+  box-shadow:none !important;
+  font-family:'Inter','Roboto',sans-serif !important;
+  font-size:.82rem !important;
+  font-weight:700 !important;
+}
+
+.category-buttons{
+  margin-top:2px !important;
+  margin-bottom:0 !important;
+  justify-content:center !important;
+}
+.category-buttons a:hover,
+.category-buttons a.active{
+  background:#2563eb !important;
+  border-color:#2563eb !important;
+  color:#fff !important;
+  box-shadow:none !important;
+}
+
+/* --- Panels & main sections --- */
+.panel{
+  background:#ffffff !important;
+  border-color:#e5e7eb !important;
+  box-shadow:0 2px 16px rgba(0,0,0,.07) !important;
+}
+
+.hero-copy{
+  background:#ffffff !important;
+}
+.hero-copy::after{ display:none !important; }
+
+.hero-side{
+  background:#f9fafb !important;
+}
+
+/* minipc hero box — only fix border/shadow, not background (hero is a grid on modern pages) */
+.hero{
+  border-color:#e5e7eb !important;
+  box-shadow:none !important;
+}
+.hero h1{
+  color:#111827 !important;
+  text-shadow:none !important;
+}
+.hero p{ color:#4b5563 !important; }
+
+/* --- Side cards --- */
+.side-card{
+  background:#fff !important;
+  border-color:#e5e7eb !important;
+}
+.side-card h3{ color:#2563eb !important; }
+.side-card p,.side-card li{ color:#4b5563 !important; }
+
+/* --- Headings --- */
+h1{
+  color:#111827 !important;
+  text-shadow:none !important;
+  font-family:'Inter','Roboto',sans-serif !important;
+}
+h2{
+  color:#111827 !important;
+  text-shadow:none !important;
+  font-family:'Inter','Roboto',sans-serif !important;
+}
+h3{
+  color:#111827 !important;
+  text-shadow:none !important;
+  font-family:'Inter','Roboto',sans-serif !important;
+}
+h4{ color:#1f2937 !important; }
+h5{ color:#374151 !important; }
+
+/* --- Generic text --- */
+p{ color:#374151 !important; }
+li{ color:#374151 !important; }
+strong{ color:#111827 !important; }
+
+/* --- Lead / body text --- */
+.lead{ color:#374151 !important; }
+.hero-copy p{ color:#4b5563 !important; }
+.section-head p{ color:#6b7280 !important; }
+.series-card p{ color:#6b7280 !important; }
+.stat p{ color:#6b7280 !important; }
+
+/* --- Eyebrow / kicker labels --- */
+.eyebrow,.kicker{
+  background:#dbeafe !important;
+  border-color:#93c5fd !important;
+  color:#1d4ed8 !important;
+}
+
+/* --- Chips & tags --- */
+.chip,.tag{
+  background:#f3f4f6 !important;
+  border-color:#e5e7eb !important;
+  color:#374151 !important;
+}
+
+/* --- CTA buttons --- */
+.cta-btn{
+  background:#fff !important;
+  border-color:#d1d5db !important;
+  color:#374151 !important;
+}
+.cta-btn.primary{
+  background:#2563eb !important;
+  border-color:#2563eb !important;
+  color:#fff !important;
+}
+.cta-btn:hover{
+  box-shadow:0 6px 18px rgba(0,0,0,.12) !important;
+}
+
+/* --- Stats bar --- */
+.stats{ background:transparent !important; }
+.stat strong{ color:#2563eb !important; }
+
+/* --- Series grid cards --- */
+.series-card{
+  background:#fff !important;
+  border-color:#e5e7eb !important;
+}
+.series-card h3{ color:#2563eb !important; }
+
+/* --- Section --- */
+.section{
+  background:#ffffff !important;
+  border-color:#e5e7eb !important;
+}
+.hint{ color:#2563eb !important; }
+
+/* --- Search input --- */
+.search-box input{
+  background:#fff !important;
+  border-color:#d1d5db !important;
+  border-width:1.5px !important;
+  color:#111827 !important;
+  box-shadow:none !important;
+}
+.search-box input::placeholder{ color:#9ca3af !important; }
+.search-box input:focus{
+  border-color:#2563eb !important;
+  box-shadow:0 0 0 3px rgba(37,99,235,.12) !important;
+}
+
+/* --- Filter buttons --- */
+.filter-buttons button{
+  background:#fff !important;
+  border-color:#d1d5db !important;
+  border-width:1.5px !important;
+  color:#374151 !important;
+  box-shadow:none !important;
+}
+.filter-buttons button:hover,
+.filter-buttons button.active{
+  background:#2563eb !important;
+  border-color:#2563eb !important;
+  color:#fff !important;
+  box-shadow:none !important;
+}
+
+/* --- Monitor / product cards --- */
+.monitor-card,.prod-card,.svga-card,.card-wrap{
+  background:#ffffff !important;
+  border-color:#e5e7eb !important;
+  box-shadow:0 2px 12px rgba(0,0,0,.06) !important;
+}
+.monitor-image-wrap{ background:#f3f4f6 !important; }
+.monitor-image{ background:#f3f4f6 !important; }
+.monitor-placeholder{
+  background:#f3f4f6 !important;
+  color:#374151 !important;
+}
+.monitor-placeholder strong{ color:#111827 !important; }
+.monitor-placeholder span{ color:#6b7280 !important; }
+.monitor-head h3,.monitor-title{ color:#111827 !important; }
+.monitor-summary,.prod-desc,.card-desc{ color:#4b5563 !important; }
+.monitor-badge,.prod-badge,.svga-badge{
+  background:#dbeafe !important;
+  border-color:#bfdbfe !important;
+  color:#2563eb !important;
+}
+
+/* Spec list */
+.spec-list li{ color:#4b5563 !important; }
+.spec-list li::before{ color:#9ca3af !important; }
+.spec-list strong{ color:#111827 !important; }
+
+/* Spec table */
+.spec-table tr,.specs-table tr{ border-color:#f3f4f6 !important; }
+.spec-table td:first-child,.specs-table td:first-child{ color:#6b7280 !important; }
+.spec-table td,.specs-table td{ color:#111827 !important; }
+
+/* Source / buy links */
+.source-link,.buy-link{
+  background:#fff !important;
+  border-color:#d1d5db !important;
+  color:#374151 !important;
+}
+.source-link:hover,.buy-link:hover{
+  border-color:#2563eb !important;
+  color:#2563eb !important;
+  background:#eff6ff !important;
+}
+
+/* --- SVGA / GPU cards --- */
+.svga-image-wrap,.prod-image-wrap{ background:#f3f4f6 !important; }
+.svga-image,.prod-image{ background:#f3f4f6 !important; }
+.svga-head h3{ color:#111827 !important; }
+.svga-body,.prod-body{ color:#4b5563 !important; }
+
+/* --- Motherboard cards (mb.html) --- */
+.mb-card{
+  background:#ffffff !important;
+  border-color:#e5e7eb !important;
+  border-width:1.5px !important;
+  box-shadow:0 2px 12px rgba(0,0,0,.06) !important;
+}
+.mb-card:hover{ box-shadow:0 6px 22px rgba(0,0,0,.1) !important; }
+.mb-card h3{
+  color:#111827 !important;
+  text-shadow:none !important;
+}
+.mb-card p{ color:#4b5563 !important; }
+.mb-card li{ color:#4b5563 !important; }
+.mb-card ul li::before{ color:#9ca3af !important; }
+.mb-card img{
+  background:#f9fafb !important;
+  border-color:#e5e7eb !important;
+  box-shadow:none !important;
+}
+.mb-card img:hover{ box-shadow:0 4px 14px rgba(0,0,0,.1) !important; }
+
+/* --- Minipc page specific --- */
+.cpu-box{
+  background:#ffffff !important;
+  border-color:#e5e7eb !important;
+  border-width:1.5px !important;
+  box-shadow:0 2px 12px rgba(0,0,0,.06) !important;
+}
+.cpu-box h3{
+  color:#2563eb !important;
+  text-shadow:none !important;
+}
+.cpu-box h4{ color:#374151 !important; }
+.cpu-box p{ color:#4b5563 !important; }
+.cpu-box li{ color:#4b5563 !important; }
+
+.center-column{
+  background:#ffffff !important;
+  border-color:#e5e7eb !important;
+  border-width:1.5px !important;
+  box-shadow:0 2px 12px rgba(0,0,0,.06) !important;
+}
+
+/* --- Cases cards --- */
+.cases-card,.case-card{
+  background:#fff !important;
+  border-color:#e5e7eb !important;
+}
+
+/* --- CPU cooler cards --- */
+.cpu-card,.cooler-card{
+  background:#fff !important;
+  border-color:#e5e7eb !important;
+}
+
+/* --- Jetservice / service cards --- */
+.service-card{
+  background:#fff !important;
+  border-color:#e5e7eb !important;
+}
+.service-card h3{ color:#2563eb !important; }
+
+/* --- Soft page --- */
+.soft-card,.software-card{
+  background:#fff !important;
+  border-color:#e5e7eb !important;
+}
+
+/* --- Minipc card --- */
+.minipc-card,.mini-card{
+  background:#fff !important;
+  border-color:#e5e7eb !important;
+}
+
+/* --- Modal --- */
+.image-modal{ background:rgba(0,0,0,.75) !important; }
+.image-modal img{
+  background:#fff !important;
+  border-color:#e5e7eb !important;
+}
+.image-modal-close{
+  background:#fff !important;
+  color:#111827 !important;
+  border-color:#e5e7eb !important;
+}
+.image-modal-close:hover{
+  background:#2563eb !important;
+  color:#fff !important;
+}
+
+/* --- Empty state --- */
+.empty-state{ color:#9ca3af !important; }
+
+/* --- Tags --- */
+.tag-row .tag,.chip-row .chip{
+  background:#f3f4f6 !important;
+  border-color:#e5e7eb !important;
+  color:#374151 !important;
+}
+
+/* --- Footer --- */
+footer{
+  background:#f9fafb !important;
+  border-top-color:#e5e7eb !important;
+  color:#9ca3af !important;
+}
+
+/* --- Telegram FAB --- */
+a[href*="t.me"]{
+  background:#2563eb !important;
+  box-shadow:0 4px 20px rgba(37,99,235,.35) !important;
+}
+a[href*="t.me"]:hover{ background:#1d4ed8 !important; }
+a[href*="t.me"] svg path{ fill:#fff !important; }
+
+/* --- Printer --- */
+.printer-card,.printer-image-wrap{ background:#f3f4f6 !important; }
+
+/* --- Mobile header navigation visibility --- */
+@media (max-width: 980px){
+  .header-nav{
+    display:flex !important;
+    width:100% !important;
+    flex-wrap:nowrap !important;
+    overflow-x:auto !important;
+    -webkit-overflow-scrolling:touch !important;
+    gap:8px !important;
+    padding-bottom:6px !important;
+    scrollbar-width:none !important;
+  }
+
+  .header-nav::-webkit-scrollbar{
+    height:0 !important;
+  }
+
+  .header-nav a{
+    flex:0 0 auto !important;
+  }
+}
+.printer-badge{
+  background:#dbeafe !important;
+  border-color:#bfdbfe !important;
+  color:#2563eb !important;
+}
+
+/* --- Feature boxes (gaming/server/office/embedded/ai) --- */
+.feature{
+  background:#ffffff !important;
+  border-color:#e5e7eb !important;
+  color:#374151 !important;
+  box-shadow:0 1px 4px rgba(0,0,0,.04) !important;
+}
+.feature b{ color:#2563eb !important; }
+
+/* --- Tables --- */
+table{ border-color:#e5e7eb !important; }
+th,td{
+  border-color:#e5e7eb !important;
+  color:#374151 !important;
+}
+th{
+  background:#f9fafb !important;
+  color:#111827 !important;
+  font-weight:700 !important;
+}
+tr:hover td{ background:#f9fafb !important; }
+
+/* --- Video elements --- */
+video{
+  border-color:#e5e7eb !important;
+  box-shadow:0 2px 12px rgba(0,0,0,.06) !important;
+  background:#f3f4f6 !important;
+}
+
+/* --- Section images --- */
+.image img{
+  background:#f3f4f6 !important;
+  border-color:#e5e7eb !important;
+  box-shadow:0 2px 12px rgba(0,0,0,.06) !important;
+}
+
+/* --- Text section headings inside content (h2 inside .text) --- */
+.text h2{
+  color:#111827 !important;
+  text-shadow:none !important;
+  font-family:'Inter','Roboto',sans-serif !important;
+}
+.text p{ color:#4b5563 !important; }
+
+/* --- Hero section on sub-pages --- */
+.hero h1{
+  color:#111827 !important;
+  text-shadow:none !important;
+  font-family:'Inter','Roboto',sans-serif !important;
+}
+.hero p{ color:#4b5563 !important; }
+
+/* --- Generic accent texts leftover --- */
+.stat-val,.kpi-val{ color:#2563eb !important; }
+
+/* --- Remove neon glow from inline-styled Telegram buttons (old pages) --- */
+a[href*="t.me"][style*="background: #00ffe0"],
+a[href*="t.me"][style*="background:#00ffe0"]{
+  background:#2563eb !important;
+  box-shadow:0 4px 20px rgba(37,99,235,.35) !important;
+}
+
+/* --- AI page (ai.html) specific overrides --- */
+.block{
+  background:#ffffff !important;
+  border-color:#e5e7eb !important;
+  box-shadow:0 2px 12px rgba(0,0,0,.06) !important;
+}
+.block-title{
+  color:#111827 !important;
+  font-family:'Inter','Roboto',sans-serif !important;
+  font-size:1.1rem !important;
+  font-weight:700 !important;
+}
+.info-card{
+  background:#f9fafb !important;
+  border-color:#e5e7eb !important;
+}
+.info-card h2,.info-card h3{
+  color:#111827 !important;
+  font-family:'Inter','Roboto',sans-serif !important;
+}
+.info-card p{ color:#4b5563 !important; }
+.subline{ color:#2563eb !important; }
+.spec-item{
+  background:#f3f4f6 !important;
+  border-color:#e5e7eb !important;
+}
+.spec-item b{ color:#2563eb !important; }
+.spec-item span{ color:#111827 !important; }
+.list{ color:#374151 !important; }
+.list li::marker{ color:#2563eb !important; }
+.install-card{
+  background:#f9fafb !important;
+  border:1px solid #e5e7eb !important;
+  border-radius:12px !important;
+}
+.install-card h3{ color:#111827 !important; font-family:'Inter','Roboto',sans-serif !important; }
+.install-card p{ color:#4b5563 !important; }
+.logic-box{
+  background:#f9fafb !important;
+  border-color:#e5e7eb !important;
+}
+.logic-box h3{ color:#111827 !important; font-family:'Inter','Roboto',sans-serif !important; }
+.logic-flow{ color:#374151 !important; }
+.adv-card{
+  background:#ffffff !important;
+  border-color:#e5e7eb !important;
+}
+.adv-card h3{ color:#111827 !important; }
+.adv-card p{ color:#4b5563 !important; }
+.port-card{
+  background:#ffffff !important;
+  border-color:#e5e7eb !important;
+}
+.port-card h3{ color:#2563eb !important; font-family:'Inter','Roboto',sans-serif !important; }
+.port-card p{ color:#374151 !important; }
+.cta{
+  background:linear-gradient(135deg,#2563eb,#1d4ed8) !important;
+  box-shadow:0 4px 24px rgba(37,99,235,.25) !important;
+}
+.cta h2{ color:#fff !important; font-family:'Inter','Roboto',sans-serif !important; }
+.cta p{ color:rgba(255,255,255,.9) !important; }
+.cta a{
+  background:#fff !important;
+  color:#2563eb !important;
+  border-color:rgba(255,255,255,.3) !important;
+}
+.contact-card{
+  background:#f9fafb !important;
+  border:1px solid #e5e7eb !important;
+}
+.contact-card b{ color:#2563eb !important; }
+.contact-card span{ color:#111827 !important; }
+.small-note{ color:#9ca3af !important; }
+td{ color:#374151 !important; background:#fff !important; }

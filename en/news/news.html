@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>IT News | MS8AT</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Current IT feed: computers, components, Windows, AI, market updates and Belarus local technology news.">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../../light-theme.css">
+<style>
+:root{
+  --card:#ffffff;
+  --card-soft:#f8fbff;
+  --line:#d8e3f1;
+  --line-strong:#9bb8ff;
+  --text:#132033;
+  --muted:#5f7088;
+  --accent:#2f70ff;
+  --accent-soft:#edf3ff;
+  --accent-dark:#153f9f;
+  --shadow:0 18px 42px rgba(17,38,74,.08);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+body{
+  font-family:'Roboto',sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(circle at top left,rgba(47,112,255,.09),transparent 26%),
+    linear-gradient(180deg,#f8fbff 0%,#f3f7fc 100%);
+}
+a{color:inherit;text-decoration:none}
+button,input{font:inherit}
+img{display:block;max-width:100%}
+[hidden]{display:none !important}
+header{
+  position:sticky;
+  top:0;
+  z-index:20;
+  padding:18px 24px 16px;
+  background:rgba(255,255,255,.92);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(207,220,236,.9);
+}
+.top-bar,.nav-buttons,.toolbar,.tab-row,.meta-row,.lead-actions,.headline-list{display:flex;flex-wrap:wrap;gap:10px}
+.top-bar{align-items:center;justify-content:space-between;margin-bottom:14px}
+.logo{display:flex;align-items:center;gap:16px}
+.logo img{height:58px}
+.logo span{font-family:'Orbitron',sans-serif;font-size:1.5rem;letter-spacing:.08em;color:#163f9f}
+.dealer-btn,.nav-buttons a,.tab-btn,.story-link,.story-toggle{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:42px;padding:0 16px;border-radius:999px;
+  border:1px solid var(--line);background:#fff;color:var(--text);
+  transition:.2s ease;font-weight:600;
+}
+.dealer-btn:hover,.nav-buttons a:hover,.nav-buttons a.active,.tab-btn:hover,.tab-btn.active,.story-link:hover,.story-toggle:hover{
+  background:var(--accent-soft);
+  border-color:var(--line-strong);
+  color:var(--accent-dark);
+}
+.nav-buttons a.news-link{
+  background:#dbeafe;
+  color:#2563eb;
+  border-color:#93c5fd;
+}
+.nav-buttons a.news-link:hover,
+.nav-buttons a.news-link.active{
+  background:#bfdbfe;
+  color:#1d4ed8;
+}
+.nav-buttons{justify-content:center}
+.nav-buttons a{min-height:40px;font-size:.92rem}
+main{width:min(1380px,calc(100% - 28px));margin:0 auto;padding:28px 0 60px}
+.page-head,.feed-shell,.stories-wrap,.empty-state{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:28px;
+  box-shadow:var(--shadow);
+}
+.page-head{padding:28px 30px;margin-bottom:18px}
+.eyebrow{
+  display:inline-flex;align-items:center;padding:8px 14px;border-radius:999px;
+  background:var(--accent-soft);border:1px solid var(--line-strong);
+  color:var(--accent-dark);font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;
+}
+h1,h2,h3{font-family:'Orbitron',sans-serif}
+h1{font-size:clamp(2.1rem,4vw,3.6rem);line-height:1.03;margin:18px 0 14px}
+.stats-row{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:22px}
+.stat-card{padding:16px 18px;border:1px solid var(--line);border-radius:20px;background:var(--card-soft)}
+.stat-card strong{display:block;font-family:'Orbitron',sans-serif;font-size:1.2rem;color:var(--accent-dark);margin-bottom:6px}
+.stat-card span{color:var(--muted);font-size:.95rem}
+.feed-shell{padding:26px 28px}
+.toolbar{justify-content:space-between;align-items:center;gap:16px;margin-bottom:22px}
+.search-box{flex:1 1 360px}
+.search-box input{
+  width:100%;min-height:52px;padding:0 18px;border-radius:18px;
+  border:1px solid var(--line);background:#fff;color:var(--text);outline:none;
+}
+.search-box input:focus{border-color:var(--line-strong);box-shadow:0 0 0 4px rgba(47,112,255,.08)}
+.search-box input::placeholder{color:#8797ab}
+.tab-btn,.story-toggle{cursor:pointer}
+.feed-layout{display:grid;grid-template-columns:minmax(0,1.22fr) 360px;gap:18px}
+.lead-story,.headlines-panel,.stories-wrap{border:1px solid var(--line);border-radius:26px;background:var(--card)}
+.lead-story{padding:24px;background:linear-gradient(135deg,#ffffff 0%,#f2f7ff 100%)}
+.lead-visual{
+  min-height:180px;margin-bottom:18px;padding:22px;border-radius:22px;color:#fff;
+  background:
+    radial-gradient(circle at top right,rgba(255,255,255,.18),transparent 30%),
+    linear-gradient(135deg,#a9c7ff 0%,#5a8dff 46%,#163f9f 100%);
+  display:flex;flex-direction:column;justify-content:space-between;
+}
+.lead-visual small{font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;opacity:.9}
+.lead-visual strong{font-family:'Orbitron',sans-serif;font-size:clamp(1.35rem,2vw,2rem);line-height:1.15;max-width:540px}
+.meta-row{align-items:center;gap:8px;margin-bottom:14px}
+.meta-row span{
+  display:inline-flex;align-items:center;padding:7px 11px;border-radius:999px;
+  background:var(--accent-soft);border:1px solid var(--line-strong);
+  color:var(--accent-dark);font-size:.82rem;font-weight:700;
+}
+.lead-story h2,.story-card h3{line-height:1.25}
+.lead-story h2{font-size:1.7rem;margin-bottom:14px}
+.story-summary,.lead-story p{color:var(--muted);line-height:1.68}
+.lead-body,.story-body{display:grid;gap:14px;margin-top:18px}
+.lead-body p,.story-body p{color:#334155;line-height:1.82;font-size:1.02rem;max-width:78ch}
+.lead-note{
+  margin-top:16px;padding:16px 18px;border-radius:18px;
+  background:#fff;border:1px solid var(--line);
+}
+.lead-note strong{display:block;margin-bottom:6px;color:var(--accent-dark)}
+.lead-actions{margin-top:18px}
+.story-link,.story-toggle{border-radius:14px}
+.headlines-panel{padding:22px;background:var(--card-soft)}
+.panel-title{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px}
+.panel-title h3{font-size:1rem}
+.panel-title span{color:var(--muted);font-size:.9rem}
+.headline-list{flex-direction:column;gap:12px}
+.headline-item{
+  display:block;width:100%;text-align:left;padding:14px;border-radius:18px;background:#fff;border:1px solid var(--line);
+  transition:.2s ease;cursor:pointer;
+}
+.headline-item:hover{border-color:var(--line-strong);transform:translateY(-1px)}
+.headline-item strong{display:block;font-size:.96rem;line-height:1.38;margin-bottom:8px}
+.headline-item span{display:block;color:var(--muted);font-size:.88rem;line-height:1.45}
+.stories-wrap{margin-top:18px;padding:24px 28px}
+.stories-head{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-bottom:18px}
+.stories-head p{color:var(--muted)}
+.stories-grid{display:grid;grid-template-columns:1fr;gap:16px}
+.story-card{
+  padding:20px;border-radius:24px;border:1px solid var(--line);background:var(--card-soft);
+  transition:.2s ease;
+}
+.story-card.expanded{background:#fff;border-color:#b8cef8;box-shadow:0 10px 24px rgba(47,112,255,.08)}
+.story-card h3{font-size:1.08rem;margin-bottom:12px}
+.story-card.expanded h3{font-size:1.34rem;margin-bottom:14px}
+.story-card.expanded .story-summary{font-size:1.02rem;color:#516276;padding-bottom:14px;border-bottom:1px solid #e5edf8}
+.story-actions{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:16px}
+.story-source{
+  margin-top:16px;font-size:.82rem;color:#7a8798;
+}
+.story-source a{color:#7a8798}
+.story-source a:hover{color:#4b5f7c}
+.article-kicker{display:inline-flex;align-items:center;padding:7px 12px;border-radius:999px;background:#eef4ff;border:1px solid #cfe0ff;color:#335cba;font-size:.78rem;font-weight:700;letter-spacing:.03em;text-transform:uppercase;margin-bottom:12px}
+.article-header{display:flex;flex-direction:column;gap:10px}
+.article-divider{height:1px;background:linear-gradient(90deg,#dbe7fb 0%,rgba(219,231,251,0) 100%);margin:18px 0 2px}
+.lead-story .story-source,.lead-story .story-summary{max-width:78ch}
+.empty-state{padding:28px;text-align:center;color:var(--muted);margin-top:18px}
+footer{padding:24px 16px 34px;text-align:center;color:var(--muted)}
+@media (max-width:1180px){
+  .feed-layout{grid-template-columns:1fr}
+}
+@media (max-width:820px){
+  header{padding:16px}
+  main{width:min(100%,calc(100% - 16px));padding-top:16px}
+  .page-head,.feed-shell,.stories-wrap{padding:22px 18px}
+  .toolbar,.stories-head,.story-actions{flex-direction:column;align-items:flex-start}
+  .stats-row{grid-template-columns:1fr}
+  .lead-visual{min-height:150px}
+}
+
+/* unified-nav */
+.nav-buttons,.header-nav{flex-wrap:nowrap;white-space:nowrap;overflow-x:auto}
+.nav-buttons a,.header-nav a{flex:0 0 auto}
+
+/* clickable-logo */
+.logo{text-decoration:none;cursor:pointer}
+.logo:hover{opacity:.86}
+
+/* emall-shop */
+.hero-shop{display:grid;gap:12px}
+.hero-shop-logo-text{display:inline-flex;align-items:center;justify-content:center;min-width:104px;height:42px;border-radius:8px;background:#f8fafc;border:1px solid #dbeafe;color:#2563eb;font-weight:900;letter-spacing:.02em}
+.btn-shop-emall{background:#111827}
+.btn-shop-emall:hover{background:#374151}
+</style>
+</head>
+<body>
+<header>
+  <div class="top-bar">
+    <a class="logo" href="../index.html" aria-label="Go to homepage">
+      <img src="../images/logo.png" alt="MS8AT Global">
+      <span>MS8AT GLOBAL</span>
+    </a>
+    <div class="top-buttons">
+      <a href="../../ru/news/news.html" class="dealer-btn">RU</a>
+      <a href="../index.html" class="dealer-btn">Home</a>
+      <a href="https://future.shop.onliner.by/" class="dealer-btn" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;">
+        <img src="../../logo-future.jpg" alt="Future" style="height:24px;width:auto;border-radius:4px;">
+        <span>Shop</span>
+      </a>
+      <a href="https://9981.emall.by/" class="dealer-btn" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:7px;padding:6px 14px 6px 8px;"><img src="../../logo-future.jpg" alt="Future" style="height:22px;width:auto;border-radius:4px;flex-shrink:0;">Emall</a>
+    </div>
+  </div>
+  <div class="nav-buttons">
+    <a href="../cases/cases.html">Cases</a>
+    <a href="../minipc/minipc.html">Future Mini-PCs</a>
+    <a href="../monoblock/monoblock.html">Future Monoblocks</a>
+    <a href="../soft/soft.html">Software</a>
+    <a href="../news/news.html" class="active news-link">IT News</a>
+    <a href="../jarvice/jarvice.html">Jarvice</a>
+  </div>
+</header>
+
+<main>
+  <section class="page-head">
+    <span class="eyebrow">IT feed</span>
+    <h1>Current hardware, Windows, AI and market news</h1>
+    <div class="stats-row">
+      <article class="stat-card">
+        <strong id="world-count">0</strong>
+        <span>world news stories</span>
+      </article>
+      <article class="stat-card">
+        <strong id="belarus-count">0</strong>
+        <span>Belarus stories</span>
+      </article>
+      <article class="stat-card">
+        <strong id="updated-at">Loading</strong>
+        <span>latest feed refresh</span>
+      </article>
+    </div>
+  </section>
+
+  <section class="feed-shell">
+    <div class="toolbar">
+      <div class="search-box">
+        <input id="news-search" type="search" placeholder="Search by topic, company, country or keyword">
+      </div>
+      <div class="tab-row">
+        <button class="tab-btn active" data-tab="world" type="button">World News</button>
+        <button class="tab-btn" data-tab="belarus" type="button">Belarus News</button>
+      </div>
+    </div>
+
+    <div class="feed-layout" id="feed-layout">
+      <article class="lead-story" id="lead-story"></article>
+      <aside class="headlines-panel">
+        <div class="panel-title">
+          <h3>Quick view</h3>
+          <span id="headline-label">World</span>
+        </div>
+        <div class="headline-list" id="headline-list"></div>
+      </aside>
+    </div>
+
+    <div class="stories-wrap" id="stories-wrap">
+      <div class="stories-head">
+        <div>
+          <h2>News feed</h2>
+          <p id="stories-caption">Click a card to open the full story directly on the site.</p>
+        </div>
+      </div>
+      <div class="stories-grid" id="stories-grid"></div>
+    </div>
+
+    <div class="empty-state" id="empty-state" hidden>
+      No stories match the current filter. Try another tab or shorten the search query.
+    </div>
+  </section>
+</main>
+
+<footer>MS8AT Global • Feed based on external tech sources and Belarus local coverage</footer>
+
+<script id="news-data" type="application/json">
+{
+  "updated_at": "2026-04-27",
+  "items": [
+    {
+      "section": "world",
+      "date": "2026-04-24",
+      "source": "Windows Insider Blog",
+      "tag": "Windows 11",
+      "regionLabel": "World",
+      "title": "Microsoft moves Windows Insider to a new Experimental and Beta structure",
+      "summary": "Microsoft announced a new Windows Insider channel structure and moved detailed release notes into the Documentation Hub.",
+      "note": "This matters for readers who closely follow Windows 11 preview builds.",
+      "body": [
+        "The change is important because Microsoft is not only renaming channels or reshuffling announcements. It is adjusting the way pre-release Windows builds are delivered and framed for testers. That gives users a clearer separation between more experimental work and builds that feel closer to practical evaluation.",
+        "The move toward a centralized Documentation Hub also matters. Instead of scattered notes and fragmented updates, readers get a cleaner place to track changes, fixes and newly introduced features. It is another sign that Windows 11 is being managed with more structure and more transparency."
+      ],
+      "url": "https://blogs.windows.com/windows-insider/2026/04/24/were-moving-to-experimental-and-beta-announcing-new-builds/"
+    },
+    {
+      "section": "world",
+      "date": "2026-04-20",
+      "source": "NVIDIA Blog",
+      "tag": "AI / Industry",
+      "regionLabel": "World",
+      "title": "NVIDIA highlights AI-driven manufacturing at Hannover Messe 2026",
+      "summary": "NVIDIA and its partners showed how AI is moving from data centers into practical industrial workflows.",
+      "note": "AI is increasingly becoming a concrete factory and logistics tool, not just a research topic.",
+      "body": [
+        "At Hannover Messe 2026 the company emphasized real industrial use cases rather than flashy demos. The focus included digital twins, machine vision, robotics and software infrastructure for factory operations. That tells us industrial AI is no longer a niche experiment reserved for a few pilots.",
+        "For the broader IT market this matters because demand shifts from single chips to complete systems. Hardware, networking, software and data pipelines now have to work together as one industrial platform. That changes what customers buy and how integrators design solutions."
+      ],
+      "url": "https://blogs.nvidia.com/blog/ai-manufacturing-hannover-messe/"
+    },
+    {
+      "section": "world",
+      "date": "2026-04-16",
+      "source": "Intel Newsroom",
+      "tag": "Processors",
+      "regionLabel": "World",
+      "title": "Intel launches Core Series 3 for mainstream PCs and edge scenarios",
+      "summary": "Intel is pushing AI-ready platform features down into more affordable laptops, business systems and edge devices.",
+      "note": "Modern client features are no longer staying only in premium PC categories.",
+      "body": [
+        "The launch matters because of where Intel is placing the product. This is not only about adding another processor family. It shows that AI-related platform positioning is spreading into systems aimed at everyday buyers, smaller businesses and practical edge deployments rather than staying in expensive flagship hardware.",
+        "From a market perspective, that means the next wave of PC refreshes may bring AI-branded capabilities into much more common price ranges. For buyers, it widens the choice. For resellers and integrators, it also creates more room to offer modern systems without always jumping into premium budgets."
+      ],
+      "url": "https://newsroom.intel.com/client-computing/intel-launches-intel-core-series-3-processors-changing-the-game-for-everyday-computing"
+    },
+    {
+      "section": "world",
+      "date": "2026-04-09",
+      "source": "Intel Newsroom",
+      "tag": "AI Infrastructure",
+      "regionLabel": "World",
+      "title": "Intel and Google deepen collaboration around AI infrastructure",
+      "summary": "The companies are focusing on balanced AI system design rather than only accelerator growth.",
+      "note": "In AI, CPU, networking, orchestration and data movement are becoming just as important as raw accelerator speed.",
+      "body": [
+        "This collaboration highlights a reality often hidden behind AI headlines: large-scale AI systems depend on the architecture around the accelerator, not just the accelerator itself. Once workloads grow and become distributed, efficiency, orchestration and data flow become central design concerns.",
+        "Stories like this influence the whole server market. When major players push balanced infrastructure, it affects what cloud platforms build, what enterprise customers deploy and what kind of hardware and management tools gain relevance over time."
+      ],
+      "url": "https://newsroom.intel.com/data-center/intel-google-deepen-collaboration-to-advance-ai-infrastructure"
+    },
+    {
+      "section": "world",
+      "date": "2026-03-20",
+      "source": "Windows Insider Blog",
+      "tag": "Windows 11",
+      "regionLabel": "World",
+      "title": "Microsoft publishes its Windows 11 quality roadmap",
+      "summary": "Microsoft spelled out which parts of Windows 11 it wants to improve in the near term.",
+      "note": "It is one of the more practical Windows stories of recent months.",
+      "body": [
+        "Many users do not need vague promises. They want to know which problems the vendor recognizes and what is likely to change. In this case Microsoft addressed concrete topics such as taskbar behavior, update handling, File Explorer quality and the general transparency of ongoing Windows development.",
+        "That makes the roadmap useful for both home users and IT teams. For enterprises especially, public clarity around quality priorities can make planning and rollout decisions easier. A clearer platform roadmap reduces uncertainty around upgrades and support."
+      ],
+      "url": "https://blogs.windows.com/windows-insider/2026/03/20/our-commitment-to-windows-quality/"
+    },
+    {
+      "section": "world",
+      "date": "2026-01-13",
+      "source": "Windows Experience Blog",
+      "tag": "CES 2026",
+      "regionLabel": "World",
+      "title": "Microsoft recaps CES 2026 across new Windows 11 PCs and Copilot+ devices",
+      "summary": "CES 2026 served as a showcase for new AI PCs, Copilot+ products, gaming laptops and displays across the Windows ecosystem.",
+      "note": "It is a convenient snapshot of where the Windows hardware market is heading.",
+      "body": [
+        "Broad CES recap material is useful because it combines many vendor signals into one market picture. It helps show which categories manufacturers are prioritizing, where AI features are becoming standard talking points and how different brands are balancing mobility, gaming and productivity positioning.",
+        "The larger pattern in 2026 is that AI PCs are no longer isolated showpieces. They are maturing into a stable category across multiple vendors. That means local AI processing is becoming part of mainstream product strategy rather than an experimental add-on."
+      ],
+      "url": "https://blogs.windows.com/windowsexperience/2026/01/13/ces-2026-showcasing-new-windows-11-pc-innovations-across-the-ecosystem/"
+    },
+    {
+      "section": "world",
+      "date": "2026-01-05",
+      "source": "AMD Newsroom",
+      "tag": "Ryzen / AI PC",
+      "regionLabel": "World",
+      "title": "AMD expands Ryzen AI and Copilot+ PC lineup at CES 2026",
+      "summary": "AMD is strengthening local AI positioning across notebooks, compact PCs and workstations.",
+      "note": "The company is reinforcing its role as one of the key players in the AI PC segment.",
+      "body": [
+        "The announcement matters because AMD is not treating AI hardware as a single product experiment. It is spreading the message across thin laptops, compact systems and more capable work-oriented machines. That suggests local AI tasks are becoming a design expectation across multiple device classes.",
+        "For the market, this raises the level of competition beyond simple CPU performance. Vendors now need to show how complete and practical their platforms are for modern productivity, content and AI-related workflows. That can shape demand in categories such as mini PCs and compact workstations as well."
+      ],
+      "url": "https://www.amd.com/en/newsroom/press-releases/2026-1-5-amd-expands-ai-leadership-across-client-graphics-.html"
+    },
+    {
+      "section": "world",
+      "date": "2026-01-05",
+      "source": "NVIDIA Blog",
+      "tag": "CES 2026",
+      "regionLabel": "World",
+      "title": "NVIDIA presents Rubin platform and new PC AI scenarios at CES 2026",
+      "summary": "NVIDIA tied data center infrastructure, local PC AI and graphics into one broader ecosystem story.",
+      "note": "It shows how tightly graphics, AI and infrastructure are becoming connected.",
+      "body": [
+        "When NVIDIA talks about Rubin, personal AI workflows and gaming-related updates in the same breath, it is building a single narrative rather than presenting unrelated product news. The company wants customers to see data center AI, workstation AI and consumer graphics as connected parts of one ecosystem.",
+        "That matters for readers because GPU news is no longer only about gaming or rendering. Graphics technologies, AI acceleration and infrastructure strategy increasingly overlap. Even consumer-facing announcements now sit inside much bigger computing stories."
+      ],
+      "url": "https://blogs.nvidia.com/blog/2026-ces-special-presentation/"
+    },
+    {
+      "section": "belarus",
+      "date": "2026-03-24",
+      "source": "Reform.news",
+      "tag": "Hosting / Cybersecurity",
+      "regionLabel": "Belarus",
+      "title": "Access to some Belarus-hosted sites was temporarily limited from abroad",
+      "summary": "Protective measures affected access to some shared-hosting projects outside Belarus.",
+      "note": "Decisions like this directly affect businesses, stores, services and public-facing websites.",
+      "body": [
+        "For the local market this is an important infrastructure story because it shows how online projects can be affected even when the sites themselves are working correctly. Once access conditions change, audience behavior, traffic and business outcomes can shift immediately.",
+        "It also reminds companies to think beyond basic site development. Resilience planning includes mirror options, hosting architecture, regional access assumptions and communication plans. In that sense, the story matters to hosting, commerce and digital operations at the same time."
+      ],
+      "url": "https://reform.news/na-den-voli-sajty-v-belarusi-zakrojut-dlja-polzovatelej-iz-za-granicy"
+    },
+    {
+      "section": "belarus",
+      "date": "2026-02-17",
+      "source": "Reform.news",
+      "tag": "Innovation / Manufacturing",
+      "regionLabel": "Belarus",
+      "title": "Belarus approved 42 projects under its innovation development program",
+      "summary": "The government confirmed a set of 2026-2030 projects tied to innovation, science and technology parks.",
+      "note": "Although broader than pure IT, it shapes the country’s technology backdrop for years ahead.",
+      "body": [
+        "Policy documents like this do not always look exciting as headlines, but they often define where money, attention and infrastructure support may go later. For local business, they provide clues about which sectors and project types are likely to receive stronger institutional backing.",
+        "From an IT angle, the story matters because innovation parks, manufacturing support and technology programs influence future demand for equipment, integration, digital systems and industrial modernization. In other words, this is part of the environment that later shapes real market opportunities."
+      ],
+      "url": "https://reform.news/opredeleny-42-proekta-gosprogrammy-innovacionnogo-razvitija"
+    },
+    {
+      "section": "belarus",
+      "date": "2026-01-05",
+      "source": "devby",
+      "tag": "Belarus IT Market",
+      "regionLabel": "Belarus",
+      "title": "Belarus economy officials outlined factors slowing the local IT sector",
+      "summary": "The report touched on weak incentives, an incomplete local software ecosystem, export friction and component cost pressures.",
+      "note": "It is one of the more substantial local pieces about the condition of the market.",
+      "body": [
+        "The value of the story is that it does not reduce the sector’s problems to one single cause. It links developer incentives, software ecosystem gaps, export barriers and even hardware price pressure into one broader picture. That makes it easier to understand how several constraints can act at the same time.",
+        "For this site’s audience, the crossover between IT policy and hardware economics is especially relevant. When memory costs rise, exports are harder and ecosystem depth is limited, those pressures can eventually affect infrastructure decisions, product availability and the competitiveness of local digital business."
+      ],
+      "url": "https://devby.io/en/news/reputational-risks-ministry-of-economy-reveals-whats-hampering-belarusian-it-development.amp"
+    },
+    {
+      "section": "belarus",
+      "date": "2025-12-31",
+      "source": "Reform.news",
+      "tag": "Digital Belarus",
+      "regionLabel": "Belarus",
+      "title": "Digital Belarus program focuses on a domestic software ecosystem",
+      "summary": "The 2026-2030 program ties together digital services, AI-related solutions and a more independent software environment.",
+      "note": "It is a baseline policy story for understanding Belarus’ official digital direction.",
+      "body": [
+        "When a government emphasizes a domestic software ecosystem, the consequences reach beyond software firms alone. The effect can spread into hardware procurement, system integration, service support, cloud strategy and the standards organizations are encouraged to adopt.",
+        "For businesses, that makes the story useful as a signal of future priorities. If digital services, AI-related projects and locally oriented software platforms are embedded in an official program, those areas may attract more initiatives, deployments and infrastructure demand in the years ahead."
+      ],
+      "url": "https://reform.news/gosprogramma-cifrovaja-belarus-predusmatrivaet-sozdanie-importonezavisimoj-jekosistemy-po"
+    },
+    {
+      "section": "belarus",
+      "date": "2025-09-15",
+      "source": "devby",
+      "tag": "Industry / Analytics",
+      "regionLabel": "Belarus",
+      "title": "devby says the Belarus IT industry has entered stagnation",
+      "summary": "The analysis points to a slower talent flow, an aging sector and a weak labor market even for experienced specialists.",
+      "note": "This is an important analytical piece about the overall state of the local IT market.",
+      "body": [
+        "Stories like this matter because they describe the background condition of an industry rather than one isolated event. If fewer new people enter the field and the sector becomes less dynamic, the effects can spread into product creation, hiring flexibility and the long-term resilience of the ecosystem.",
+        "It is not the easiest story to read, but it provides a more honest view of local reality. Over time, trends like these can influence service quality, talent availability, internal product investment and the general climate in the technology sector."
+      ],
+      "url": "https://devby.io/en/news/belarusian-it-industry-enters-stagnation-migration-halts-as-workforce-ages-and-new-talent-dries-up.amp"
+    },
+    {
+      "section": "belarus",
+      "date": "2025-04-30",
+      "source": "devby",
+      "tag": "Startups / HTP",
+      "regionLabel": "Belarus",
+      "title": "Belarus is trying to revive startup activity through HTP and universities",
+      "summary": "The plan includes HTP Accelerator activity, university involvement and new attempts to rebuild internal growth points.",
+      "note": "It provides useful context for the entrepreneurial side of Belarusian IT.",
+      "body": [
+        "The story matters because it reflects an effort to rebuild not just outsourcing activity or corporate technology work, but the product and startup layer of the ecosystem. If those conditions improve, they can influence what kinds of new local services, tools and brands appear later.",
+        "Even when the impact is not immediate, attempts to reconnect universities, accelerator structures and startup support matter. They show that the entrepreneurial agenda inside Belarusian IT has not disappeared and remains a meaningful part of the local technology discussion."
+      ],
+      "url": "https://devby.io/en/news/startapy-v-belarusi-plan"
+    }
+  ]
+}
+</script>
+
+<script>
+const embeddedNews = JSON.parse(document.getElementById('news-data').textContent);
+
+function itemKey(item) {
+  return `${item.section}|${item.date}|${item.source}|${item.title}`;
+}
+
+function mergeWithFallback(remote, fallback) {
+  const fallbackMap = new Map(fallback.items.map((item) => [itemKey(item), item]));
+  return {
+    updated_at: remote.updated_at || fallback.updated_at,
+    items: (remote.items || []).map((item) => {
+      const local = fallbackMap.get(itemKey(item)) || {};
+      return {
+        ...local,
+        ...item,
+        body: item.body || local.body || [item.summary, item.note].filter(Boolean)
+      };
+    })
+  };
+}
+
+async function loadNews() {
+  if (location.protocol === 'file:') return embeddedNews;
+  try {
+    const response = await fetch('./news.json', { cache: 'no-store' });
+    if (!response.ok) throw new Error('news.json');
+    const remote = await response.json();
+    return mergeWithFallback(remote, embeddedNews);
+  } catch {
+    return embeddedNews;
+  }
+}
+
+function formatDate(value) {
+  const date = new Date(value);
+  return new Intl.DateTimeFormat('en-US', { day: '2-digit', month: 'long', year: 'numeric' }).format(date);
+}
+
+function buildMeta(item) {
+  return `
+    <span>${item.source}</span>
+    <span>${formatDate(item.date)}</span>
+    <span>${item.tag}</span>
+  `;
+}
+
+function buildBodyParagraphs(item) {
+  return (item.body || []).map((text) => `<p>${text}</p>`).join('');
+}
+
+function renderLead(item, expanded) {
+  const lead = document.getElementById('lead-story');
+  lead.innerHTML = `
+    <div class="lead-visual">
+      <small>${item.regionLabel} • ${item.tag}</small>
+      <strong>${item.title}</strong>
+    </div>
+    <div class="article-header">
+      <span class="article-kicker">Lead story</span>
+      <div class="meta-row">${buildMeta(item)}</div>
+    </div>
+    <h2>${item.title}</h2>
+    <p class="story-summary">${item.summary}</p>
+    <div class="lead-note">
+      <strong>Why it matters</strong>
+      <p>${item.note}</p>
+    </div>
+    ${expanded ? `<div class="article-divider"></div><div class="lead-body">${buildBodyParagraphs(item)}</div>` : ''}
+    <div class="lead-actions">
+      <button class="story-toggle" type="button" id="lead-toggle">${expanded ? 'Collapse' : 'Read full story'}</button>
+    </div>
+    <p class="story-source">Source: <a href="${item.url}" target="_blank" rel="noopener noreferrer">${item.source}</a>, ${item.regionLabel}</p>
+  `;
+}
+
+function renderHeadlines(items, activeTab, onSelect, focusKey) {
+  const list = document.getElementById('headline-list');
+  document.getElementById('headline-label').textContent = activeTab === 'world' ? 'World' : 'Belarus';
+  list.innerHTML = '';
+  items.slice(0, 5).forEach((item, index) => {
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = `headline-item${focusKey && focusKey !== key ? ' subdued' : ''}`;
+    button.innerHTML = `
+      <strong>${item.title}</strong>
+      <span>${index === 0 ? 'Lead story' : item.source + ' • ' + formatDate(item.date)}</span>
+    `;
+    button.addEventListener('click', () => onSelect(key));
+    list.append(button);
+  });
+}
+
+function renderStories(items, expandedKeys, onToggle, focusKey) {
+  const grid = document.getElementById('stories-grid');
+  grid.innerHTML = '';
+  items.slice(1).forEach((item) => {
+    const key = itemKey(item);
+    const expanded = expandedKeys.has(key);
+    const subdued = focusKey && focusKey !== key;
+    const card = document.createElement('article');
+    card.className = `story-card${expanded ? ' expanded' : ''}${subdued ? ' subdued' : ''}`;
+    card.id = `story-${btoa(unescape(encodeURIComponent(key))).replace(/=+/g, '')}`;
+    card.innerHTML = `
+      <div class="article-header">
+        <span class="article-kicker">${item.regionLabel}</span>
+        <div class="meta-row">${buildMeta(item)}</div>
+      </div>
+      <h3>${item.title}</h3>
+      <p class="story-summary">${item.summary}</p>
+      ${expanded ? `<div class="article-divider"></div><div class="story-body">${buildBodyParagraphs(item)}</div>` : ''}
+      <div class="story-actions">
+        <button class="story-toggle" type="button">${expanded ? 'Collapse' : 'Read full story'}</button>
+      </div>
+      <p class="story-source">Source: <a href="${item.url}" target="_blank" rel="noopener noreferrer">${item.source}</a>, ${item.regionLabel}</p>
+    `;
+    card.querySelector('.story-toggle').addEventListener('click', () => onToggle(key));
+    grid.append(card);
+  });
+}
+
+function scrollToStory(key, items, expandedKeys, render) {
+  const firstKey = itemKey(items[0]);
+  if (key === firstKey) {
+    expandedKeys.add(firstKey);
+    render();
+    document.getElementById('lead-story').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    return;
+  }
+  expandedKeys.add(key);
+  render();
+  const targetId = `story-${btoa(unescape(encodeURIComponent(key))).replace(/=+/g, '')}`;
+  const target = document.getElementById(targetId);
+  if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function initNews(data) {
+  const search = document.getElementById('news-search');
+  const tabs = [...document.querySelectorAll('.tab-btn')];
+  const empty = document.getElementById('empty-state');
+  const feedLayout = document.getElementById('feed-layout');
+  const storiesWrap = document.getElementById('stories-wrap');
+  let activeTab = 'world';
+  let expandedKeys = null;
+
+  document.getElementById('world-count').textContent = data.items.filter((item) => item.section === 'world').length;
+  document.getElementById('belarus-count').textContent = data.items.filter((item) => item.section === 'belarus').length;
+  document.getElementById('updated-at').textContent = formatDate(data.updated_at);
+
+  function currentItems() {
+    const query = search.value.trim().toLowerCase();
+    return data.items
+      .filter((item) => item.section === activeTab)
+      .filter((item) => {
+        if (!query) return true;
+        return `${item.title} ${item.summary} ${item.note} ${(item.body || []).join(' ')} ${item.source} ${item.tag} ${item.regionLabel}`.toLowerCase().includes(query);
+      })
+      .sort((a, b) => new Date(b.date) - new Date(a.date));
+  }
+
+  function render() {
+    const items = currentItems();
+    document.getElementById('stories-caption').textContent =
+      `${activeTab === 'world' ? 'World' : 'Belarus'} selection: ${items.length} stories under the current filter.`;
+
+    if (!items.length) {
+      empty.hidden = false;
+      feedLayout.hidden = true;
+      storiesWrap.hidden = true;
+      return;
+    }
+
+    empty.hidden = true;
+    feedLayout.hidden = false;
+    storiesWrap.hidden = false;
+
+    const firstKey = itemKey(items[0]);
+    if (expandedKeys === null) expandedKeys = new Set([firstKey]);
+    const leadExpanded = expandedKeys.has(firstKey);
+
+    renderLead(items[0], leadExpanded);
+    document.getElementById('lead-toggle').addEventListener('click', () => {
+      if (expandedKeys.has(firstKey)) expandedKeys.delete(firstKey);
+      else expandedKeys.add(firstKey);
+      render();
+    });
+
+    renderHeadlines(items, activeTab, (key) => {
+      scrollToStory(key, items, expandedKeys, render);
+    }, null);
+    renderStories(items, expandedKeys, (key) => {
+      if (expandedKeys.has(key)) expandedKeys.delete(key);
+      else expandedKeys.add(key);
+      render();
+    }, null);
+  }
+
+  tabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      activeTab = tab.dataset.tab;
+      expandedKeys = null;
+      tabs.forEach((item) => item.classList.toggle('active', item === tab));
+      render();
+    });
+  });
+
+  search.addEventListener('input', () => {
+    expandedKeys = null;
+    render();
+  });
+
+  render();
+}
+
+loadNews().then(initNews);
+</script>
+</body>
+</html>

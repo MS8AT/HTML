@@ -1,0 +1,633 @@
+[
+  {
+    "model": "195A01",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: black, Material: 0.45  SPCC black coating",
+    "specs": [
+      "Form Factor: ATX/MicroATX/ITX/support a",
+      "PSU: ATX",
+      "Size: 385*195*450 ",
+      "Net Weight: 5,5 kg",
+      "Gross Weight: 5,5 kg",
+      "Cooler Hgt: 165 mm",
+      "Max GPU Len: 340 mm"
+    ]
+  },
+  {
+    "model": "195A02",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: black, Material: 0.45  SPCC black coating",
+    "specs": [
+      "Form Factor: ATX/MicroATX/ITX/support a",
+      "PSU: ATX",
+      "Size: 385*195*450 ",
+      "Net Weight: 5,5 kg",
+      "Gross Weight: 5,5 kg",
+      "Cooler Hgt: 165 mm",
+      "Max GPU Len: 340 mm"
+    ]
+  },
+  {
+    "model": "285M B",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: black, Material: 0.55-0.85/SPCC black /Side panel &Front panel :  Tempered glass front ",
+    "specs": [
+      "Form Factor: MicroATX/ITX",
+      "PSU: ATX",
+      "Size: 420*285*365 ",
+      "Net Weight: 6,5 kg",
+      "Gross Weight: 6,5 kg",
+      "Cooler Hgt: 165 mm",
+      "Max GPU Len: 400 mm"
+    ]
+  },
+  {
+    "model": "285M W",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: white, Material: 0.55-0.85/SPCC black /Side panel &Front panel :  Tempered glass front ",
+    "specs": [
+      "Form Factor: MicroATX/ITX",
+      "PSU: ATX",
+      "Size: 420*285*365 ",
+      "Net Weight: 6,5 kg",
+      "Gross Weight: 6,5 kg",
+      "Cooler Hgt: 165 mm",
+      "Max GPU Len: 400 mm"
+    ]
+  },
+  {
+    "model": "33B",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: black, Material: 0.4/SPCC black Side panel &Front panel :  Tempered glass front ",
+    "specs": [
+      "Form Factor: MicroATX\\ITX",
+      "PSU: ATX",
+      "Size: 315*185*420 ",
+      "Net Weight: 3,7 kg",
+      "Gross Weight: 3,7 kg",
+      "Cooler Hgt: 160 mm",
+      "Max GPU Len: 305 mm"
+    ]
+  },
+  {
+    "model": "33W",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: white, Material: 0.4/SPCC black Side panel &Front panel :  Tempered glass front ",
+    "specs": [
+      "Form Factor: MicroATX\\ITX",
+      "PSU: ATX",
+      "Size: 315*185*420 ",
+      "Net Weight: 3,7 kg",
+      "Gross Weight: 3,7 kg",
+      "Cooler Hgt: 160 mm",
+      "Max GPU Len: 305 mm"
+    ]
+  },
+  {
+    "model": "501B",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: black, Material: 0.4SPCCblack Side panel &Front panel :  Tempered glass front ",
+    "specs": [
+      "Form Factor: MicroATX/ITX",
+      "PSU: ATX",
+      "Size: 295*195*395 ",
+      "Net Weight: 3,2 kg",
+      "Gross Weight: 3,2 kg",
+      "Cooler Hgt: 165 mm",
+      "Max GPU Len: 280 mm"
+    ]
+  },
+  {
+    "model": "501W",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: white, Material: 0.4SPCCblack Side panel &Front panel :  Tempered glass front ",
+    "specs": [
+      "Form Factor: MicroATX/ITX",
+      "PSU: ATX",
+      "Size: 295*195*395 ",
+      "Net Weight: 3,2 kg",
+      "Gross Weight: 3,2 kg",
+      "Cooler Hgt: 165 mm",
+      "Max GPU Len: 280 mm"
+    ]
+  },
+  {
+    "model": "9501GB",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: black, Material: 0.4SPCC black/ Side panel &Front panel :  Tempered glass front ",
+    "specs": [
+      "Form Factor: MicroATX/ITX",
+      "PSU: Bottom ATX PSU",
+      "Size: 320*195*395 ",
+      "Cooler Hgt: 165 mm",
+      "Max GPU Len: 280 mm"
+    ]
+  },
+  {
+    "model": "9501GW",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: white, Material: 0.4SPCC black/ Side panel &Front panel :  Tempered glass front ",
+    "specs": [
+      "Form Factor: MicroATX/ITX",
+      "PSU: Bottom ATX PSU",
+      "Size: 320*195*395 ",
+      "Cooler Hgt: 165 mm",
+      "Max GPU Len: 280 mm"
+    ]
+  },
+  {
+    "model": "9501MB",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: black, Material: 0.4SPCC black/ Side panel &Front panel :  Tempered glass front ",
+    "specs": [
+      "Form Factor: MicroATX/ITX",
+      "PSU: Bottom ATX PSU",
+      "Size: 320*195*395 ",
+      "Cooler Hgt: 165 mm",
+      "Max GPU Len: 280 mm"
+    ]
+  },
+  {
+    "model": "9501MW",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: white, Material: 0.4SPCC black/ Side panel &Front panel :  Tempered glass front ",
+    "specs": [
+      "Form Factor: MicroATX/ITX",
+      "PSU: Bottom ATX PSU",
+      "Size: 320*195*395 ",
+      "Cooler Hgt: 165 mm",
+      "Max GPU Len: 280 mm"
+    ]
+  },
+  {
+    "model": "A09",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: Black, Material: 0.4/SPCC",
+    "specs": [
+      "Form Factor: ITX",
+      "PSU: ITX",
+      "Size: 187*89*228  ",
+      "Net Weight: 4,5 kg",
+      "Cooler Hgt: 40 mm",
+      "Max GPU Len: 0 mm"
+    ]
+  },
+  {
+    "model": "A09_3",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: Black, Material: 0.4/SPCC",
+    "specs": [
+      "Form Factor: ITX",
+      "PSU: ITX",
+      "Size: 187*89*228  ",
+      "Net Weight: 5,5 kg",
+      "Cooler Hgt: 40 mm",
+      "Max GPU Len: 0 mm"
+    ]
+  },
+  {
+    "model": "CD09P_2_3",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: Black, Material: 0.4/SPCC",
+    "specs": [
+      "Form Factor: ITX",
+      "PSU: ITX",
+      "Size: 187*89*228    ",
+      "Net Weight: 6,5 kg",
+      "Cooler Hgt: 40 mm",
+      "Max GPU Len: 0 mm"
+    ]
+  },
+  {
+    "model": "CD218-3",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: black, Material: 0.45  SPCC black coating",
+    "specs": [
+      "Form Factor: ATX/MicroATX/ITX/support a",
+      "PSU: ATX",
+      "Size: 385*218*450 ",
+      "Net Weight: 6 kg",
+      "Gross Weight: 6 kg",
+      "Cooler Hgt: 165 mm",
+      "Max GPU Len: 340 mm"
+    ]
+  },
+  {
+    "model": "CD3203",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: black, Material: 0.4/SPCC",
+    "specs": [
+      "Form Factor: ATX\\MicroATX\\ITX",
+      "PSU: Upper ATX power supply",
+      "Size: 355*176*410 ",
+      "Net Weight: 2,65 kg",
+      "Gross Weight: 2,65 kg",
+      "Cooler Hgt: 160 mm",
+      "Max GPU Len: 305 mm"
+    ]
+  },
+  {
+    "model": "CD3204",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: black, Material: 0.4/SPCC",
+    "specs": [
+      "Form Factor: ATX\\MicroATX\\ITX",
+      "PSU: Upper ATX power supply",
+      "Size: 355*176*410 ",
+      "Net Weight: 2,65 kg",
+      "Gross Weight: 2,65 kg",
+      "Cooler Hgt: 160 mm",
+      "Max GPU Len: 305 mm"
+    ]
+  },
+  {
+    "model": "CD3205",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: black, Material: 0.4/SPCC",
+    "specs": [
+      "Form Factor: ATX\\MicroATX\\ITX",
+      "PSU: Upper ATX power supply",
+      "Size: 355*176*410 ",
+      "Net Weight: 2,65 kg",
+      "Gross Weight: 2,65 kg",
+      "Cooler Hgt: 160 mm",
+      "Max GPU Len: 305 mm"
+    ]
+  },
+  {
+    "model": "CD3206",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: black, Material: 0.4/SPCC",
+    "specs": [
+      "Form Factor: ATX\\MicroATX\\ITX",
+      "PSU: Upper ATX power supply",
+      "Size: 355*176*410 ",
+      "Net Weight: 2,65 kg",
+      "Gross Weight: 2,65 kg",
+      "Cooler Hgt: 160 mm",
+      "Max GPU Len: 305 mm"
+    ]
+  },
+  {
+    "model": "CD3703",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: black, Material: 0.4/SPCC black ",
+    "specs": [
+      "Form Factor: ATX\\MicroATX\\ITX",
+      "PSU: Upper ATX power supply",
+      "Size: 400*176*410 ",
+      "Net Weight: 3,3 kg",
+      "Gross Weight: 3,3 kg",
+      "Cooler Hgt: 160 mm",
+      "Max GPU Len: 370 mm"
+    ]
+  },
+  {
+    "model": "CD3704",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: black, Material: 0.4/SPCC black ",
+    "specs": [
+      "Form Factor: ATX\\MicroATX\\ITX",
+      "PSU: Upper ATX power supply",
+      "Size: 400*176*410 ",
+      "Net Weight: 3,3 kg",
+      "Gross Weight: 3,3 kg",
+      "Cooler Hgt: 160 mm",
+      "Max GPU Len: 370 mm"
+    ]
+  },
+  {
+    "model": "CD3705",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: black, Material: 0.4/SPCC black ",
+    "specs": [
+      "Form Factor: ATX\\MicroATX\\ITX",
+      "PSU: Upper ATX power supply",
+      "Size: 400*176*410 ",
+      "Net Weight: 3,3 kg",
+      "Gross Weight: 3,3 kg",
+      "Cooler Hgt: 160 mm",
+      "Max GPU Len: 370 mm"
+    ]
+  },
+  {
+    "model": "CD3706",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: black, Material: 0.4/SPCC black ",
+    "specs": [
+      "Form Factor: ATX\\MicroATX\\ITX",
+      "PSU: Upper ATX power supply",
+      "Size: 400*176*410 ",
+      "Net Weight: 3,3 kg",
+      "Gross Weight: 3,3 kg",
+      "Cooler Hgt: 160 mm",
+      "Max GPU Len: 370 mm"
+    ]
+  },
+  {
+    "model": "CDE2852W",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: white, Material: 0.7/SPCCblack /Side panel &Front panel :  Tempered glass front ",
+    "specs": [
+      "Form Factor: ATX/MicroATX/ITX/support adopts back-insert structure",
+      "PSU: ATX",
+      "Size: 460*285*380 ",
+      "Net Weight: 7,3 kg",
+      "Gross Weight: 7,3 kg",
+      "Cooler Hgt: 160 mm",
+      "Max GPU Len: 410 mm"
+    ]
+  },
+  {
+    "model": "CDE285B",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: black, Material: 0.7/SPCCblack /Side panel &Front panel :  Tempered glass front ",
+    "specs": [
+      "Form Factor: ATX/MicroATX/ITX/support adopts back-insert structure",
+      "PSU: ATX",
+      "Size: 460*285*380 ",
+      "Net Weight: 7,3 kg",
+      "Gross Weight: 7,3 kg",
+      "Cooler Hgt: 160 mm",
+      "Max GPU Len: 410 mm"
+    ]
+  },
+  {
+    "model": "H01B",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: black, Material: 0.7/SPCC black/Side panel &Front panel :  Tempered glass front ",
+    "specs": [
+      "Form Factor: ATX/MicroATX/ITX/",
+      "PSU: ATX/MicroATX/ITX/",
+      "Size: 420*285*400 ",
+      "Net Weight: 6,8 kg",
+      "Gross Weight: 6,8 kg",
+      "Cooler Hgt: 165 mm",
+      "Max GPU Len: 400 mm"
+    ]
+  },
+  {
+    "model": "H01W",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: white, Material: 0.7/SPCC black/Side panel &Front panel :  Tempered glass front ",
+    "specs": [
+      "Form Factor: ATX/MicroATX/ITX/",
+      "PSU: ATX/MicroATX/ITX/",
+      "Size: 420*285*400 ",
+      "Net Weight: 6,8 kg",
+      "Gross Weight: 6,8 kg",
+      "Cooler Hgt: 165 mm",
+      "Max GPU Len: 400 mm"
+    ]
+  },
+  {
+    "model": "H02B",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: black, Material: 0.7/SPCCblack /Side panel &Front panel :  Tempered glass front ",
+    "specs": [
+      "Form Factor: ATX/MicroATX/ITX/support adopts back-insert structure",
+      "PSU: ATX",
+      "Size: 420*285*400 ",
+      "Net Weight: 7,3 kg",
+      "Gross Weight: 7,3 kg",
+      "Cooler Hgt: 165 mm",
+      "Max GPU Len: 400 mm"
+    ]
+  },
+  {
+    "model": "H02W",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: white, Material: 0.7/SPCCblack /Side panel &Front panel :  Tempered glass front ",
+    "specs": [
+      "Form Factor: ATX/MicroATX/ITX/support adopts back-insert structure",
+      "PSU: ATX",
+      "Size: 420*285*400 ",
+      "Net Weight: 7,3 kg",
+      "Gross Weight: 7,3 kg",
+      "Cooler Hgt: 165 mm",
+      "Max GPU Len: 400 mm"
+    ]
+  },
+  {
+    "model": "LP32-31",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: black, Material: 0.4/SPCC",
+    "specs": [
+      "Form Factor: ATX\\MicroATX\\ITX",
+      "PSU: Upper ATX power supply",
+      "Size: 355*176*410 ",
+      "Net Weight: 2,65 kg",
+      "Gross Weight: 2,65 kg",
+      "Cooler Hgt: 160 mm",
+      "Max GPU Len: 305 mm"
+    ]
+  },
+  {
+    "model": "LP32-38",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: black, Material: 0.4/SPCC",
+    "specs": [
+      "Form Factor: ATX\\MicroATX\\ITX",
+      "PSU: Upper ATX power supply",
+      "Size: 355*176*410 ",
+      "Net Weight: 2,65 kg",
+      "Gross Weight: 2,65 kg",
+      "Cooler Hgt: 160 mm",
+      "Max GPU Len: 305 mm"
+    ]
+  },
+  {
+    "model": "LP32-41",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: black, Material: 0.4/SPCC",
+    "specs": [
+      "Form Factor: ATX\\MicroATX\\ITX",
+      "PSU: Upper ATX power supply",
+      "Size: 355*176*410 ",
+      "Net Weight: 2,65 kg",
+      "Gross Weight: 2,65 kg",
+      "Cooler Hgt: 160 mm",
+      "Max GPU Len: 305 mm"
+    ]
+  },
+  {
+    "model": "LP37-31",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: black, Material: 0.4/SPCC black ",
+    "specs": [
+      "Form Factor: ATX\\MicroATX\\ITX",
+      "PSU: Upper ATX power supply",
+      "Size: 400*176*410 ",
+      "Net Weight: 3,3 kg",
+      "Gross Weight: 3,3 kg",
+      "Cooler Hgt: 160 mm",
+      "Max GPU Len: 370 mm"
+    ]
+  },
+  {
+    "model": "LP37-36",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: black, Material: 0.4/SPCC black ",
+    "specs": [
+      "Form Factor: ATX\\MicroATX\\ITX",
+      "PSU: Upper ATX power supply",
+      "Size: 400*176*410 ",
+      "Net Weight: 3,3 kg",
+      "Gross Weight: 3,3 kg",
+      "Cooler Hgt: 160 mm",
+      "Max GPU Len: 370 mm"
+    ]
+  },
+  {
+    "model": "LP37-37",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: black, Material: 0.4/SPCC black ",
+    "specs": [
+      "Form Factor: ATX\\MicroATX\\ITX",
+      "PSU: Upper ATX power supply",
+      "Size: 400*176*410 ",
+      "Net Weight: 3,3 kg",
+      "Gross Weight: 3,3 kg",
+      "Cooler Hgt: 160 mm",
+      "Max GPU Len: 370 mm"
+    ]
+  },
+  {
+    "model": "LP37-38",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: black, Material: 0.4/SPCC black ",
+    "specs": [
+      "Form Factor: ATX\\MicroATX\\ITX",
+      "PSU: Upper ATX power supply",
+      "Size: 400*176*410 ",
+      "Net Weight: 3,3 kg",
+      "Gross Weight: 3,3 kg",
+      "Cooler Hgt: 160 mm",
+      "Max GPU Len: 370 mm"
+    ]
+  },
+  {
+    "model": "LP-41",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: black, Material: 0.4/SPCC black ",
+    "specs": [
+      "Form Factor: ATX\\MicroATX\\ITX",
+      "PSU: Upper ATX power supply",
+      "Size: 400*176*410 ",
+      "Net Weight: 3,3 kg",
+      "Gross Weight: 3,3 kg",
+      "Cooler Hgt: 160 mm",
+      "Max GPU Len: 370 mm"
+    ]
+  },
+  {
+    "model": "MX01",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: black, Material: SPCC 0.6",
+    "specs": [
+      "Form Factor: ITX",
+      "PSU: ITX",
+      "Size: 205*60*190 ",
+      "Net Weight: 1,5 kg",
+      "Cooler Hgt: 40 mm",
+      "Max GPU Len: 0 mm"
+    ]
+  },
+  {
+    "model": "MX02",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: black, Material: SPCC 0.8",
+    "specs": [
+      "Form Factor: ITX",
+      "PSU: ITX",
+      "Size: 216*74*214  ",
+      "Net Weight: 2,5 kg",
+      "Cooler Hgt: 40 mm",
+      "Max GPU Len: 0 mm"
+    ]
+  },
+  {
+    "model": "MX02_3",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: black, Material: SPCC 0.8",
+    "specs": [
+      "Form Factor: ITX",
+      "PSU: ITX",
+      "Size: 216*74*214   ",
+      "Net Weight: 3,5 kg",
+      "Cooler Hgt: 40 mm",
+      "Max GPU Len: 0 mm"
+    ]
+  },
+  {
+    "model": "S02B",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: black, Material: 0.45/SPCC Side panel &Front panel :  Tempered glass front ",
+    "specs": [
+      "Form Factor: MicroATX\\ITX",
+      "PSU: ATX",
+      "Size: 335*275*355 ",
+      "Net Weight: 4,3 kg",
+      "Gross Weight: 4,3 kg",
+      "Cooler Hgt: 170 mm",
+      "Max GPU Len: 330 mm"
+    ]
+  },
+  {
+    "model": "S02BW",
+    "category": "ATX",
+    "image": "placeholder.png",
+    "description": "Case, Color: white, Material: 0.45/SPCC Side panel &Front panel :  Tempered glass front ",
+    "specs": [
+      "Form Factor: MicroATX\\ITX",
+      "PSU: ATX",
+      "Size: 335*275*355 ",
+      "Net Weight: 4,3 kg",
+      "Gross Weight: 4,3 kg",
+      "Cooler Hgt: 170 mm",
+      "Max GPU Len: 330 mm"
+    ]
+  }
+]

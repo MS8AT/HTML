@@ -1,0 +1,633 @@
+﻿[
+  {
+    "model": "195A01",
+    "category": "ATX",
+    "image": "../images/cases/195A01/main.png",
+    "description": "Case, Цвет: black, Материал: 0.45  SPCC black coating",
+    "specs": [
+      "Форм-фактор мат.платы: ATX/MicroATX/ITX/support a",
+      "Блок питания: ATX",
+      "Размеры: 385*195*450",
+      "Вес нетто: 5,5 kg",
+      "Вес брутто: 5,5 kg",
+      "Высота CPU кулера: 165 mm",
+      "Макс. длина GPU: 340 mm"
+    ]
+  },
+  {
+    "model": "195A02",
+    "category": "ATX",
+    "image": "../images/cases/195A02/main.png",
+    "description": "Case, Цвет: black, Материал: 0.45  SPCC black coating",
+    "specs": [
+      "Форм-фактор мат.платы: ATX/MicroATX/ITX/support a",
+      "Блок питания: ATX",
+      "Размеры: 385*195*450",
+      "Вес нетто: 5,5 kg",
+      "Вес брутто: 5,5 kg",
+      "Высота CPU кулера: 165 mm",
+      "Макс. длина GPU: 340 mm"
+    ]
+  },
+  {
+    "model": "285M B",
+    "category": "ATX",
+    "image": "../images/cases/285M B/main.png",
+    "description": "Case, Цвет: black, Материал: 0.55-0.85/SPCC black /Side panel &Front panel :  Tempered glass front",
+    "specs": [
+      "Форм-фактор мат.платы: MicroATX/ITX",
+      "Блок питания: ATX",
+      "Размеры: 420*285*365",
+      "Вес нетто: 6,5 kg",
+      "Вес брутто: 6,5 kg",
+      "Высота CPU кулера: 165 mm",
+      "Макс. длина GPU: 400 mm"
+    ]
+  },
+  {
+    "model": "285M W",
+    "category": "ATX",
+    "image": "../images/cases/285M W/main.png",
+    "description": "Case, Цвет: white, Материал: 0.55-0.85/SPCC black /Side panel &Front panel :  Tempered glass front",
+    "specs": [
+      "Форм-фактор мат.платы: MicroATX/ITX",
+      "Блок питания: ATX",
+      "Размеры: 420*285*365",
+      "Вес нетто: 6,5 kg",
+      "Вес брутто: 6,5 kg",
+      "Высота CPU кулера: 165 mm",
+      "Макс. длина GPU: 400 mm"
+    ]
+  },
+  {
+    "model": "33B",
+    "category": "ATX",
+    "image": "../images/cases/33B/main.png",
+    "description": "Case, Цвет: black, Материал: 0.4/SPCC black Side panel &Front panel :  Tempered glass front",
+    "specs": [
+      "Форм-фактор мат.платы: MicroATX\\ITX",
+      "Блок питания: ATX",
+      "Размеры: 315*185*420",
+      "Вес нетто: 3,7 kg",
+      "Вес брутто: 3,7 kg",
+      "Высота CPU кулера: 160 mm",
+      "Макс. длина GPU: 305 mm"
+    ]
+  },
+  {
+    "model": "33W",
+    "category": "ATX",
+    "image": "../images/cases/33W/main.png",
+    "description": "Case, Цвет: white, Материал: 0.4/SPCC black Side panel &Front panel :  Tempered glass front",
+    "specs": [
+      "Форм-фактор мат.платы: MicroATX\\ITX",
+      "Блок питания: ATX",
+      "Размеры: 315*185*420",
+      "Вес нетто: 3,7 kg",
+      "Вес брутто: 3,7 kg",
+      "Высота CPU кулера: 160 mm",
+      "Макс. длина GPU: 305 mm"
+    ]
+  },
+  {
+    "model": "501B",
+    "category": "ATX",
+    "image": "../images/cases/501B/main.png",
+    "description": "Case, Цвет: black, Материал: 0.4SPCCblack Side panel &Front panel :  Tempered glass front",
+    "specs": [
+      "Форм-фактор мат.платы: MicroATX/ITX",
+      "Блок питания: ATX",
+      "Размеры: 295*195*395",
+      "Вес нетто: 3,2 kg",
+      "Вес брутто: 3,2 kg",
+      "Высота CPU кулера: 165 mm",
+      "Макс. длина GPU: 280 mm"
+    ]
+  },
+  {
+    "model": "501W",
+    "category": "ATX",
+    "image": "../images/cases/501W/main.png",
+    "description": "Case, Цвет: white, Материал: 0.4SPCCblack Side panel &Front panel :  Tempered glass front",
+    "specs": [
+      "Форм-фактор мат.платы: MicroATX/ITX",
+      "Блок питания: ATX",
+      "Размеры: 295*195*395",
+      "Вес нетто: 3,2 kg",
+      "Вес брутто: 3,2 kg",
+      "Высота CPU кулера: 165 mm",
+      "Макс. длина GPU: 280 mm"
+    ]
+  },
+  {
+    "model": "9501GB",
+    "category": "ATX",
+    "image": "../images/cases/9501GB/main.png",
+    "description": "Case, Цвет: black, Материал: 0.4SPCC black/ Side panel &Front panel :  Tempered glass front",
+    "specs": [
+      "Форм-фактор мат.платы: MicroATX/ITX",
+      "Блок питания: Bottom ATX PSU",
+      "Размеры: 320*195*395",
+      "Высота CPU кулера: 165 mm",
+      "Макс. длина GPU: 280 mm"
+    ]
+  },
+  {
+    "model": "9501GW",
+    "category": "ATX",
+    "image": "../images/cases/9501GW/main.png",
+    "description": "Case, Цвет: white, Материал: 0.4SPCC black/ Side panel &Front panel :  Tempered glass front",
+    "specs": [
+      "Форм-фактор мат.платы: MicroATX/ITX",
+      "Блок питания: Bottom ATX PSU",
+      "Размеры: 320*195*395",
+      "Высота CPU кулера: 165 mm",
+      "Макс. длина GPU: 280 mm"
+    ]
+  },
+  {
+    "model": "9501MB",
+    "category": "ATX",
+    "image": "../images/cases/9501MB/main.png",
+    "description": "Case, Цвет: black, Материал: 0.4SPCC black/ Side panel &Front panel :  Tempered glass front",
+    "specs": [
+      "Форм-фактор мат.платы: MicroATX/ITX",
+      "Блок питания: Bottom ATX PSU",
+      "Размеры: 320*195*395",
+      "Высота CPU кулера: 165 mm",
+      "Макс. длина GPU: 280 mm"
+    ]
+  },
+  {
+    "model": "9501MW",
+    "category": "ATX",
+    "image": "../images/cases/9501MW/main.png",
+    "description": "Case, Цвет: white, Материал: 0.4SPCC black/ Side panel &Front panel :  Tempered glass front",
+    "specs": [
+      "Форм-фактор мат.платы: MicroATX/ITX",
+      "Блок питания: Bottom ATX PSU",
+      "Размеры: 320*195*395",
+      "Высота CPU кулера: 165 mm",
+      "Макс. длина GPU: 280 mm"
+    ]
+  },
+  {
+    "model": "A09",
+    "category": "ATX",
+    "image": "../images/cases/A09/main.png",
+    "description": "Case, Цвет: Black, Материал: 0.4/SPCC",
+    "specs": [
+      "Форм-фактор мат.платы: ITX",
+      "Блок питания: ITX",
+      "Размеры: 187*89*228",
+      "Вес нетто: 4,5 kg",
+      "Высота CPU кулера: 40 mm",
+      "Макс. длина GPU: 0 mm"
+    ]
+  },
+  {
+    "model": "A09_3",
+    "category": "ATX",
+    "image": "../images/cases/A09_3/main.png",
+    "description": "Case, Цвет: Black, Материал: 0.4/SPCC",
+    "specs": [
+      "Форм-фактор мат.платы: ITX",
+      "Блок питания: ITX",
+      "Размеры: 187*89*228",
+      "Вес нетто: 5,5 kg",
+      "Высота CPU кулера: 40 mm",
+      "Макс. длина GPU: 0 mm"
+    ]
+  },
+  {
+    "model": "CD09P_2_3",
+    "category": "ATX",
+    "image": "../images/cases/CD09P_2_3/main.png",
+    "description": "Case, Цвет: Black, Материал: 0.4/SPCC",
+    "specs": [
+      "Форм-фактор мат.платы: ITX",
+      "Блок питания: ITX",
+      "Размеры: 187*89*228",
+      "Вес нетто: 6,5 kg",
+      "Высота CPU кулера: 40 mm",
+      "Макс. длина GPU: 0 mm"
+    ]
+  },
+  {
+    "model": "CD218-3",
+    "category": "ATX",
+    "image": "../images/cases/CD218-3/main.png",
+    "description": "Case, Цвет: black, Материал: 0.45  SPCC black coating",
+    "specs": [
+      "Форм-фактор мат.платы: ATX/MicroATX/ITX/support a",
+      "Блок питания: ATX",
+      "Размеры: 385*218*450",
+      "Вес нетто: 6 kg",
+      "Вес брутто: 6 kg",
+      "Высота CPU кулера: 165 mm",
+      "Макс. длина GPU: 340 mm"
+    ]
+  },
+  {
+    "model": "CD3203",
+    "category": "ATX",
+    "image": "../images/cases/CD3203/main.png",
+    "description": "Case, Цвет: black, Материал: 0.4/SPCC",
+    "specs": [
+      "Форм-фактор мат.платы: ATX\\MicroATX\\ITX",
+      "Блок питания: Upper ATX power supply",
+      "Размеры: 355*176*410",
+      "Вес нетто: 2,65 kg",
+      "Вес брутто: 2,65 kg",
+      "Высота CPU кулера: 160 mm",
+      "Макс. длина GPU: 305 mm"
+    ]
+  },
+  {
+    "model": "CD3204",
+    "category": "ATX",
+    "image": "../images/cases/CD3204/main.png",
+    "description": "Case, Цвет: black, Материал: 0.4/SPCC",
+    "specs": [
+      "Форм-фактор мат.платы: ATX\\MicroATX\\ITX",
+      "Блок питания: Upper ATX power supply",
+      "Размеры: 355*176*410",
+      "Вес нетто: 2,65 kg",
+      "Вес брутто: 2,65 kg",
+      "Высота CPU кулера: 160 mm",
+      "Макс. длина GPU: 305 mm"
+    ]
+  },
+  {
+    "model": "CD3205",
+    "category": "ATX",
+    "image": "../images/cases/CD3205/main.png",
+    "description": "Case, Цвет: black, Материал: 0.4/SPCC",
+    "specs": [
+      "Форм-фактор мат.платы: ATX\\MicroATX\\ITX",
+      "Блок питания: Upper ATX power supply",
+      "Размеры: 355*176*410",
+      "Вес нетто: 2,65 kg",
+      "Вес брутто: 2,65 kg",
+      "Высота CPU кулера: 160 mm",
+      "Макс. длина GPU: 305 mm"
+    ]
+  },
+  {
+    "model": "CD3206",
+    "category": "ATX",
+    "image": "../images/cases/CD3206/main.png",
+    "description": "Case, Цвет: black, Материал: 0.4/SPCC",
+    "specs": [
+      "Форм-фактор мат.платы: ATX\\MicroATX\\ITX",
+      "Блок питания: Upper ATX power supply",
+      "Размеры: 355*176*410",
+      "Вес нетто: 2,65 kg",
+      "Вес брутто: 2,65 kg",
+      "Высота CPU кулера: 160 mm",
+      "Макс. длина GPU: 305 mm"
+    ]
+  },
+  {
+    "model": "CD3703",
+    "category": "ATX",
+    "image": "../images/cases/CD3703/main.png",
+    "description": "Case, Цвет: black, Материал: 0.4/SPCC black",
+    "specs": [
+      "Форм-фактор мат.платы: ATX\\MicroATX\\ITX",
+      "Блок питания: Upper ATX power supply",
+      "Размеры: 400*176*410",
+      "Вес нетто: 3,3 kg",
+      "Вес брутто: 3,3 kg",
+      "Высота CPU кулера: 160 mm",
+      "Макс. длина GPU: 370 mm"
+    ]
+  },
+  {
+    "model": "CD3704",
+    "category": "ATX",
+    "image": "../images/cases/CD3704/main.png",
+    "description": "Case, Цвет: black, Материал: 0.4/SPCC black",
+    "specs": [
+      "Форм-фактор мат.платы: ATX\\MicroATX\\ITX",
+      "Блок питания: Upper ATX power supply",
+      "Размеры: 400*176*410",
+      "Вес нетто: 3,3 kg",
+      "Вес брутто: 3,3 kg",
+      "Высота CPU кулера: 160 mm",
+      "Макс. длина GPU: 370 mm"
+    ]
+  },
+  {
+    "model": "CD3705",
+    "category": "ATX",
+    "image": "../images/cases/CD3705/main.png",
+    "description": "Case, Цвет: black, Материал: 0.4/SPCC black",
+    "specs": [
+      "Форм-фактор мат.платы: ATX\\MicroATX\\ITX",
+      "Блок питания: Upper ATX power supply",
+      "Размеры: 400*176*410",
+      "Вес нетто: 3,3 kg",
+      "Вес брутто: 3,3 kg",
+      "Высота CPU кулера: 160 mm",
+      "Макс. длина GPU: 370 mm"
+    ]
+  },
+  {
+    "model": "CD3706",
+    "category": "ATX",
+    "image": "../images/cases/CD3706/main.png",
+    "description": "Case, Цвет: black, Материал: 0.4/SPCC black",
+    "specs": [
+      "Форм-фактор мат.платы: ATX\\MicroATX\\ITX",
+      "Блок питания: Upper ATX power supply",
+      "Размеры: 400*176*410",
+      "Вес нетто: 3,3 kg",
+      "Вес брутто: 3,3 kg",
+      "Высота CPU кулера: 160 mm",
+      "Макс. длина GPU: 370 mm"
+    ]
+  },
+  {
+    "model": "CDE2852W",
+    "category": "ATX",
+    "image": "../images/cases/CDE2852W/main.png",
+    "description": "Case, Цвет: white, Материал: 0.7/SPCCblack /Side panel &Front panel :  Tempered glass front",
+    "specs": [
+      "Форм-фактор мат.платы: ATX/MicroATX/ITX/support adopts back-insert structure",
+      "Блок питания: ATX",
+      "Размеры: 460*285*380",
+      "Вес нетто: 7,3 kg",
+      "Вес брутто: 7,3 kg",
+      "Высота CPU кулера: 160 mm",
+      "Макс. длина GPU: 410 mm"
+    ]
+  },
+  {
+    "model": "CDE285B",
+    "category": "ATX",
+    "image": "../images/cases/CDE285B/main.png",
+    "description": "Case, Цвет: black, Материал: 0.7/SPCCblack /Side panel &Front panel :  Tempered glass front",
+    "specs": [
+      "Форм-фактор мат.платы: ATX/MicroATX/ITX/support adopts back-insert structure",
+      "Блок питания: ATX",
+      "Размеры: 460*285*380",
+      "Вес нетто: 7,3 kg",
+      "Вес брутто: 7,3 kg",
+      "Высота CPU кулера: 160 mm",
+      "Макс. длина GPU: 410 mm"
+    ]
+  },
+  {
+    "model": "H01B",
+    "category": "ATX",
+    "image": "../images/cases/H01B/main.png",
+    "description": "Case, Цвет: black, Материал: 0.7/SPCC black/Side panel &Front panel :  Tempered glass front",
+    "specs": [
+      "Форм-фактор мат.платы: ATX/MicroATX/ITX/",
+      "Блок питания: ATX/MicroATX/ITX/",
+      "Размеры: 420*285*400",
+      "Вес нетто: 6,8 kg",
+      "Вес брутто: 6,8 kg",
+      "Высота CPU кулера: 165 mm",
+      "Макс. длина GPU: 400 mm"
+    ]
+  },
+  {
+    "model": "H01W",
+    "category": "ATX",
+    "image": "../images/cases/H01W/main.png",
+    "description": "Case, Цвет: white, Материал: 0.7/SPCC black/Side panel &Front panel :  Tempered glass front",
+    "specs": [
+      "Форм-фактор мат.платы: ATX/MicroATX/ITX/",
+      "Блок питания: ATX/MicroATX/ITX/",
+      "Размеры: 420*285*400",
+      "Вес нетто: 6,8 kg",
+      "Вес брутто: 6,8 kg",
+      "Высота CPU кулера: 165 mm",
+      "Макс. длина GPU: 400 mm"
+    ]
+  },
+  {
+    "model": "H02B",
+    "category": "ATX",
+    "image": "../images/cases/H02B/main.png",
+    "description": "Case, Цвет: black, Материал: 0.7/SPCCblack /Side panel &Front panel :  Tempered glass front",
+    "specs": [
+      "Форм-фактор мат.платы: ATX/MicroATX/ITX/support adopts back-insert structure",
+      "Блок питания: ATX",
+      "Размеры: 420*285*400",
+      "Вес нетто: 7,3 kg",
+      "Вес брутто: 7,3 kg",
+      "Высота CPU кулера: 165 mm",
+      "Макс. длина GPU: 400 mm"
+    ]
+  },
+  {
+    "model": "H02W",
+    "category": "ATX",
+    "image": "../images/cases/H02W/main.png",
+    "description": "Case, Цвет: white, Материал: 0.7/SPCCblack /Side panel &Front panel :  Tempered glass front",
+    "specs": [
+      "Форм-фактор мат.платы: ATX/MicroATX/ITX/support adopts back-insert structure",
+      "Блок питания: ATX",
+      "Размеры: 420*285*400",
+      "Вес нетто: 7,3 kg",
+      "Вес брутто: 7,3 kg",
+      "Высота CPU кулера: 165 mm",
+      "Макс. длина GPU: 400 mm"
+    ]
+  },
+  {
+    "model": "LP32-31",
+    "category": "ATX",
+    "image": "../images/cases/LP32-31/main.png",
+    "description": "Case, Цвет: black, Материал: 0.4/SPCC",
+    "specs": [
+      "Форм-фактор мат.платы: ATX\\MicroATX\\ITX",
+      "Блок питания: Upper ATX power supply",
+      "Размеры: 355*176*410",
+      "Вес нетто: 2,65 kg",
+      "Вес брутто: 2,65 kg",
+      "Высота CPU кулера: 160 mm",
+      "Макс. длина GPU: 305 mm"
+    ]
+  },
+  {
+    "model": "LP32-38",
+    "category": "ATX",
+    "image": "../images/cases/LP32-38/main.png",
+    "description": "Case, Цвет: black, Материал: 0.4/SPCC",
+    "specs": [
+      "Форм-фактор мат.платы: ATX\\MicroATX\\ITX",
+      "Блок питания: Upper ATX power supply",
+      "Размеры: 355*176*410",
+      "Вес нетто: 2,65 kg",
+      "Вес брутто: 2,65 kg",
+      "Высота CPU кулера: 160 mm",
+      "Макс. длина GPU: 305 mm"
+    ]
+  },
+  {
+    "model": "LP32-41",
+    "category": "ATX",
+    "image": "../images/cases/LP32-41/main.png",
+    "description": "Case, Цвет: black, Материал: 0.4/SPCC",
+    "specs": [
+      "Форм-фактор мат.платы: ATX\\MicroATX\\ITX",
+      "Блок питания: Upper ATX power supply",
+      "Размеры: 355*176*410",
+      "Вес нетто: 2,65 kg",
+      "Вес брутто: 2,65 kg",
+      "Высота CPU кулера: 160 mm",
+      "Макс. длина GPU: 305 mm"
+    ]
+  },
+  {
+    "model": "LP37-31",
+    "category": "ATX",
+    "image": "../images/cases/LP37-31/main.png",
+    "description": "Case, Цвет: black, Материал: 0.4/SPCC black",
+    "specs": [
+      "Форм-фактор мат.платы: ATX\\MicroATX\\ITX",
+      "Блок питания: Upper ATX power supply",
+      "Размеры: 400*176*410",
+      "Вес нетто: 3,3 kg",
+      "Вес брутто: 3,3 kg",
+      "Высота CPU кулера: 160 mm",
+      "Макс. длина GPU: 370 mm"
+    ]
+  },
+  {
+    "model": "LP37-36",
+    "category": "ATX",
+    "image": "../images/cases/LP37-36/main.png",
+    "description": "Case, Цвет: black, Материал: 0.4/SPCC black",
+    "specs": [
+      "Форм-фактор мат.платы: ATX\\MicroATX\\ITX",
+      "Блок питания: Upper ATX power supply",
+      "Размеры: 400*176*410",
+      "Вес нетто: 3,3 kg",
+      "Вес брутто: 3,3 kg",
+      "Высота CPU кулера: 160 mm",
+      "Макс. длина GPU: 370 mm"
+    ]
+  },
+  {
+    "model": "LP37-37",
+    "category": "ATX",
+    "image": "../images/cases/LP37-37/main.png",
+    "description": "Case, Цвет: black, Материал: 0.4/SPCC black",
+    "specs": [
+      "Форм-фактор мат.платы: ATX\\MicroATX\\ITX",
+      "Блок питания: Upper ATX power supply",
+      "Размеры: 400*176*410",
+      "Вес нетто: 3,3 kg",
+      "Вес брутто: 3,3 kg",
+      "Высота CPU кулера: 160 mm",
+      "Макс. длина GPU: 370 mm"
+    ]
+  },
+  {
+    "model": "LP37-38",
+    "category": "ATX",
+    "image": "../images/cases/LP37-38/main.png",
+    "description": "Case, Цвет: black, Материал: 0.4/SPCC black",
+    "specs": [
+      "Форм-фактор мат.платы: ATX\\MicroATX\\ITX",
+      "Блок питания: Upper ATX power supply",
+      "Размеры: 400*176*410",
+      "Вес нетто: 3,3 kg",
+      "Вес брутто: 3,3 kg",
+      "Высота CPU кулера: 160 mm",
+      "Макс. длина GPU: 370 mm"
+    ]
+  },
+  {
+    "model": "LP-41",
+    "category": "ATX",
+    "image": "../images/cases/LP-41/main.png",
+    "description": "Case, Цвет: black, Материал: 0.4/SPCC black",
+    "specs": [
+      "Форм-фактор мат.платы: ATX\\MicroATX\\ITX",
+      "Блок питания: Upper ATX power supply",
+      "Размеры: 400*176*410",
+      "Вес нетто: 3,3 kg",
+      "Вес брутто: 3,3 kg",
+      "Высота CPU кулера: 160 mm",
+      "Макс. длина GPU: 370 mm"
+    ]
+  },
+  {
+    "model": "MX01",
+    "category": "ATX",
+    "image": "../images/cases/MX01/main.png",
+    "description": "Case, Цвет: black, Материал: SPCC 0.6",
+    "specs": [
+      "Форм-фактор мат.платы: ITX",
+      "Блок питания: ITX",
+      "Размеры: 205*60*190",
+      "Вес нетто: 1,5 kg",
+      "Высота CPU кулера: 40 mm",
+      "Макс. длина GPU: 0 mm"
+    ]
+  },
+  {
+    "model": "MX02",
+    "category": "ATX",
+    "image": "../images/cases/MX02/main.png",
+    "description": "Case, Цвет: black, Материал: SPCC 0.8",
+    "specs": [
+      "Форм-фактор мат.платы: ITX",
+      "Блок питания: ITX",
+      "Размеры: 216*74*214",
+      "Вес нетто: 2,5 kg",
+      "Высота CPU кулера: 40 mm",
+      "Макс. длина GPU: 0 mm"
+    ]
+  },
+  {
+    "model": "MX02_3",
+    "category": "ATX",
+    "image": "../images/cases/MX02_3/main.png",
+    "description": "Case, Цвет: black, Материал: SPCC 0.8",
+    "specs": [
+      "Форм-фактор мат.платы: ITX",
+      "Блок питания: ITX",
+      "Размеры: 216*74*214",
+      "Вес нетто: 3,5 kg",
+      "Высота CPU кулера: 40 mm",
+      "Макс. длина GPU: 0 mm"
+    ]
+  },
+  {
+    "model": "S02B",
+    "category": "ATX",
+    "image": "../images/cases/S02B/main.png",
+    "description": "Case, Цвет: black, Материал: 0.45/SPCC Side panel &Front panel :  Tempered glass front",
+    "specs": [
+      "Форм-фактор мат.платы: MicroATX\\ITX",
+      "Блок питания: ATX",
+      "Размеры: 335*275*355",
+      "Вес нетто: 4,3 kg",
+      "Вес брутто: 4,3 kg",
+      "Высота CPU кулера: 170 mm",
+      "Макс. длина GPU: 330 mm"
+    ]
+  },
+  {
+    "model": "S02BW",
+    "category": "ATX",
+    "image": "../images/cases/S02BW/main.png",
+    "description": "Case, Цвет: white, Материал: 0.45/SPCC Side panel &Front panel :  Tempered glass front",
+    "specs": [
+      "Форм-фактор мат.платы: MicroATX\\ITX",
+      "Блок питания: ATX",
+      "Размеры: 335*275*355",
+      "Вес нетто: 4,3 kg",
+      "Вес брутто: 4,3 kg",
+      "Высота CPU кулера: 170 mm",
+      "Макс. длина GPU: 330 mm"
+    ]
+  }
+]

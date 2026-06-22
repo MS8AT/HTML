@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>MS8AT Global</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',sans-serif;background:#fff;color:#1f2937}
+a{text-decoration:none;color:inherit}
+
+.header{
+  position:sticky;top:0;z-index:100;
+  background:#fff;border-bottom:1px solid #e5e7eb;
+  padding:0 48px;display:flex;align-items:center;justify-content:space-between;height:68px;
+}
+.logo{display:flex;align-items:center;gap:16px;font-weight:800;font-size:1.5rem;letter-spacing:.08em;color:#163f9f;font-family:'Orbitron','Inter','Roboto',sans-serif}
+.logo img{height:58px}
+
+.header-nav{display:flex;gap:2px;align-items:center}
+.header-nav a{padding:6px 12px;border-radius:999px;font-size:.82rem;font-weight:500;color:#4b5563;transition:.18s}
+.header-nav a:hover{background:#eff6ff;color:#2563eb}
+.header-nav a.news-link{background:#dbeafe;color:#2563eb}
+.header-nav a.news-link:hover{background:#bfdbfe;color:#1d4ed8}
+
+.header-actions{display:flex;gap:10px;align-items:center}
+.btn-lang{padding:7px 18px;border:1.5px solid #d1d5db;border-radius:999px;color:#374151;font-size:.82rem;font-weight:600;transition:.18s}
+.btn-lang:hover{border-color:#2563eb;color:#2563eb}
+.btn-shop{padding:7px 16px 7px 10px;background:#2563eb;border-radius:999px;color:#fff;font-size:.82rem;font-weight:600;display:inline-flex;align-items:center;gap:7px;transition:.18s}
+.btn-shop:hover{background:#1d4ed8}
+.btn-shop img{height:20px;border-radius:3px;flex-shrink:0}
+
+.hero{
+  background:linear-gradient(135deg,#f0f7ff 0%,#e8f0fe 100%);
+  padding:72px 48px;
+  display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:start;
+}
+.hero-eyebrow{display:inline-block;background:#dbeafe;color:#2563eb;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:5px 14px;border-radius:999px;margin-bottom:22px}
+.hero h1{font-size:2.45rem;font-weight:800;line-height:1.08;color:#111827;margin-bottom:24px;white-space:nowrap}
+.hero-desc p{font-size:.98rem;line-height:1.75;color:#4b5563;margin-bottom:10px}
+.hero-desc strong{color:#111827;font-weight:600}
+.hero-shop{margin-top:26px}
+.hero-shop-link{
+  display:inline-flex;align-items:center;gap:14px;
+  padding:14px 18px;border-radius:18px;
+  background:#fff;border:1px solid #dbeafe;
+  box-shadow:0 8px 26px rgba(37,99,235,.08);
+  transition:.18s;
+}
+.hero-shop-link:hover{
+  border-color:#2563eb;
+  box-shadow:0 12px 28px rgba(37,99,235,.14);
+  transform:translateY(-1px);
+}
+.hero-shop-link img{
+  height:42px;width:auto;border-radius:8px;flex-shrink:0;
+}
+.hero-shop-copy{display:flex;flex-direction:column;gap:2px}
+.hero-shop-label{
+  font-size:.72rem;font-weight:700;letter-spacing:.08em;
+  text-transform:uppercase;color:#9ca3af;
+}
+.hero-shop-title{font-size:1rem;font-weight:800;color:#111827}
+.hero-shop-text{font-size:.88rem;color:#4b5563}
+
+.cards{display:flex;flex-direction:column;gap:16px}
+.card{background:#fff;border-radius:14px;padding:22px 24px;box-shadow:0 2px 18px rgba(0,0,0,.07);border-left:4px solid #2563eb}
+.card h3{font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.07em;color:#111827;margin-bottom:8px}
+.card p{font-size:.9rem;color:#4b5563;line-height:1.65}
+
+.catalog{padding:52px 48px;border-top:1px solid #f3f4f6}
+.catalog-label{font-size:.72rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase;color:#9ca3af;margin-bottom:18px}
+.catalog-links{display:flex;flex-wrap:wrap;gap:10px}
+.catalog-links a{padding:9px 20px;border:1.5px solid #e5e7eb;border-radius:999px;font-size:.875rem;font-weight:500;color:#374151;transition:.18s}
+.catalog-links a:hover{border-color:#2563eb;color:#2563eb;background:#eff6ff}
+.catalog-links a.news-link{border-color:#93c5fd;color:#2563eb;background:#dbeafe}
+.catalog-links a.news-link:hover{border-color:#60a5fa;color:#1d4ed8;background:#bfdbfe}
+
+footer{background:#f9fafb;border-top:1px solid #e5e7eb;text-align:center;padding:18px;font-size:.8rem;color:#9ca3af}
+
+.tg-fab{position:fixed;bottom:22px;right:22px;width:54px;height:54px;border-radius:50%;background:#2563eb;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,99,235,.35);z-index:9999;transition:.22s}
+.tg-fab:hover{background:#1d4ed8;transform:scale(1.08)}
+
+@media(max-width:960px){
+  .header{padding:0 20px}
+  .header-nav{display:none}
+  .hero{grid-template-columns:1fr;padding:40px 20px;gap:36px}
+  .hero h1{font-size:1.85rem}
+  .catalog{padding:36px 20px}
+}
+
+/* unified-nav */
+.nav-buttons,.header-nav{flex-wrap:nowrap;white-space:nowrap;overflow-x:auto}
+.nav-buttons a,.header-nav a{flex:0 0 auto}
+
+/* clickable-logo */
+.logo{text-decoration:none;cursor:pointer}
+.logo:hover{opacity:.86}
+
+/* emall-shop */
+.hero-shop{display:grid;gap:12px}
+.hero-shop-logo-text{display:inline-flex;align-items:center;justify-content:center;min-width:104px;height:42px;border-radius:8px;background:#f8fafc;border:1px solid #dbeafe;color:#2563eb;font-weight:900;letter-spacing:.02em}
+.btn-shop-emall{background:#111827}
+.btn-shop-emall:hover{background:#374151}
+</style>
+</head>
+<body>
+
+<header class="header">
+  <a class="logo" href="./index.html" aria-label="Go to homepage">
+    <img src="./images/logo.png" alt="MS8AT">
+    MS8AT GLOBAL
+  </a>
+  <nav class="header-nav">
+    <a href="./cases/cases.html">Cases</a>
+    <a href="./minipc/minipc.html">Future Mini-PCs</a>
+    <a href="./monoblock/monoblock.html">Future Monoblocks</a>
+    <a href="./soft/soft.html">Software</a>
+    <a href="./news/news.html" class="news-link">IT News</a>
+    <a href="./jarvice/jarvice.html">Jarvice</a>
+  </nav>
+  <div class="header-actions">
+    <a class="btn-lang" href="../ru/index.html">RU</a>
+    <a href="https://future.shop.onliner.by/" class="btn-shop" target="_blank" rel="noopener noreferrer">
+      <img src="../logo-future.jpg" alt="Future">Shop
+    </a>
+      <a href="https://9981.emall.by/" class="btn-shop btn-shop-emall" target="_blank" rel="noopener noreferrer"><img src="../logo-future.jpg" alt="Future">Emall</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <span class="hero-eyebrow">International IT Company</span>
+    <h1>LLC MS8AT Global</h1>
+    <div class="hero-desc">
+      <p><strong>International technology company.</strong></p>
+      <p>We work with partners in Belarus, Russia, and China.</p>
+      <p>Direct supply of hardware and components from China — working directly with manufacturers, without intermediaries.</p>
+      <p>Our focus: Mini-PCs, all-in-one systems, components, IT integration and automation.</p>
+    </div>
+    <div class="hero-shop">
+      <a href="https://future.shop.onliner.by/" class="hero-shop-link" target="_blank" rel="noopener noreferrer">
+        <img src="../logo-future.jpg" alt="Future">
+        <span class="hero-shop-copy">
+          <span class="hero-shop-label">Online Store</span>
+          <span class="hero-shop-title">Future on Onliner</span>
+          <span class="hero-shop-text">Go to the catalog and view products</span>
+        </span>
+      </a>
+      <a href="https://9981.emall.by/" class="hero-shop-link" target="_blank" rel="noopener noreferrer">
+        <img src="../logo-future.jpg" alt="Future">
+        <span class="hero-shop-copy">
+          <span class="hero-shop-label">Online Store</span>
+          <span class="hero-shop-title">Future on Emall</span>
+          <span class="hero-shop-text">Go to the catalog and view products</span>
+        </span>
+      </a>
+    </div>
+  </div>
+  <div class="cards">
+    <div class="card">
+      <h3>About the Company</h3>
+      <p>MS8AT Global is a technology partner for business, combining hardware supply, software development and process automation.</p>
+    </div>
+    <div class="card">
+      <h3>Our Products Are Used By</h3>
+      <p>Dobronom · Euroopt · 21vek · Beltelecom · 5 Element · ITmarket</p>
+    </div>
+    <div class="card">
+      <h3>Contacts & Legal Info</h3>
+      <p>
+        Phone: +375 29 616-52-18<br>
+        Email: ms8at@proton.me<br><br>
+        MS8AT Global LLC<br>
+        Republic of Belarus, 220067<br>
+        Minsk, Syrokomli St. 7, office 78<br>
+        UNP 193923754
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="catalog">
+  <p class="catalog-label">Product Catalog</p>
+  <div class="catalog-links">
+    <a href="./cases/cases.html">Cases</a>
+    <a href="./minipc/minipc.html">Future Mini-PCs</a>
+    <a href="./monoblock/monoblock.html">Future Monoblocks</a>
+    <a href="./soft/soft.html">Software</a>
+    <a href="./news/news.html" class="news-link">IT News</a>
+    <a href="./jarvice/jarvice.html">Jarvice</a>
+  </div>
+</section>
+
+<a class="tg-fab" href="https://t.me/viq4uat_bot?start=order" target="_blank" title="Leave a request in Telegram">
+  <svg width="26" height="26" viewBox="0 0 240 240" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+    <path d="M120 0C53.7 0 0 53.7 0 120s53.7 120 120 120 120-53.7 120-120S186.3 0 120 0zm58.3 82.1-19.9 93.8c-1.5 6.7-5.5 8.3-11.2 5.2l-31-22.9-14.9 14.3c-1.6 1.6-3 3-6.1 3l2.2-31.7 57.7-52.1c2.5-2.2-.5-3.4-3.9-1.2l-71.3 44.9-30.7-9.6c-6.7-2.1-6.8-6.7 1.4-9.9l119.9-46.2c5.6-2 10.5 1.3 8.8 9.4z"/>
+  </svg>
+</a>
+
+<footer>MS8AT Global LLC • All rights reserved</footer>
+
+</body>
+</html>

@@ -1,0 +1,1477 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>JET Future Mini PC | MS8AT</title>
+<meta name="description" content="JET Future Mini PC lineup with 11 processor platforms, RAM and SSD options, Windows 10 / Windows 11 / no OS, MX-01 / MX-02 / MX-09 cases, certificates and support details.">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f4f7fb;
+  --panel:#ffffff;
+  --panel-soft:#f7f9fc;
+  --line:#dbe4ef;
+  --line-strong:#c8d7e8;
+  --text:#162235;
+  --muted:#5f6f84;
+  --accent:#2563eb;
+  --accent-strong:#1d4ed8;
+  --accent-soft:#dbeafe;
+  --future:#ff7a1a;
+  --future-soft:#fff1e8;
+  --shadow:0 18px 44px rgba(15,23,42,.08);
+  --radius-xl:28px;
+  --radius-lg:22px;
+  --radius-md:18px;
+  --radius-sm:14px;
+  --page:min(1280px, calc(100vw - 32px));
+}
+*,
+*::before,
+*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:'Inter',sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(37,99,235,.08), transparent 32%),
+    radial-gradient(circle at top right, rgba(255,122,26,.08), transparent 26%),
+    linear-gradient(180deg, #fbfdff 0%, var(--bg) 100%);
+  overflow-x:hidden;
+}
+a{color:inherit;text-decoration:none}
+button{font:inherit}
+img{display:block;max-width:100%}
+.wrap{width:var(--page);margin:0 auto}
+.header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(255,255,255,.92);
+  border-bottom:1px solid rgba(219,228,239,.9);
+  backdrop-filter:blur(14px);
+}
+.header-inner{
+  min-height:68px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+}
+.logo{
+  display:flex;
+  align-items:center;
+  gap:16px;
+  font-family:'Orbitron','Inter',sans-serif;
+  font-weight:800;
+  font-size:1.42rem;
+  letter-spacing:.08em;
+  color:#163f9f;
+}
+.logo img{height:58px}
+.header-nav,
+.header-actions,
+.hero-actions,
+.hero-stats,
+.quick-links,
+.chip-row,
+.pill-group,
+.doc-actions,
+.switches,
+.support-actions{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+.header-nav a,
+.header-actions a,
+.quick-links a,
+.hero-actions a,
+.doc-actions a,
+.support-actions a{
+  border-radius:999px;
+  transition:.18s ease;
+}
+.header-nav{
+  align-items:center;
+  min-width:0;
+}
+.header-actions{
+  margin-left:auto;
+  align-items:center;
+  flex-wrap:nowrap;
+  flex-shrink:0;
+}
+.header-nav a{
+  padding:7px 12px;
+  font-size:.82rem;
+  font-weight:500;
+  color:#4b5563;
+}
+.header-nav a:hover,
+.header-nav a.current{
+  background:#eff6ff;
+  color:#2563eb;
+}
+.btn-lang{
+  padding:7px 18px;
+  border:1.5px solid #d1d5db;
+  color:#374151;
+  font-size:.82rem;
+  font-weight:600;
+}
+.btn-home{
+  padding:7px 16px;
+  border:1.5px solid #d1d5db;
+  color:#374151;
+  font-size:.82rem;
+  font-weight:600;
+  background:#fff;
+}
+.btn-home:hover{border-color:#2563eb;color:#2563eb}
+.btn-lang:hover{border-color:#2563eb;color:#2563eb}
+.btn-shop{
+  padding:7px 16px 7px 10px;
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  background:#2563eb;
+  color:#fff;
+  font-size:.82rem;
+  font-weight:600;
+  white-space:nowrap;
+}
+.btn-shop:hover{background:#1d4ed8}
+.btn-shop img{height:20px;border-radius:3px;flex-shrink:0}
+main{padding:28px 0 56px}
+section{margin-top:22px}
+.panel,
+.benefit,
+.doc-card,
+.support-card,
+.software-card,
+.case-card,
+.table-wrap,
+.model-card,
+.info-card{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:var(--radius-xl);
+  box-shadow:var(--shadow);
+}
+.hero{
+  display:grid;
+  grid-template-columns:minmax(0,1.05fr) minmax(320px,.95fr);
+  gap:22px;
+}
+.hero-copy{
+  padding:34px;
+  background:
+    radial-gradient(circle at top left, rgba(37,99,235,.09), transparent 36%),
+    radial-gradient(circle at bottom right, rgba(255,122,26,.08), transparent 24%),
+    linear-gradient(180deg, #ffffff 0%, #f8fbff 100%);
+}
+.hero-side{
+  padding:24px;
+  display:grid;
+  align-content:center;
+}
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:7px 14px;
+  border-radius:999px;
+  background:var(--accent-soft);
+  color:var(--accent);
+  font-size:.74rem;
+  font-weight:800;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+h1,h2,h3,h4{margin:0;letter-spacing:-.03em}
+h1{
+  margin-top:18px;
+  font-size:clamp(2.6rem,5vw,4.4rem);
+  line-height:.96;
+  overflow-wrap:anywhere;
+}
+h2{
+  font-size:clamp(1.8rem,3vw,2.7rem);
+  line-height:1.02;
+}
+h3{font-size:1.2rem;line-height:1.12}
+p{margin:0;color:var(--muted);line-height:1.7}
+.lead{
+  margin-top:16px;
+  max-width:42rem;
+  font-size:1.02rem;
+}
+.hero-stats{margin-top:24px}
+.hero-stats article{
+  min-width:160px;
+  flex:1 1 0;
+  padding:16px 18px;
+  background:rgba(255,255,255,.86);
+  border:1px solid var(--line);
+  border-radius:var(--radius-md);
+}
+.hero-stats strong{
+  display:block;
+  font-size:1.65rem;
+  line-height:1;
+  color:var(--accent);
+}
+.hero-stats span{
+  display:block;
+  margin-top:8px;
+  font-size:.92rem;
+  color:var(--muted);
+}
+.hero-actions{margin-top:24px}
+.btn-primary,
+.btn-secondary{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:48px;
+  padding:0 18px;
+  font-weight:700;
+}
+.btn-primary{
+  background:var(--accent);
+  color:#fff;
+  box-shadow:0 12px 26px rgba(37,99,235,.18);
+}
+.btn-primary:hover{background:var(--accent-strong);transform:translateY(-1px)}
+.btn-secondary{
+  border:1px solid var(--line-strong);
+  background:#fff;
+  color:var(--text);
+}
+.btn-secondary:hover{border-color:var(--accent);color:var(--accent)}
+.quick-links{margin-top:18px;gap:8px}
+.quick-links a,
+.chip{
+  padding:8px 12px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background:var(--panel-soft);
+  color:#304053;
+  font-size:.84rem;
+}
+.zoom-link{
+  display:block;
+  transition:.18s ease;
+}
+.zoom-link:hover{transform:translateY(-1px)}
+.hero-visual{
+  overflow:hidden;
+  border-radius:var(--radius-lg);
+  border:1px solid var(--line);
+  background:#fff;
+  padding:6px;
+  min-height:0;
+  aspect-ratio:1 / 1;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+.hero-visual img{
+  width:100%;
+  height:100%;
+  max-height:none;
+  object-fit:contain;
+}
+.docs-grid,
+.support-grid,
+.grid-3,
+.software-list,
+.cases-grid,
+.models{
+  display:grid;
+  gap:18px;
+}
+.docs-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.support-grid{grid-template-columns:1.1fr .9fr}
+.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.software-list{grid-template-columns:repeat(2,minmax(0,1fr))}
+.cases-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.models{grid-template-columns:1fr}
+.section-head{
+  display:flex;
+  align-items:end;
+  justify-content:space-between;
+  gap:18px;
+  margin-bottom:18px;
+}
+.section-head p{max-width:44rem}
+.benefit,
+.doc-card,
+.support-card,
+.software-card,
+.case-card,
+.model-card,
+.info-card{padding:24px}
+.benefit-icon{
+  width:54px;
+  height:54px;
+  display:grid;
+  place-items:center;
+  border-radius:18px;
+  background:var(--accent-soft);
+  color:var(--accent);
+  font-size:1.45rem;
+  margin-bottom:16px;
+}
+.benefit p{margin-top:10px}
+.doc-card{
+  display:grid;
+  gap:16px;
+}
+.doc-top{
+  display:flex;
+  align-items:start;
+  justify-content:space-between;
+  gap:12px;
+}
+.doc-badge{
+  flex-shrink:0;
+  padding:8px 12px;
+  border-radius:999px;
+  background:var(--accent-soft);
+  color:var(--accent);
+  font-size:.78rem;
+  font-weight:800;
+}
+.doc-preview{
+  position:relative;
+  overflow:hidden;
+  border-radius:var(--radius-md);
+  border:1px solid var(--line);
+  background:#f8fbff;
+  aspect-ratio:4 / 5;
+  min-height:230px;
+}
+.doc-preview iframe{
+  width:100%;
+  height:100%;
+  border:0;
+  background:#fff;
+  pointer-events:none;
+}
+.doc-preview-hit{
+  display:block;
+  position:absolute;
+  inset:0;
+  border-radius:inherit;
+  cursor:zoom-in;
+}
+.support-card{
+  display:grid;
+  gap:14px;
+}
+.small-title,
+.selector-title,
+.meta-title{
+  display:block;
+  margin-bottom:10px;
+  font-size:.74rem;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--muted);
+}
+.support-card ul,
+.info-card ul{
+  margin:0;
+  padding:0;
+  list-style:none;
+  display:grid;
+  gap:10px;
+}
+.support-card li,
+.info-card li{
+  padding:13px 14px;
+  border-radius:14px;
+  background:#fff;
+  border:1px solid var(--line);
+  color:#304053;
+  line-height:1.55;
+}
+.model-card{padding:18px}
+.model-shell{
+  display:grid;
+  grid-template-columns:minmax(280px,360px) minmax(0,1fr);
+  gap:18px;
+}
+.model-media{
+  display:grid;
+  gap:12px;
+}
+.main-photo{
+  position:relative;
+  overflow:hidden;
+  border-radius:var(--radius-lg);
+  border:1px solid var(--line);
+  background:#fff;
+  padding:8px;
+  aspect-ratio:1 / 1;
+}
+.main-photo img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+.photo-badge{
+  position:absolute;
+  left:14px;
+  right:14px;
+  bottom:14px;
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  padding:10px 12px;
+  border-radius:14px;
+  background:rgba(22,34,53,.78);
+  color:#fff;
+  font-size:.82rem;
+}
+.switches{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;
+}
+.switch{
+  display:grid;
+  gap:8px;
+  padding:8px;
+  border:1px solid var(--line);
+  border-radius:var(--radius-md);
+  background:#fff;
+  cursor:pointer;
+  transition:.18s ease;
+}
+.switch:hover,
+.switch.active{
+  border-color:rgba(37,99,235,.35);
+  background:#f7fbff;
+}
+.switch img{
+  width:100%;
+  height:96px;
+  object-fit:contain;
+}
+.switch span{
+  font-size:.82rem;
+  font-weight:700;
+  text-align:center;
+  color:#304053;
+}
+.model-copy{
+  min-width:0;
+  display:grid;
+  gap:16px;
+}
+.brand-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  align-items:center;
+}
+.brand-badge,
+.status-badge{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:8px 12px;
+  border-radius:999px;
+  font-size:.8rem;
+  font-weight:700;
+}
+.brand-badge{
+  background:var(--future-soft);
+  color:#b45309;
+}
+.status-badge{
+  background:var(--accent-soft);
+  color:var(--accent);
+}
+.model-title{
+  max-width:100%;
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+.chip-row{gap:8px}
+.chip-row .chip{background:#fff}
+.selector-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:12px;
+}
+.selector{
+  padding:16px;
+  border-radius:var(--radius-md);
+  border:1px solid var(--line);
+  background:var(--panel-soft);
+}
+.pill-group{gap:8px}
+.pill{
+  min-height:42px;
+  padding:0 14px;
+  border:1px solid var(--line);
+  border-radius:999px;
+  background:#fff;
+  color:#2c3b4f;
+  font-weight:700;
+  cursor:pointer;
+  transition:.18s ease;
+}
+.pill:hover,
+.pill.active{
+  border-color:rgba(37,99,235,.35);
+  background:var(--accent-soft);
+  color:var(--accent);
+}
+.selector-hint{
+  margin-top:10px;
+  font-size:.82rem;
+  line-height:1.55;
+}
+.sku-card{
+  padding:18px;
+  border-radius:var(--radius-lg);
+  background:#13243c;
+  color:#fff;
+}
+.sku-title{
+  font-size:1.18rem;
+  font-weight:800;
+  line-height:1.35;
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+.sku-code{
+  display:inline-block;
+  margin-top:12px;
+  padding:10px 12px;
+  border-radius:14px;
+  background:rgba(255,255,255,.08);
+  font-family:Consolas,'Courier New',monospace;
+  font-size:.94rem;
+  line-height:1.5;
+  white-space:normal;
+  overflow-wrap:anywhere;
+  word-break:break-all;
+}
+.meta-grid{
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:12px;
+}
+.meta-card{
+  min-width:0;
+  padding:15px 16px;
+  border:1px solid var(--line);
+  border-radius:var(--radius-md);
+  background:#fff;
+}
+.meta-value{
+  display:block;
+  color:var(--text);
+  font-weight:700;
+  line-height:1.45;
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+.ports{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:10px;
+}
+.port{
+  padding:12px 14px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:#fff;
+  color:#304053;
+  font-size:.88rem;
+}
+.soft-inline{
+  padding:16px;
+  border-radius:var(--radius-md);
+  border:1px dashed rgba(37,99,235,.26);
+  background:#f8fbff;
+}
+.soft-inline p{
+  margin-top:8px;
+  font-size:.9rem;
+}
+.case-card{
+  display:grid;
+  gap:16px;
+}
+.case-photo{
+  border-radius:var(--radius-lg);
+  border:1px solid var(--line);
+  background:#fff;
+  padding:8px;
+  aspect-ratio:1 / 1;
+}
+.case-photo img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+.case-meta{
+  display:grid;
+  gap:8px;
+}
+.case-meta span{
+  padding:9px 12px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background:var(--panel-soft);
+  font-size:.84rem;
+  color:#304053;
+}
+.case-sections{
+  display:grid;
+  gap:22px;
+}
+.case-jump-card{
+  margin-bottom:16px;
+  padding:16px;
+  border-radius:var(--radius-md);
+  border:1px solid var(--line);
+  background:#fff;
+}
+.case-jump-links{
+  margin-top:8px;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+}
+.case-jump-link{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:8px 12px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background:var(--panel-soft);
+  color:#304053;
+  font-size:.86rem;
+  font-weight:600;
+}
+.case-jump-link:hover{
+  border-color:var(--accent);
+  color:var(--accent);
+}
+.case-section-card{
+  padding:24px;
+  border-radius:var(--radius-lg);
+  border:1px solid var(--line);
+  background:#fff;
+  scroll-margin-top:110px;
+}
+.case-section-head{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:12px;
+}
+.case-section-head h3{
+  margin-top:4px;
+}
+.case-count{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:44px;
+  height:44px;
+  padding:0 12px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background:var(--panel-soft);
+  color:var(--muted);
+  font-weight:700;
+}
+.case-section-note{
+  margin-top:10px;
+}
+.case-gallery-wrap,
+.case-config-wrap{
+  margin-top:16px;
+}
+.case-config-accordion{
+  padding:10px 12px;
+  border-radius:var(--radius-md);
+  border:1px solid var(--line);
+  background:var(--panel-soft);
+}
+.case-config-accordion > summary{
+  list-style:none;
+  cursor:pointer;
+}
+.case-config-accordion > summary::-webkit-details-marker{
+  display:none;
+}
+.case-config-summary{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+}
+.case-config-summary-title{
+  color:var(--text);
+  font-weight:700;
+  font-size:.98rem;
+}
+.case-config-summary-right{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  flex-shrink:0;
+}
+.case-config-count{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-width:34px;
+  height:30px;
+  padding:0 10px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background:#fff;
+  color:var(--muted);
+  font-weight:700;
+  font-size:.84rem;
+}
+.case-config-summary-toggle{
+  width:30px;
+  height:30px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background:#fff;
+  position:relative;
+  transition:transform .2s ease;
+}
+.case-config-summary-toggle::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:8px;
+  height:8px;
+  border-right:2px solid var(--muted);
+  border-bottom:2px solid var(--muted);
+  transform:translate(-50%,-60%) rotate(45deg);
+}
+.case-config-accordion[open] .case-config-summary-toggle{
+  transform:rotate(180deg);
+}
+.case-config-body{
+  margin-top:12px;
+  padding-top:12px;
+  border-top:1px solid var(--line);
+}
+.case-config-accordion[open] .case-config-body{
+  animation:case-config-slide .2s ease;
+}
+@keyframes case-config-slide{
+  from{
+    opacity:0;
+    transform:translateY(-4px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+.case-gallery{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:12px;
+  margin-top:8px;
+}
+.case-gallery-photo{
+  border-radius:var(--radius-md);
+  border:1px solid var(--line);
+  background:#fff;
+  padding:8px;
+  aspect-ratio:1 / 1;
+}
+.case-gallery-photo img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+}
+.case-config-grid{
+  display:grid;
+  gap:12px;
+  margin-top:8px;
+}
+.config-card{
+  padding:16px;
+  border-radius:var(--radius-md);
+  border:1px solid var(--line);
+  background:var(--panel-soft);
+}
+.config-accordion{
+  overflow:hidden;
+}
+.config-accordion > summary{
+  list-style:none;
+  cursor:pointer;
+}
+.config-accordion > summary::-webkit-details-marker{
+  display:none;
+}
+.config-head{
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:12px;
+}
+.config-main{
+  min-width:0;
+}
+.config-side{
+  display:flex;
+  align-items:flex-start;
+  gap:12px;
+}
+.config-title{
+  margin-top:6px;
+  font-size:1rem;
+  line-height:1.45;
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+.config-sku-wrap{
+  width:min(340px,100%);
+}
+.config-sku{
+  margin-top:6px;
+  padding:10px 12px;
+  border-radius:10px;
+  border:1px solid var(--line);
+  background:#fff;
+  font-family:Consolas,'Courier New',monospace;
+  font-size:.86rem;
+  line-height:1.45;
+  overflow-wrap:anywhere;
+  word-break:break-all;
+}
+.config-toggle{
+  flex:0 0 auto;
+  width:30px;
+  height:30px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  background:#fff;
+  position:relative;
+  transition:transform .2s ease;
+}
+.config-toggle::before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:50%;
+  width:8px;
+  height:8px;
+  border-right:2px solid var(--muted);
+  border-bottom:2px solid var(--muted);
+  transform:translate(-50%,-60%) rotate(45deg);
+}
+.config-accordion[open] .config-toggle{
+  transform:rotate(180deg);
+}
+.config-body{
+  margin-top:12px;
+  padding-top:12px;
+  border-top:1px solid var(--line);
+}
+.config-specs{
+  margin-top:0;
+}
+.specs-list{
+  display:grid;
+  gap:8px;
+  margin-top:8px;
+}
+.spec-row{
+  display:grid;
+  grid-template-columns:minmax(180px,240px) minmax(0,1fr);
+  gap:10px;
+  padding:8px 10px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  background:#fff;
+}
+.spec-row dt{
+  margin:0;
+  color:var(--muted);
+  font-size:.82rem;
+}
+.spec-row dd{
+  margin:0;
+  color:var(--text);
+  font-weight:600;
+  overflow-wrap:anywhere;
+  word-break:break-word;
+}
+.spec-warning{
+  margin-top:8px;
+  color:#b45309;
+  font-size:.88rem;
+}
+.model-summary-card{
+  padding:20px;
+  border-radius:var(--radius-md);
+  border:1px solid var(--line);
+  background:#fff;
+}
+.model-summary-card p{
+  margin-top:8px;
+}
+.model-summary-grid{
+  margin-top:14px;
+  display:grid;
+  gap:10px;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+}
+.model-summary-pill{
+  padding:12px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background:var(--panel-soft);
+}
+.model-summary-pill strong{
+  display:block;
+}
+.model-summary-pill span{
+  display:block;
+  margin-top:4px;
+  color:var(--muted);
+  font-size:.9rem;
+}
+.software-card{padding:24px}
+.software-list{gap:12px}
+.software-item{
+  padding:14px 16px;
+  border:1px solid var(--line);
+  border-radius:16px;
+  background:#fff;
+  color:#304053;
+  line-height:1.5;
+}
+.table-wrap{overflow:hidden}
+table{
+  width:100%;
+  border-collapse:collapse;
+}
+th,td{
+  padding:16px 18px;
+  text-align:left;
+  border-bottom:1px solid var(--line);
+  vertical-align:top;
+}
+thead th{
+  background:#f7fafe;
+  color:var(--muted);
+  font-size:.76rem;
+  font-weight:800;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+tbody tr:last-child td{border-bottom:0}
+.footer{padding:0 0 30px}
+.footer .wrap{
+  padding:18px 22px;
+  border-radius:22px;
+  background:rgba(255,255,255,.86);
+  border:1px solid var(--line);
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-between;
+  gap:12px;
+  color:var(--muted);
+}
+.tg-fab{
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  width:54px;
+  height:54px;
+  border-radius:50%;
+  background:#2563eb;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 4px 20px rgba(37,99,235,.35);
+  z-index:9999;
+  transition:.22s;
+}
+.tg-fab:hover{
+  background:#1d4ed8;
+  transform:scale(1.08);
+}
+.image-modal{
+  position:fixed;
+  inset:0;
+  z-index:2200;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:18px;
+  background:rgba(5,10,20,.82);
+}
+.image-modal[hidden]{display:none}
+.doc-modal{
+  position:fixed;
+  inset:0;
+  z-index:2210;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:18px;
+  background:rgba(5,10,20,.86);
+}
+.doc-modal[hidden]{display:none}
+.image-modal img{
+  max-width:min(1280px,96vw);
+  max-height:92vh;
+  width:auto;
+  height:auto;
+  object-fit:contain;
+  border-radius:16px;
+  box-shadow:0 20px 60px rgba(0,0,0,.45);
+}
+.doc-modal iframe{
+  width:min(1500px,96vw);
+  height:92vh;
+  border:0;
+  border-radius:16px;
+  background:#fff;
+  box-shadow:0 20px 60px rgba(0,0,0,.45);
+}
+.image-modal-close,
+.doc-modal-close{
+  position:absolute;
+  top:14px;
+  right:14px;
+  width:44px;
+  height:44px;
+  border:1px solid rgba(255,255,255,.35);
+  border-radius:50%;
+  background:rgba(0,0,0,.4);
+  color:#fff;
+  font-size:1.6rem;
+  line-height:1;
+  cursor:pointer;
+}
+body.modal-open{overflow:hidden}
+@media (max-width:1180px){
+  .header-inner{
+    min-height:auto;
+    padding:14px 0;
+    align-items:flex-start;
+    flex-direction:column;
+  }
+  .header-nav{
+    display:flex;
+    width:100%;
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    padding-bottom:6px;
+  }
+  .header-nav a{
+    flex:0 0 auto;
+  }
+  .header-actions{
+    width:100%;
+    justify-content:flex-start;
+    flex-wrap:nowrap;
+  }
+  .hero,
+  .support-grid{
+    grid-template-columns:1fr;
+  }
+  .grid-3,
+  .cases-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+  .case-gallery{
+    grid-template-columns:repeat(3,minmax(0,1fr));
+  }
+  .model-summary-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
+@media (max-width:980px){
+  .header-inner{
+    min-height:auto;
+    padding:14px 0;
+    align-items:flex-start;
+    flex-direction:column;
+  }
+  .header-nav{
+    display:flex;
+    width:100%;
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    -webkit-overflow-scrolling:touch;
+    padding-bottom:6px;
+  }
+  .header-nav a{
+    flex:0 0 auto;
+  }
+  .header-actions{
+    width:100%;
+    justify-content:flex-start;
+    flex-wrap:nowrap;
+  }
+  .docs-grid,
+  .software-list,
+  .model-shell,
+  .selector-grid,
+  .meta-grid{
+    grid-template-columns:1fr;
+  }
+  .case-gallery{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+  .spec-row{
+    grid-template-columns:1fr;
+  }
+  .config-sku-wrap{
+    width:100%;
+  }
+  .config-side{
+    width:100%;
+  }
+  .ports{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:760px){
+  .wrap{width:min(100vw - 20px, 1280px)}
+  .logo{
+    gap:12px;
+    font-size:1.1rem;
+  }
+  .logo img{height:46px}
+  .hero-copy,
+  .hero-side,
+  .benefit,
+  .doc-card,
+  .support-card,
+  .software-card,
+  .case-card,
+  .model-card,
+  .info-card{padding:18px}
+  .case-section-card,
+  .model-summary-card,
+  .config-card{
+    padding:16px;
+  }
+  .section-head{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+  .hero-stats{
+    display:grid;
+    grid-template-columns:1fr;
+  }
+  .hero-stats article{width:100%}
+  .grid-3,
+  .cases-grid,
+  .software-list,
+  .case-jump-links,
+  .case-gallery,
+  .model-summary-grid,
+  .switches,
+  .ports{
+    grid-template-columns:1fr;
+  }
+  .case-jump-links{
+    display:grid;
+  }
+  .case-jump-link{
+    width:100%;
+  }
+  .config-head{
+    flex-direction:column;
+  }
+  .case-config-summary{
+    align-items:flex-start;
+  }
+  .case-config-summary-right{
+    align-self:flex-end;
+  }
+  .config-side{
+    width:100%;
+    flex-direction:column;
+  }
+  .config-toggle{
+    align-self:flex-end;
+  }
+  .hero-visual{
+    min-height:0;
+    padding:4px;
+  }
+  th,td{padding:14px 12px}
+  .tg-fab{
+    right:14px;
+    bottom:14px;
+    width:50px;
+    height:50px;
+  }
+}
+</style>
+</head>
+<body>
+<header class="header">
+  <div class="wrap header-inner">
+    <div class="logo">
+      <img src="../images/logo.png" alt="MS8AT">
+      <span>MS8AT GLOBAL</span>
+    </div>
+    <nav class="header-nav">
+      <a href="../index.html">Home</a>
+      <a href="../cases/cases.html">Cases</a>
+      <a href="../cooler/cooler.html">Cooling</a>
+      <a href="../cpu/cpu.html">Processors</a>
+      <a href="../mb/mb.html">Motherboards</a>
+      <a href="../minipc/minipc.html">Mini-PC</a>
+      <a href="../monoblock/monoblock.html">Future</a>
+      <a href="./onliner_pc.html" class="current">JET Future Mini PC</a>
+      <a href="../monitor/monitor.html">Monitors</a>
+      <a href="../printer/printer.html">Printers</a>
+      <a href="../soft/soft.html">Software</a>
+      <a href="../svga/svga.html">Graphics Cards</a>
+      <a href="../news/news.html">IT News</a>
+    </nav>
+    <div class="header-actions">
+      <a class="btn-home" href="../index.html">Home</a>
+      <a class="btn-lang" href="../../ru/jet_future_minipc/onliner_pc.html">RU</a>
+      <a href="https://future.shop.onliner.by/" class="btn-shop" target="_blank" rel="noopener noreferrer">
+        <img src="../../logo-future.jpg" alt="Future">Shop
+      </a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <div class="hero-copy panel">
+      <span class="eyebrow">Mini-PC | Future | Onliner</span>
+      <h1>JET Future Mini PC</h1>
+      <p class="lead">Compact desktop systems with selectable RAM, SSD, operating system and case format for office, retail, service desks, learning spaces and everyday workstations.</p>
+      <div class="hero-stats">
+        <article>
+          <strong id="modelsCount">11</strong>
+          <span>configurations</span>
+        </article>
+        <article>
+          <strong>3</strong>
+          <span>case options: MX-01, MX-02, MX-09</span>
+        </article>
+        <article>
+          <strong>3</strong>
+          <span>additional software</span>
+        </article>
+      </div>
+      <div class="hero-actions">
+        <a class="btn-primary" href="#documents">Certificates</a>
+        <a class="btn-secondary" href="#models">Models</a>
+        <a class="btn-secondary" href="#software">Software</a>
+      </div>
+      <div class="quick-links">
+        <a href="#cases">Cases</a>
+        <a href="#dimensions">Dimensions</a>
+        <a href="#kit">Package</a>
+        <a href="#legal">Support</a>
+      </div>
+    </div>
+    <aside class="hero-side panel">
+      <a class="zoom-link hero-visual" href="../../ru/jet_future_minipc/variants%20minipc.png" data-zoomable="true">
+        <img src="../../ru/jet_future_minipc/variants%20minipc.png" alt="JET Future Mini PC lineup">
+      </a>
+    </aside>
+  </section>
+
+  <section id="documents">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Documents</span>
+        <h2>Certificates and support details</h2>
+      </div>
+      <p>Open certificate files and support information first, then choose the required platform and configuration below.</p>
+    </div>
+    <div class="support-grid">
+      <div class="docs-grid" id="docsGrid"></div>
+      <article class="support-card">
+        <div>
+          <span class="small-title">Manufacturer</span>
+          <h3>JetService LLC</h3>
+        </div>
+        <ul>
+          <li>Manufacturer: JetService LLC, 220049, Minsk, Knorina str. 6B, 5N, room 7, tel. 271-78-13, 257-30-24</li>
+          <li>Service center: JetService LLC, 220049, Minsk, Knorina str. 6B, 5N, room 7, tel. 271-78-13, 257-30-24</li>
+          <li>Warranty: 24 months</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section id="advantages">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Advantages</span>
+        <h2>Why this lineup works well</h2>
+      </div>
+      <p>A practical lineup for work scenarios.</p>
+    </div>
+    <div class="grid-3">
+      <article class="benefit">
+        <div class="benefit-icon">&#9889;</div>
+        <h3>Energy efficient</h3>
+        <p>Compact platforms that fit office desks, reception areas, retail counters and training rooms without excess power draw.</p>
+      </article>
+      <article class="benefit">
+        <div class="benefit-icon">&#9881;</div>
+        <h3>Flexible configuration</h3>
+        <p>Platforms support 4 / 8 / 16 GB memory (Intel Core i3-1215U also supports 32 GB), SSD options from 128 GB to 2 TB and three operating system variants.</p>
+      </article>
+      <article class="benefit">
+        <div class="benefit-icon">&#128737;</div>
+        <h3>Documents and warranty</h3>
+        <p>Certificate PDF, warranty PDF, package list, service address and additional software options are all available on the same page.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="models">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Model lineup</span>
+        <h2>Configurations</h2>
+      </div>
+      <p>Model names and characteristics are synchronized with the source Excel files by exact model-name match.</p>
+    </div>
+    <div class="models" id="modelsGrid"></div>
+  </section>
+
+  <section id="cases">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Cases</span>
+        <h2>MX-01 / MX-02 / MX-09 cases</h2>
+      </div>
+    </div>
+    <div class="case-sections" id="casesGrid"></div>
+  </section>
+
+  <section id="dimensions">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Dimensions</span>
+        <h2>Case dimensions</h2>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Case</th>
+            <th>Width</th>
+            <th>Height</th>
+            <th>Depth</th>
+            <th>Weight</th>
+          </tr>
+        </thead>
+        <tbody id="dimensionsBody"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section id="software">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Additional software</span>
+        <h2>Available software options</h2>
+      </div>
+      <p>Additional software.</p>
+    </div>
+    <div class="software-card">
+      <div class="software-list" id="softwareList"></div>
+    </div>
+  </section>
+
+  <section id="kit">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Package</span>
+        <h2>Included in the package</h2>
+      </div>
+      <p>Package contents.</p>
+    </div>
+    <div class="info-card">
+      <ul id="kitList"></ul>
+    </div>
+  </section>
+
+  <section id="legal">
+    <div class="section-head">
+      <div>
+        <span class="eyebrow">Support</span>
+        <h2>Warranty and service information</h2>
+      </div>
+      <p>Warranty and service information.</p>
+    </div>
+    <div class="docs-grid">
+      <article class="info-card">
+        <h3>Manufacturer and service center</h3>
+        <ul id="legalManufacturer"></ul>
+      </article>
+      <article class="info-card">
+        <h3>Warranty and additional software</h3>
+        <ul id="legalWarranty"></ul>
+      </article>
+    </div>
+  </section>
+</main>
+
+<a class="tg-fab" href="https://t.me/viq4uat_bot?start=order" target="_blank" rel="noopener noreferrer" title="Send request in Telegram">
+  <svg width="26" height="26" viewBox="0 0 240 240" fill="#fff" xmlns="http://www.w3.org/2000/svg">
+    <path d="M120 0C53.7 0 0 53.7 0 120s53.7 120 120 120 120-53.7 120-120S186.3 0 120 0zm58.3 82.1-19.9 93.8c-1.5 6.7-5.5 8.3-11.2 5.2l-31-22.9-14.9 14.3c-1.6 1.6-3 3-6.1 3l2.2-31.7 57.7-52.1c2.5-2.2-.5-3.4-3.9-1.2l-71.3 44.9-30.7-9.6c-6.7-2.1-6.8-6.7 1.4-9.9l119.9-46.2c5.6-2 10.5 1.3 8.8 9.4z"/>
+  </svg>
+</a>
+
+<footer class="footer">
+  <div class="wrap">
+    <span>MS8AT Global</span>
+    <span>JET Future Mini PC</span>
+  </div>
+</footer>
+
+<div class="image-modal" id="imageModal" hidden>
+  <button class="image-modal-close" id="imageModalClose" type="button" aria-label="Close">×</button>
+  <img id="imageModalPreview" src="" alt="">
+</div>
+<div class="doc-modal" id="docModal" hidden>
+  <button class="doc-modal-close" id="docModalClose" type="button" aria-label="Close">×</button>
+  <iframe id="docModalFrame" src="" title="PDF preview"></iframe>
+</div>
+
+<script src="../../ru/jet_future_minipc/models_data.js"></script>
+<script src="../../ru/jet_future_minipc/onliner_pc_app.js"></script>
+</body>
+</html>
+
+
+

@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Корпуса — MS8AT Global</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;700;800&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../light-theme.css">
+
+  <style>
+    :root{
+      --bg:#061018;
+      --panel:#0d1a23;
+      --border:rgba(46,235,225,.34);
+      --border-strong:#1cefe0;
+      --text:#eef8ff;
+      --muted:#9fb4c4;
+      --accent:#1cefe0;
+      --accent-soft:rgba(28,239,224,.14);
+      --shadow:0 0 30px rgba(28,239,224,.15);
+      --radius:26px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      font-family: 'Inter','Roboto',sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at top left, rgba(28,239,224,.12), transparent 28%),
+        radial-gradient(circle at top right, rgba(33,162,255,.09), transparent 24%),
+        linear-gradient(180deg,#061018 0%,#07131c 38%,#050b11 100%);
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { display: block; max-width: 100%; }
+
+    /* ================= HEADER ================= */
+    header {
+      padding: 22px 24px 18px;
+      border-bottom: 1px solid rgba(28,239,224,.18);
+      background: rgba(5,12,18,.92);
+      backdrop-filter: blur(14px);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .top-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .logo img {
+      height: 42px;
+      filter: drop-shadow(0 0 12px rgba(28,239,224,.55));
+    }
+
+    .logo span {
+      font-family: 'Exo 2','Inter','Roboto',sans-serif;
+      color: #1cefe0;
+      font-size: 1.08rem;
+      letter-spacing: 1px;
+      text-shadow: 0 0 12px rgba(28,239,224,.38);
+    }
+
+    .top-buttons,
+    .nav-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .dealer-btn,
+    .nav-buttons a {
+      border: 1px solid #1cefe0;
+      color: #1cefe0;
+      border-radius: 999px;
+      transition: .25s ease;
+      white-space: nowrap;
+    }
+
+    .dealer-btn {
+      padding: 10px 18px;
+      font-weight: 700;
+      background: rgba(6,16,24,.75);
+    }
+
+    .dealer-btn:hover,
+    .nav-buttons a:hover,
+    .nav-buttons a.active {
+      background: #1cefe0;
+      color: #071116;
+      box-shadow: 0 0 18px rgba(28,239,224,.35);
+    }
+
+    .nav-buttons {
+      justify-content: center;
+    }
+
+    .nav-buttons a {
+      padding: 9px 16px;
+      font-size: .92rem;
+      background: rgba(8,19,28,.72);
+    }
+
+    /* ================= MAIN ================= */
+    main {
+      width: min(1360px, calc(100% - 32px));
+      margin: 0 auto;
+      padding: 36px 0 76px;
+    }
+
+    .panel {
+      background: linear-gradient(180deg,rgba(13,26,35,.96),rgba(8,17,25,.96));
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+
+    /* HERO */
+    .hero {
+      display: grid;
+      grid-template-columns: 1.45fr .95fr;
+      gap: 24px;
+      align-items: stretch;
+      margin-bottom: 24px;
+    }
+
+    .hero-copy,
+    .hero-side,
+    .section { padding: 30px; }
+
+    .hero-copy { position: relative; overflow: hidden; }
+
+    .hero-copy::after {
+      content: "";
+      position: absolute;
+      inset: auto -40px -60px auto;
+      width: 220px; height: 220px;
+      background: radial-gradient(circle, rgba(28,239,224,.18), transparent 70%);
+      pointer-events: none;
+    }
+
+    .eyebrow, .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-bottom: 16px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(28,239,224,.45);
+      background: rgba(28,239,224,.08);
+      color: var(--accent);
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3, .stat strong { font-family: 'Exo 2','Inter','Roboto',sans-serif; }
+
+    h1 {
+      font-size: clamp(2.3rem,5vw,4rem);
+      line-height: .98;
+      margin-bottom: 18px;
+      color: #e9ffff;
+      text-shadow: 0 0 22px rgba(28,239,224,.16);
+    }
+
+    .lead {
+      font-size: 1.1rem;
+      line-height: 1.62;
+      color: #effbff;
+      margin-bottom: 14px;
+    }
+
+    .hero-copy p,
+    .section-head p,
+    .series-card p,
+    .side-card p,
+    .side-card li,
+    .stat p { color: var(--muted); line-height: 1.65; font-size: 1rem; }
+
+    .hero-chips, .chip-row { display: flex; flex-wrap: wrap; gap: 10px; }
+    .hero-chips { margin: 22px 0 24px; }
+
+    .chip, .hint {
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(159,180,196,.18);
+      background: rgba(255,255,255,.04);
+      color: #051015;
+      font-size: .86rem;
+    }
+
+    .hint {
+      border-color: rgba(28,239,224,.45);
+      background: rgba(28,239,224,.08);
+      color: #051015;
+      white-space: nowrap;
+    }
+
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+    .cta-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 18px;
+      border-radius: 16px;
+      border: 1px solid rgba(159,180,196,.22);
+      color: #effbff;
+      background: rgba(255,255,255,.03);
+      font-weight: 700;
+      transition: .25s ease;
+    }
+
+    .cta-btn.primary {
+      border-color: var(--border-strong);
+      background: linear-gradient(135deg, var(--accent), #79fff2);
+      color: #051015;
+    }
+
+    .cta-btn:hover { transform: translateY(-1px); box-shadow: 0 12px 26px rgba(0,0,0,.18); }
+
+    .hero-side { display: grid; gap: 18px; background: linear-gradient(180deg,rgba(7,16,24,.92),rgba(11,23,31,.96)); }
+
+    .side-card, .series-card, .stat {
+      border-radius: 22px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.03);
+    }
+
+    .side-card { padding: 22px 22px 20px; }
+
+    .side-card h3 { color: var(--accent); margin-bottom: 12px; font-size: 1.02rem; }
+
+    .side-card ul { padding-left: 18px; display: grid; gap: 10px; }
+
+    /* STATS */
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0,1fr));
+      gap: 18px;
+      margin-bottom: 24px;
+    }
+
+    .stat { padding: 22px 20px; }
+
+    .stat strong { display: block; margin-bottom: 10px; color: var(--accent); font-size: 1rem; }
+
+    /* SECTION */
+    .section { margin-bottom: 24px; }
+
+    .section-head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 22px;
+      flex-wrap: wrap;
+    }
+
+    h2 { font-size: 1.55rem; margin-bottom: 8px; color: #e9ffff; }
+
+    .series-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+      gap: 16px;
+    }
+
+    .series-card { padding: 22px; }
+
+    .series-card h3 { color: var(--accent); margin-bottom: 10px; font-size: 1rem; }
+
+    /* CATALOG */
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 28px;
+    }
+
+    .search-box { flex: 1; min-width: 220px; }
+
+    .search-box input {
+      width: 100%;
+      padding: 12px 16px;
+      border-radius: 12px;
+      border: 1px solid var(--border-strong);
+      background: rgba(6,16,24,.8);
+      color: var(--accent);
+      font-size: 1rem;
+      outline: none;
+    }
+
+    .search-box input::placeholder { color: rgba(28,239,224,.5); }
+
+    .filter-buttons { display: flex; gap: 10px; flex-wrap: wrap; }
+
+    .filter-buttons button {
+      padding: 9px 16px;
+      border: 1px solid var(--border-strong);
+      background: rgba(8,19,28,.72);
+      color: var(--accent);
+      border-radius: 999px;
+      cursor: pointer;
+      font-size: .9rem;
+      transition: .25s ease;
+    }
+
+    .filter-buttons button.active,
+    .filter-buttons button:hover {
+      background: var(--accent);
+      color: #071116;
+      box-shadow: 0 0 14px rgba(28,239,224,.3);
+    }
+
+    .cases-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px,1fr));
+      gap: 20px;
+    }
+
+    .case-card {
+      background: rgba(13,26,35,.9);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px;
+      cursor: pointer;
+      transition: .25s ease;
+    }
+
+    .case-card:hover {
+      border-color: var(--border-strong);
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(28,239,224,.12);
+    }
+
+    .case-card img {
+      width: 100%;
+      max-height: 220px;
+      object-fit: contain;
+      border-radius: 10px;
+      margin-bottom: 14px;
+      background: transparent !important;
+      display: block;
+      cursor: zoom-in;
+    }
+
+    .case-card h3 {
+      font-size: 1rem;
+      color: var(--accent);
+      margin-bottom: 6px;
+    }
+
+    .case-card p { font-size: .9rem; color: var(--muted); line-height: 1.45; }
+
+    /* MODAL */
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.88);
+      justify-content: center;
+      align-items: center;
+      z-index: 1000;
+      padding: 16px;
+    }
+
+    .modal-content {
+      background: transparent;
+      padding: 0;
+      border: 0;
+      box-shadow: none;
+      width: auto;
+      max-width: 96vw;
+      max-height: 96vh;
+    }
+
+    .modal-content img {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: 96vw;
+      max-height: 96vh;
+      margin: 0;
+      border-radius: 0;
+      background: transparent !important;
+      box-shadow: 0 12px 34px rgba(0,0,0,.45);
+    }
+
+    .modal-content h3,
+    .modal-content ul,
+    .modal-close { display: none !important; }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 18px;
+      font-size: .85rem;
+      color: var(--muted);
+      border-top: 1px solid rgba(28,239,224,.15);
+    }
+
+    @media(max-width:900px){
+      .hero { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: repeat(2,1fr); }
+    }
+
+    @media(max-width:560px){
+      .stats { grid-template-columns: 1fr; }
+      .top-bar { flex-wrap: wrap; justify-content: center; }
+      .top-buttons { justify-content: center; }
+    }
+
+/* unified-nav */
+.nav-buttons,.header-nav{flex-wrap:nowrap;white-space:nowrap;overflow-x:auto}
+.nav-buttons a,.header-nav a{flex:0 0 auto}
+
+/* clickable-logo */
+.logo{text-decoration:none;cursor:pointer}
+.logo:hover{opacity:.86}
+
+/* emall-shop */
+.hero-shop{display:grid;gap:12px}
+.hero-shop-logo-text{display:inline-flex;align-items:center;justify-content:center;min-width:104px;height:42px;border-radius:8px;background:#f8fafc;border:1px solid #dbeafe;color:#2563eb;font-weight:900;letter-spacing:.02em}
+.btn-shop-emall{background:#111827}
+.btn-shop-emall:hover{background:#374151}
+</style>
+
+</head>
+
+<body>
+
+<header>
+  <div class="top-bar">
+    <a class="logo" href="../index.html" aria-label="На главную страницу">
+      <img src="../images/logo.png" alt="MS8AT Global">
+      <span>MS8AT GLOBAL</span>
+    </a>
+
+    <div class="top-buttons">
+      <!-- EN version -->
+      <a href="../../en/cases/cases.html" class="dealer-btn">ENG</a>
+
+      <!-- Главная -->
+      <a href="../index.html" class="dealer-btn">Главная</a>
+
+      <a href="https://future.shop.onliner.by/" class="dealer-btn" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:7px;padding:6px 14px 6px 8px;"><img src="../../logo-future.jpg" alt="Future" style="height:22px;width:auto;border-radius:4px;flex-shrink:0;">Магазин</a>
+      <a href="https://9981.emall.by/" class="dealer-btn" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:7px;padding:6px 14px 6px 8px;"><img src="../../logo-future.jpg" alt="Future" style="height:22px;width:auto;border-radius:4px;flex-shrink:0;">Emall</a>
+    </div>
+  </div>
+
+  <div class="nav-buttons">
+    <a href="../cases/cases.html" class="active">Корпуса</a>
+    <a href="../minipc/minipc.html">Мини-ПК Future</a>
+    <a href="../monoblock/monoblock.html">Моноблоки Future</a>
+    <a href="../soft/soft.html">Софт</a>
+    <a href="../news/news.html" class="news-link">IT Новости</a>
+    <a href="../jarvice/jarvice.html">Jarvice</a>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <article class="panel hero-copy">
+      <span class="eyebrow">Корпуса для ПК и серверов</span>
+      <h1>Корпуса</h1>
+      <p class="lead">Большой выбор корпусов для дома, офиса и серверных систем - от компактных Mini-ITX до полноразмерных ATX и стоечных решений.</p>
+      <p>В каталоге представлены модели с закаленным стеклом, матовым покрытием SPCC, в черном и белом цветах. Есть варианты как для игровых сборок, так и для офисных и корпоративных систем.</p>
+      <div class="hero-chips">
+        <span class="chip">Mini-ITX</span>
+        <span class="chip">ATX</span>
+        <span class="chip">Rack / Сервер</span>
+        <span class="chip">Закаленное стекло</span>
+        <span class="chip">Черный / Белый</span>
+        <span class="chip">Сталь SPCC</span>
+      </div>
+      <div class="hero-actions">
+        <a class="cta-btn primary" href="#cases">Все модели</a>
+        <a class="cta-btn" href="https://t.me/viq4uat_bot?start=order" target="_blank" rel="noopener noreferrer">Подобрать корпус</a>
+      </div>
+    </article>
+
+    <div class="panel hero-side">
+      <article class="side-card">
+        <h3>Как выбрать быстрее</h3>
+        <ul>
+          <li><strong>Mini-ITX</strong> - для компактных сборок, когда ограничено место на столе.</li>
+          <li><strong>ATX</strong> - универсальный формат с хорошим воздушным потоком и местом под СЖО и несколько накопителей.</li>
+          <li>Закаленное стекло делает сборку более премиальной, а матовый SPCC выглядит строгим и практичным.</li>
+          <li><strong>Rack</strong> - для серверных и промышленных стоечных установок.</li>
+        </ul>
+      </article>
+      <article class="side-card">
+        <h3>Что есть в каталоге</h3>
+        <p>Большинство моделей - полноразмерные ATX-корпуса в черном и белом цветах с прозрачной боковой панелью. Также есть стойки для серверных решений и один компактный вариант Mini-ITX.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="stats">
+    <article class="panel stat">
+      <strong>44 модели в каталоге</strong>
+      <p>Корпуса ATX, Rack и Mini-ITX для домашних, офисных и серверных систем.</p>
+    </article>
+    <article class="panel stat">
+      <strong>Mini-ITX / ATX / Rack</strong>
+      <p>Три форм-фактора для разных задач - от компактного домашнего ПК до серверной стойки.</p>
+    </article>
+    <article class="panel stat">
+      <strong>Черный и белый</strong>
+      <p>Большинство ATX-моделей доступны в двух цветах для разных стилей сборки.</p>
+    </article>
+    <article class="panel stat">
+      <strong>Сталь + закаленное стекло</strong>
+      <p>Конструкция из стали SPCC, у многих моделей - фронтальные или боковые панели из закаленного стекла.</p>
+    </article>
+  </section>
+
+  <section class="panel section" id="series">
+    <div class="section-head">
+      <div>
+        <span class="kicker">Форм-факторы</span>
+        <h2>Корпуса для разных сборок</h2>
+        <p>Подберите тип корпуса по форм-фактору платы, сценарию нагрузки и стилю сборки.</p>
+      </div>
+      <span class="hint">Фильтр по типу ниже</span>
+    </div>
+
+    <div class="series-grid">
+      <article class="series-card">
+        <h3>ATX - Игровые и универсальные</h3>
+        <p>Полноразмерные корпуса для стандартных и игровых сборок. Большинство с прозрачной боковой панелью из закаленного стекла, хорошим продувом и поддержкой башенных кулеров.</p>
+        <div class="chip-row">
+          <span class="chip">285M / 33 / 501</span>
+          <span class="chip">H01 / H02</span>
+          <span class="chip">Закаленное стекло</span>
+          <span class="chip">Черный / Белый</span>
+        </div>
+      </article>
+      <article class="series-card">
+        <h3>ATX - Офисные и корпоративные</h3>
+        <p>Практичные ATX-корпуса без стекла для офисных и корпоративных ПК. Сдержанный дизайн, прочное покрытие SPCC и стандартные габариты под ATX-компоненты.</p>
+        <div class="chip-row">
+          <span class="chip">195A / CD3203-3706</span>
+          <span class="chip">LP32 / LP37</span>
+          <span class="chip">SPCC 0.4-0.45</span>
+        </div>
+      </article>
+      <article class="series-card">
+        <h3>Rack / Сервер</h3>
+        <p>Стоечные корпуса для серверных и промышленных систем. Подходят для 19" стоек, серверных помещений и компактных NAS-решений.</p>
+        <div class="chip-row">
+          <span class="chip">A09 / CD09P</span>
+          <span class="chip">MX02</span>
+          <span class="chip">SPCC 0.4-0.8</span>
+        </div>
+      </article>
+      <article class="series-card">
+        <h3>Mini-ITX</h3>
+        <p>Компактный корпус для сборок на платах Mini-ITX. Минимум места на столе при сохранении полной функциональности для дома и офиса.</p>
+        <div class="chip-row">
+          <span class="chip">MX01</span>
+          <span class="chip">SPCC 0.6</span>
+          <span class="chip">Компактный</span>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="panel section" id="cases">
+    <div class="section-head">
+      <div>
+        <span class="kicker">Каталог товаров</span>
+        <h2>Все корпуса</h2>
+        <p>Нажмите на карточку, чтобы открыть детали модели. Используйте фильтр по типу или поиск.</p>
+      </div>
+      <span class="hint">Mini-ITX • ATX • Rack</span>
+    </div>
+
+    <div class="toolbar">
+      <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Поиск по модели или форм-фактору...">
+      </div>
+      <div class="filter-buttons">
+        <button class="active" data-filter="all">Все</button>
+        <button data-filter="mini">Mini-ITX</button>
+        <button data-filter="ATX">ATX</button>
+        <button data-filter="rack">Rack / Сервер</button>
+      </div>
+    </div>
+
+  <div class="cases-grid" id="casesContainer">
+
+    <div class="case-card" data-category="ATX">
+      <img src="../images/cases/case 195A01/main.png" alt="Case 195A01" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case 195A01</h3>
+      <p>Тип: Корпус, Цвет: черный, Материал: 0.45  SPCC black coating</p>
+    </div>
+
+    <div class="case-card" data-category="ATX">
+      <img src="../images/cases/case 195A02/main.png" alt="Case 195A02" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case 195A02</h3>
+      <p>Тип: Корпус, Цвет: черный, Материал: 0.45  SPCC black coating</p>
+    </div>
+
+    <div class="case-card" data-category="ATX">
+      <img src="../images/cases/case 285M B/main.png" alt="Case 285M B" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case 285M B</h3>
+      <p>Тип: Корпус, Цвет: черный, Материал: 0.55-0.85/SPCC black /Боковая и фронтальная панели: закаленное стекло спереди </p>
+    </div>
+
+    <div class="case-card" data-category="ATX">
+      <img src="../images/cases/case 285M W/main.png" alt="Case 285M W" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case 285M W</h3>
+      <p>Тип: Корпус, Цвет: белый, Материал: 0.55-0.85/SPCC black /Боковая и фронтальная панели: закаленное стекло спереди </p>
+    </div>
+
+    <div class="case-card" data-category="ATX">
+      <img src="../images/cases/case 33b/main.png" alt="Case 33B" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case 33B</h3>
+      <p>Тип: Корпус, Цвет: черный, Материал: 0.4/SPCC black Боковая и фронтальная панели: закаленное стекло спереди </p>
+    </div>
+
+    <div class="case-card" data-category="ATX">
+      <img src="../images/cases/case 33W/main.png" alt="Case 33W" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case 33W</h3>
+      <p>Тип: Корпус, Цвет: белый, Материал: 0.4/SPCC black Боковая и фронтальная панели: закаленное стекло спереди </p>
+    </div>
+
+    <div class="case-card" data-category="ATX">
+      <img src="../images/cases/case 501b/main.png" alt="Case 501B" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case 501B</h3>
+      <p>Тип: Корпус, Цвет: черный, Материал: 0.4SPCCblack Боковая и фронтальная панели: закаленное стекло спереди </p>
+    </div>
+
+    <div class="case-card" data-category="ATX">
+      <img src="../images/cases/case 501W/main.png" alt="Case 501W" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case 501W</h3>
+      <p>Тип: Корпус, Цвет: белый, Материал: 0.4SPCCblack Боковая и фронтальная панели: закаленное стекло спереди </p>
+    </div>
+
+    <div class="case-card" data-category="ATX">
+      <img src="../images/cases/case 9501gb/main.png" alt="Case 9501GB" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case 9501GB</h3>
+      <p>Тип: Корпус, Цвет: черный, Материал: 0.4SPCC black/ Боковая и фронтальная панели: закаленное стекло спереди </p>
+    </div>
+
+    <div class="case-card" data-category="ATX">
+      <img src="../images/cases/case 9501gw/main.png" alt="Case 9501GW" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case 9501GW</h3>
+      <p>Тип: Корпус, Цвет: белый, Материал: 0.4SPCC black/ Боковая и фронтальная панели: закаленное стекло спереди </p>
+    </div>
+
+    <div class="case-card" data-category="ATX">
+      <img src="../images/cases/case 9501MB/main.png" alt="Case 9501MB" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case 9501MB</h3>
+      <p>Тип: Корпус, Цвет: черный, Материал: 0.4SPCC black/ Боковая и фронтальная панели: закаленное стекло спереди </p>
+    </div>
+
+    <div class="case-card" data-category="ATX">
+      <img src="../images/cases/case 9501MW/main.png" alt="Case 9501MW" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case 9501MW</h3>
+      <p>Тип: Корпус, Цвет: белый, Материал: 0.4SPCC black/ Боковая и фронтальная панели: закаленное стекло спереди </p>
+    </div>
+
+    <div class="case-card" data-category="rack">
+      <img src="../images/cases/case A09/main.png" alt="Case A09" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case A09</h3>
+      <p>Тип: Корпус, Цвет: черный, Материал: 0.4/SPCC</p>
+    </div>
+
+    <div class="case-card" data-category="rack">
+      <img src="../images/cases/case A09_3/main.png" alt="Case A09_3" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case A09_3</h3>
+      <p>Тип: Корпус, Цвет: черный, Материал: 0.4/SPCC</p>
+    </div>
+
+    <div class="case-card" data-category="rack">
+      <img src="../images/cases/case CD09P_2_3/main.png" alt="Case CD09P_2_3" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case CD09P_2_3</h3>
+      <p>Тип: Корпус, Цвет: черный, Материал: 0.4/SPCC</p>
+    </div>
+
+    <div class="case-card" data-category="ATX">
+      <img src="../images/cases/case CD218-3/main.png" alt="Case CD218-3" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case CD218-3</h3>
+      <p>Тип: Корпус, Цвет: черный, Материал: 0.45  SPCC black coating</p>
+    </div>
+
+    <div class="case-card" data-category="ATX">
+      <img src="../images/cases/case CD3203/main.png" alt="Case CD3203" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case CD3203</h3>
+      <p>Тип: Корпус, Цвет: черный, Материал: 0.4/SPCC</p>
+    </div>
+
+    <div class="case-card" data-category="ATX">
+      <img src="../images/cases/case CD3204/main.png" alt="Case CD3204" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case CD3204</h3>
+      <p>Тип: Корпус, Цвет: черный, Материал: 0.4/SPCC</p>
+    </div>
+
+    <div class="case-card" data-category="ATX">
+      <img src="../images/cases/case CD3205/main.png" alt="Case CD3205" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case CD3205</h3>
+      <p>Тип: Корпус, Цвет: черный, Материал: 0.4/SPCC</p>
+    </div>
+
+    <div class="case-card" data-category="ATX">
+      <img src="../images/cases/case CD3206/main.png" alt="Case CD3206" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case CD3206</h3>
+      <p>Тип: Корпус, Цвет: черный, Материал: 0.4/SPCC</p>
+    </div>
+
+    <div class="case-card" data-category="ATX">
+      <img src="../images/cases/case CD3703/main.png" alt="Case CD3703" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case CD3703</h3>
+      <p>Тип: Корпус, Цвет: черный, Материал: 0.4/SPCC black </p>
+    </div>
+
+    <div class="case-card" data-category="ATX">
+      <img src="../images/cases/case CD3704/main.png" alt="Case CD3704" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case CD3704</h3>
+      <p>Тип: Корпус, Цвет: черный, Материал: 0.4/SPCC black </p>
+    </div>
+
+    <div class="case-card" data-category="ATX">
+      <img src="../images/cases/case CD3705/main.png" alt="Case CD3705" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case CD3705</h3>
+      <p>Тип: Корпус, Цвет: черный, Материал: 0.4/SPCC black </p>
+    </div>
+
+    <div class="case-card" data-category="ATX">
+      <img src="../images/cases/case CD3706/main.png" alt="Case CD3706" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case CD3706</h3>
+      <p>Тип: Корпус, Цвет: черный, Материал: 0.4/SPCC black </p>
+    </div>
+
+    <div class="case-card" data-category="ATX">
+      <img src="../images/cases/case CDE2852W/main.png" alt="Case CDE2852W" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case CDE2852W</h3>
+      <p>Тип: Корпус, Цвет: белый, Материал: 0.7/SPCCblack /Боковая и фронтальная панели: закаленное стекло спереди </p>
+    </div>
+
+    <div class="case-card" data-category="ATX">
+      <img src="../images/cases/case CDE285B/main.png" alt="Case CDE285B" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case CDE285B</h3>
+      <p>Тип: Корпус, Цвет: черный, Материал: 0.7/SPCCblack /Боковая и фронтальная панели: закаленное стекло спереди </p>
+    </div>
+
+    <div class="case-card" data-category="ATX">
+      <img src="../images/cases/case H01B/main.png" alt="Case H01B" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case H01B</h3>
+      <p>Тип: Корпус, Цвет: черный, Материал: 0.7/SPCC black/Боковая и фронтальная панели: закаленное стекло спереди </p>
+    </div>
+
+    <div class="case-card" data-category="ATX">
+      <img src="../images/cases/case H01W/main.png" alt="Case H01W" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case H01W</h3>
+      <p>Тип: Корпус, Цвет: белый, Материал: 0.7/SPCC black/Боковая и фронтальная панели: закаленное стекло спереди </p>
+    </div>
+
+    <div class="case-card" data-category="ATX">
+      <img src="../images/cases/case H02B/main.png" alt="Case H02B" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case H02B</h3>
+      <p>Тип: Корпус, Цвет: черный, Материал: 0.7/SPCCblack /Боковая и фронтальная панели: закаленное стекло спереди </p>
+    </div>
+
+    <div class="case-card" data-category="ATX">
+      <img src="../images/cases/case H02W/main.png" alt="Case H02W" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case H02W</h3>
+      <p>Тип: Корпус, Цвет: белый, Материал: 0.7/SPCCblack /Боковая и фронтальная панели: закаленное стекло спереди </p>
+    </div>
+
+    <div class="case-card" data-category="ATX">
+      <img src="../images/cases/case LP32-31/main.png" alt="Case LP32-31" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case LP32-31</h3>
+      <p>Тип: Корпус, Цвет: черный, Материал: 0.4/SPCC</p>
+    </div>
+
+    <div class="case-card" data-category="ATX">
+      <img src="../images/cases/case LP32-38/main.png" alt="Case LP32-38" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case LP32-38</h3>
+      <p>Тип: Корпус, Цвет: черный, Материал: 0.4/SPCC</p>
+    </div>
+
+    <div class="case-card" data-category="ATX">
+      <img src="../images/cases/case LP32-41/main.png" alt="Case LP32-41" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case LP32-41</h3>
+      <p>Тип: Корпус, Цвет: черный, Материал: 0.4/SPCC</p>
+    </div>
+
+    <div class="case-card" data-category="ATX">
+      <img src="../images/cases/case LP37-31/main.png" alt="Case LP37-31" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case LP37-31</h3>
+      <p>Тип: Корпус, Цвет: черный, Материал: 0.4/SPCC black </p>
+    </div>
+
+    <div class="case-card" data-category="ATX">
+      <img src="../images/cases/case LP37-36/main.png" alt="Case LP37-36" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case LP37-36</h3>
+      <p>Тип: Корпус, Цвет: черный, Материал: 0.4/SPCC black </p>
+    </div>
+
+    <div class="case-card" data-category="ATX">
+      <img src="../images/cases/case LP37-37/main.png" alt="Case LP37-37" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case LP37-37</h3>
+      <p>Тип: Корпус, Цвет: черный, Материал: 0.4/SPCC black </p>
+    </div>
+
+    <div class="case-card" data-category="ATX">
+      <img src="../images/cases/case LP37-38/main.png" alt="Case LP37-38" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case LP37-38</h3>
+      <p>Тип: Корпус, Цвет: черный, Материал: 0.4/SPCC black </p>
+    </div>
+
+    <div class="case-card" data-category="ATX">
+      <img src="../images/cases/case LP-41/main.png" alt="Case LP-41" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case LP-41</h3>
+      <p>Тип: Корпус, Цвет: черный, Материал: 0.4/SPCC black </p>
+    </div>
+
+    <div class="case-card" data-category="mini">
+      <img src="../images/cases/case MX01/main.png" alt="Case MX01" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case MX01</h3>
+      <p>Тип: Корпус, Цвет: черный, Материал: SPCC 0.6</p>
+    </div>
+
+    <div class="case-card" data-category="rack">
+      <img src="../images/cases/case MX02/main.png" alt="Case MX02" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case MX02</h3>
+      <p>Тип: Корпус, Цвет: черный, Материал: SPCC 0.8</p>
+    </div>
+
+    <div class="case-card" data-category="rack">
+      <img src="../images/cases/case MX02_3/main.png" alt="Case MX02_3" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case MX02_3</h3>
+      <p>Тип: Корпус, Цвет: черный, Материал: SPCC 0.8</p>
+    </div>
+
+    <div class="case-card" data-category="ATX">
+      <img src="../images/cases/case S02B/main.png" alt="Case S02B" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case S02B</h3>
+      <p>Тип: Корпус, Цвет: черный, Материал: 0.45/SPCC Боковая и фронтальная панели: закаленное стекло спереди </p>
+    </div>
+
+    <div class="case-card" data-category="ATX">
+      <img src="../images/cases/case S02BW/main.png" alt="Case S02BW" onerror="this.src='../images/cases/placeholder.png'">
+      <h3>Case S02BW</h3>
+      <p>Тип: Корпус, Цвет: белый, Материал: 0.45/SPCC Боковая и фронтальная панели: закаленное стекло спереди </p>
+    </div>
+
+  </div>
+  </section>
+
+</main>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+  <div class="modal-content">
+    <img id="modalImage" src="" alt="">
+  </div>
+</div>
+
+<footer>
+  ООО "МС8АТ Глобал" • Все права защищены
+</footer>
+
+  <script>
+    // Filter cards without loading JSON
+    function renderCasesFromDOM(filter) {
+        const cards = document.querySelectorAll('.case-card');
+        cards.forEach(card => {
+            if (filter === 'all' || card.dataset.category === filter) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    }
+
+    // Open modal with case details
+    function openModal(item) {
+        const modal = document.getElementById('modal');
+        const modalImage = document.getElementById('modalImage');
+        const sourceImage = item.querySelector('img');
+        modalImage.src = sourceImage.src;
+        modalImage.alt = sourceImage.alt || item.querySelector('h3').textContent;
+        modal.style.display = 'flex';
+    }
+
+    // Event handlers
+    document.querySelectorAll('.case-card img').forEach(img => {
+        img.addEventListener('click', e => {
+            e.stopPropagation();
+            openModal(img.closest('.case-card'));
+        });
+    });
+
+    window.onclick = e => {
+        if (e.target === document.getElementById('modal')) {
+            document.getElementById('modal').style.display = 'none';
+        }
+    };
+
+    document.addEventListener('keydown', e => {
+        if (e.key === 'Escape') {
+            document.getElementById('modal').style.display = 'none';
+        }
+    });
+
+    document.querySelectorAll('.filter-buttons button').forEach(btn => {
+        btn.onclick = () => {
+            document.querySelectorAll('.filter-buttons button')
+                .forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            const f = btn.dataset.filter;
+            renderCasesFromDOM(f);
+        };
+    });
+
+    document.getElementById('searchInput').oninput = e => {
+        const q = e.target.value.toLowerCase().trim();
+        const cards = document.querySelectorAll('.case-card');
+        cards.forEach(card => {
+            const text = card.textContent.toLowerCase();
+            if (!q || text.includes(q)) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+    };
+
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        renderCasesFromDOM('all');
+    });
+
+  </script>
+
+<!-- === FIXED TELEGRAM BUTTON === -->
+<a href="https://t.me/viq4uat_bot?start=order"
+   target="_blank"
+   title="Оставить заявку в Telegram"
+   style="position:fixed;right:22px;bottom:22px;width:58px;height:58px;border-radius:50%;background:#1cefe0;display:flex;align-items:center;justify-content:center;box-shadow:0 0 18px rgba(28,239,224,0.8);z-index:9999;transition:transform 0.25s,box-shadow 0.25s;"
+   onmouseover="this.style.transform='scale(1.12)';this.style.boxShadow='0 0 30px rgba(28,239,224,1)'"
+   onmouseout="this.style.transform='scale(1)';this.style.boxShadow='0 0 18px rgba(28,239,224,0.8)'"
+>
+  <svg width="28" height="28" viewBox="0 0 240 240" fill="#061018" xmlns="http://www.w3.org/2000/svg">
+    <path d="M120 0C53.7 0 0 53.7 0 120s53.7 120 120 120 120-53.7 120-120S186.3 0 120 0zm58.3 82.1-19.9 93.8c-1.5 6.7-5.5 8.3-11.2 5.2l-31-22.9-14.9 14.3c-1.6 1.6-3 3-6.1 3l2.2-31.7 57.7-52.1c2.5-2.2-.5-3.4-3.9-1.2l-71.3 44.9-30.7-9.6c-6.7-2.1-6.8-6.7 1.4-9.9l119.9-46.2c5.6-2 10.5 1.3 8.8 9.4z"/>
+  </svg>
+</a>
+
+</body>
+</html>

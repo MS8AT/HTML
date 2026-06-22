@@ -1,0 +1,14 @@
+[
+  {
+    "model": "MS8AT MX01",
+    "category": "office",
+    "description": "Компактный Mini-PC для офиса и POS",
+    "specs": [
+      "CPU: Intel Core i5-8400T",
+      "RAM: DDR4 до 32 ГБ",
+      "SSD: M.2 / SATA",
+      "LAN: 2×GbE",
+      "Питание: 12V"
+    ]
+  }
+]

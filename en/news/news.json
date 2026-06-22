@@ -1,0 +1,181 @@
+{
+  "updated_at": "2026-04-28",
+  "items": [
+    {
+      "section": "world",
+      "date": "2026-04-27",
+      "source": "AMD Blog",
+      "tag": "AI PC",
+      "regionLabel": "World",
+      "title": "AMD says enterprise AI PC adoption is accelerating as companies prepare for agentic AI",
+      "summary": "On April 27, 2026 AMD published a new update on rising business interest in AI PCs. Citing a fresh IDC study, the company says more than eight in ten organizations have already deployed AI PCs, piloted them or are planning near-term adoption.",
+      "note": "This is a timely and practical PC-market story: AI features are moving from experiments toward real enterprise refresh plans for employee devices.",
+      "url": "https://www.amd.com/en/blogs/2026/ai-pc-adoption-accelerates-as-enterprises-prepare.html"
+    },
+    {
+      "section": "world",
+      "date": "2026-04-24",
+      "source": "Windows Insider Blog",
+      "tag": "Windows 11",
+      "regionLabel": "World",
+      "title": "Microsoft moves Windows Insider to the new Experimental and Beta structure",
+      "summary": "On April 24, 2026 Microsoft announced a major reshaping of the Windows Insider Program. At the same time, build release notes are moving to the Documentation Hub and new builds are being published under the updated channel logic.",
+      "note": "A strong anchor story for anyone following Windows 11 testing and preview builds: Microsoft is changing how the Insider program itself works.",
+      "url": "https://blogs.windows.com/windows-insider/2026/04/24/were-moving-to-experimental-and-beta-announcing-new-builds/"
+    },
+    {
+      "section": "world",
+      "date": "2026-04-10",
+      "source": "Windows Insider Blog",
+      "tag": "Windows 11",
+      "regionLabel": "World",
+      "title": "Microsoft explained in detail how the Windows Insider program is changing",
+      "summary": "On April 10, 2026 the Windows Insider team laid out the new Experimental and Beta channel logic, along with a more transparent approach to feature rollouts and movement between Windows versions.",
+      "note": "This complements the later April 24 announcement well: it explains why Microsoft is making these changes and how the new Insider flow is meant to work.",
+      "url": "https://blogs.windows.com/windows-insider/2026/04/10/improving-your-windows-insider-experience/"
+    },
+    {
+      "section": "world",
+      "date": "2026-04-20",
+      "source": "NVIDIA Blog",
+      "tag": "AI / Industry",
+      "regionLabel": "World",
+      "title": "NVIDIA shows AI-driven manufacturing at Hannover Messe 2026",
+      "summary": "NVIDIA and its partners used Hannover Messe 2026 to showcase industrial AI scenarios including simulation, vision agents, robotics and the infrastructure needed for the next generation of factories.",
+      "note": "This is not only about data centers: AI is moving deeper into real manufacturing, logistics and engineering workflows.",
+      "url": "https://blogs.nvidia.com/blog/ai-manufacturing-hannover-messe/"
+    },
+    {
+      "section": "world",
+      "date": "2026-04-16",
+      "source": "Intel Newsroom",
+      "tag": "Processors",
+      "regionLabel": "World",
+      "title": "Intel launches Core Series 3 for everyday PCs and edge deployments",
+      "summary": "On April 16, 2026 Intel introduced Intel Core Series 3: AI-ready mobile processors aimed at mainstream notebooks, small business systems and edge devices. Intel says more than 70 partner designs are on the way.",
+      "note": "This matters for the affordable PC segment: modern AI-ready features and platform upgrades are moving into more mass-market systems.",
+      "url": "https://newsroom.intel.com/client-computing/intel-launches-intel-core-series-3-processors-changing-the-game-for-everyday-computing"
+    },
+    {
+      "section": "world",
+      "date": "2026-04-09",
+      "source": "Intel Newsroom",
+      "tag": "AI Infrastructure",
+      "regionLabel": "World",
+      "title": "Intel and Google expand cooperation around AI infrastructure",
+      "summary": "Intel and Google announced a multiyear collaboration around Xeon and infrastructure processing units. The focus is on efficiency, orchestration and scaling modern heterogeneous AI systems.",
+      "note": "The story reflects a broader market shift: AI increasingly depends not only on accelerators but on balanced system architecture.",
+      "url": "https://newsroom.intel.com/data-center/intel-google-deepen-collaboration-to-advance-ai-infrastructure"
+    },
+    {
+      "section": "world",
+      "date": "2026-03-20",
+      "source": "Windows Insider Blog",
+      "tag": "Windows 11",
+      "regionLabel": "World",
+      "title": "Microsoft published a Windows 11 quality roadmap",
+      "summary": "In March 2026 Microsoft outlined what it plans to improve in Windows 11: taskbar positions, update controls, File Explorer, Insider transparency, Feedback Hub and a more deliberate approach to AI integration.",
+      "note": "One of the most practical Windows stories in recent months: Microsoft publicly listed what it wants to fix and polish.",
+      "url": "https://blogs.windows.com/windows-insider/2026/03/20/our-commitment-to-windows-quality/"
+    },
+    {
+      "section": "world",
+      "date": "2026-01-13",
+      "source": "Windows Experience Blog",
+      "tag": "CES 2026",
+      "regionLabel": "World",
+      "title": "Microsoft recapped CES 2026 across Windows 11 PCs and Copilot+ devices",
+      "summary": "At CES 2026 Microsoft gathered the key ecosystem announcements around Windows 11: new AI PCs, Copilot+ models, gaming laptops and displays from Acer, ASUS, Dell, Lenovo and other partners.",
+      "note": "This is a useful snapshot of where the broader Windows PC market is heading in 2026.",
+      "url": "https://blogs.windows.com/windowsexperience/2026/01/13/ces-2026-showcasing-new-windows-11-pc-innovations-across-the-ecosystem/"
+    },
+    {
+      "section": "world",
+      "date": "2026-01-05",
+      "source": "AMD Newsroom",
+      "tag": "Ryzen / AI PC",
+      "regionLabel": "World",
+      "title": "AMD expanded the Ryzen AI and Copilot+ PC lineup at CES 2026",
+      "summary": "AMD introduced Ryzen AI 400 Series, Ryzen AI PRO 400 Series and new Ryzen AI Max+ parts for thin notebooks, compact PCs and workstations. The company is clearly pushing local AI workloads and the Copilot+ PC segment.",
+      "note": "An important PC-market announcement: AMD is strengthening not only CPU positioning but also the AI direction for notebooks and compact systems.",
+      "url": "https://www.amd.com/en/newsroom/press-releases/2026-1-5-amd-expands-ai-leadership-across-client-graphics-.html"
+    },
+    {
+      "section": "world",
+      "date": "2026-01-05",
+      "source": "NVIDIA Blog",
+      "tag": "CES 2026",
+      "regionLabel": "World",
+      "title": "NVIDIA used CES 2026 to present Rubin and new AI-on-PC directions",
+      "summary": "At CES 2026 NVIDIA introduced the Rubin platform, open AI models for multiple domains and updates for personal AI scenarios, including DGX Spark, RTX and DLSS 4.5.",
+      "note": "The story is interesting because it connects data-center AI, local AI on PCs and gaming graphics inside one NVIDIA ecosystem.",
+      "url": "https://blogs.nvidia.com/blog/2026-ces-special-presentation/"
+    },
+    {
+      "section": "belarus",
+      "date": "2026-03-24",
+      "source": "Reform.news",
+      "tag": "Hosting / Cybersecurity",
+      "regionLabel": "Belarus",
+      "title": "Belarus temporarily restricted access to some hosted sites from abroad",
+      "summary": "On March 24, 2026 it became public that access from outside Belarus was limited for shared-hosting sites during March 24-26 as part of protective measures against cyber threats.",
+      "note": "A locally important infrastructure story for businesses and web projects: it shows how cybersecurity measures can directly affect site availability.",
+      "url": "https://reform.news/na-den-voli-sajty-v-belarusi-zakrojut-dlja-polzovatelej-iz-za-granicy"
+    },
+    {
+      "section": "belarus",
+      "date": "2026-02-17",
+      "source": "Reform.news",
+      "tag": "Innovation / Manufacturing",
+      "regionLabel": "Belarus",
+      "title": "Belarus approved 42 projects under its innovation development program",
+      "summary": "The government approved a list of 42 major innovation projects for 2026-2030 and separate measures for the development of science and technology parks.",
+      "note": "While broader than pure IT, this is important local context for technology, production investment and innovation infrastructure.",
+      "url": "https://reform.news/opredeleny-42-proekta-gosprogrammy-innovacionnogo-razvitija"
+    },
+    {
+      "section": "belarus",
+      "date": "2026-01-05",
+      "source": "devby",
+      "tag": "Belarus IT Market",
+      "regionLabel": "Belarus",
+      "title": "Belarusian Economy Ministry named the factors holding local IT back",
+      "summary": "devby summarized a Belarus Economy Ministry report that pointed to weak incentives for developers, missing elements of a national software ecosystem and export difficulties. It also noted rising RAM prices in Belarus during the AI boom.",
+      "note": "One of the most meaningful local industry stories because it connects market conditions, hardware pricing, exports and structural IT-sector limits.",
+      "url": "https://devby.io/en/news/reputational-risks-ministry-of-economy-reveals-whats-hampering-belarusian-it-development.amp"
+    },
+    {
+      "section": "belarus",
+      "date": "2025-12-31",
+      "source": "Reform.news",
+      "tag": "Digital Belarus",
+      "regionLabel": "Belarus",
+      "title": "Digital Belarus program focuses on a domestic software ecosystem",
+      "summary": "At the end of 2025 the government approved the Digital Belarus program for 2026-2030. It includes digital services for government and business, AI-linked solutions and the creation of a more import-independent software ecosystem.",
+      "note": "This is a key local policy story for understanding where Belarus officially wants to move in digital and IT development over the next few years.",
+      "url": "https://reform.news/gosprogramma-cifrovaja-belarus-predusmatrivaet-sozdanie-importonezavisimoj-jekosistemy-po"
+    },
+    {
+      "section": "belarus",
+      "date": "2025-09-15",
+      "source": "devby",
+      "tag": "Industry / Analytics",
+      "regionLabel": "Belarus",
+      "title": "devby says the Belarusian IT industry has entered stagnation",
+      "summary": "According to devby research, specialist migration has slowed sharply, the industry is aging, fewer new people are entering and the job market remains weak even for experienced talent.",
+      "note": "This is an important local analytical piece not about one announcement, but about the overall condition of the Belarus IT market and talent base.",
+      "url": "https://devby.io/en/news/belarusian-it-industry-enters-stagnation-migration-halts-as-workforce-ages-and-new-talent-dries-up.amp"
+    },
+    {
+      "section": "belarus",
+      "date": "2025-04-30",
+      "source": "devby",
+      "tag": "Startups / HTP",
+      "regionLabel": "Belarus",
+      "title": "Belarus is trying to revive startup activity through HTP and universities",
+      "summary": "devby described a plan to revive the startup environment via the HTP Accelerator, university partnerships and new attempts to rebuild points of growth for technology projects inside the country.",
+      "note": "Useful local context for the Belarus tab because it captures the entrepreneurial and product side of the local IT ecosystem.",
+      "url": "https://devby.io/en/news/startapy-v-belarusi-plan"
+    }
+  ]
+}

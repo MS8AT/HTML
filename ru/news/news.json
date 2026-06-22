@@ -1,0 +1,181 @@
+{
+  "updated_at": "2026-04-28",
+  "items": [
+    {
+      "section": "world",
+      "date": "2026-04-27",
+      "source": "AMD Blog",
+      "tag": "AI PC",
+      "regionLabel": "Мир",
+      "title": "AMD: корпоративное внедрение AI PC ускоряется по мере подготовки компаний к агентному ИИ",
+      "summary": "27 апреля 2026 года AMD опубликовала материал о росте интереса бизнеса к AI PC. Компания ссылается на свежее исследование IDC: более восьми из десяти организаций уже внедрили AI PC, тестируют их или планируют запуск в ближайшей перспективе.",
+      "note": "Это актуальная прикладная новость для рынка ПК: AI-функции всё заметнее переходят из категории экспериментов в корпоративные планы по обновлению рабочих устройств.",
+      "url": "https://www.amd.com/en/blogs/2026/ai-pc-adoption-accelerates-as-enterprises-prepare.html"
+    },
+    {
+      "section": "world",
+      "date": "2026-04-24",
+      "source": "Windows Insider Blog",
+      "tag": "Windows 11",
+      "regionLabel": "Мир",
+      "title": "Microsoft переводит Windows Insider в новую схему Experimental и Beta",
+      "summary": "24 апреля 2026 года Microsoft объявила о переходе Windows Insider на новую структуру каналов. Одновременно release notes переносятся в Documentation Hub, а новые сборки публикуются уже по обновлённой логике.",
+      "note": "Хорошая опорная новость для всех, кто следит за Windows 11 и тестовыми сборками: Microsoft меняет саму механику Insider-программы.",
+      "url": "https://blogs.windows.com/windows-insider/2026/04/24/were-moving-to-experimental-and-beta-announcing-new-builds/"
+    },
+    {
+      "section": "world",
+      "date": "2026-04-10",
+      "source": "Windows Insider Blog",
+      "tag": "Windows 11",
+      "regionLabel": "Мир",
+      "title": "Microsoft подробно объяснила, как меняется программа Windows Insider",
+      "summary": "10 апреля 2026 года команда Windows Insider описала новую логику каналов Experimental и Beta, а также более прозрачный подход к публикации функций и переходам между версиями Windows.",
+      "note": "Эта новость хорошо дополняет более поздний анонс от 24 апреля: здесь Microsoft объясняет причины изменений и то, как именно будет устроен новый Insider-процесс.",
+      "url": "https://blogs.windows.com/windows-insider/2026/04/10/improving-your-windows-insider-experience/"
+    },
+    {
+      "section": "world",
+      "date": "2026-04-20",
+      "source": "NVIDIA Blog",
+      "tag": "AI / Industry",
+      "regionLabel": "Мир",
+      "title": "NVIDIA показала AI-driven manufacturing на Hannover Messe 2026",
+      "summary": "NVIDIA и её партнёры представили на Hannover Messe 2026 сценарии промышленного применения AI: моделирование, визуальные агенты, робототехнику и инфраструктуру для заводов нового поколения.",
+      "note": "Это не только про дата-центры: AI всё активнее уходит в реальное производство, логистику и инженерные процессы.",
+      "url": "https://blogs.nvidia.com/blog/ai-manufacturing-hannover-messe/"
+    },
+    {
+      "section": "world",
+      "date": "2026-04-16",
+      "source": "Intel Newsroom",
+      "tag": "Процессоры",
+      "regionLabel": "Мир",
+      "title": "Intel представила Core Series 3 для повседневных ПК и edge-сценариев",
+      "summary": "16 апреля 2026 года Intel запустила Intel Core Series 3: AI-ready мобильные процессоры для массовых ноутбуков, малого бизнеса и edge-устройств. Компания заявляет 70+ устройств от партнёров и старт поставок уже в 2026 году.",
+      "note": "Это важный сигнал для сегмента доступных ПК: новые функции AI и современная платформа начинают спускаться в более массовый класс устройств.",
+      "url": "https://newsroom.intel.com/client-computing/intel-launches-intel-core-series-3-processors-changing-the-game-for-everyday-computing"
+    },
+    {
+      "section": "world",
+      "date": "2026-04-09",
+      "source": "Intel Newsroom",
+      "tag": "AI Infrastructure",
+      "regionLabel": "Мир",
+      "title": "Intel и Google расширяют сотрудничество по AI-инфраструктуре",
+      "summary": "Intel и Google объявили о многолетнем сотрудничестве вокруг Xeon и инфраструктурных IPU. Акцент сделан на эффективности, оркестрации AI-нагрузок и масштабировании современных гетерогенных систем.",
+      "note": "Новость хорошо показывает общий тренд рынка: вокруг AI всё чаще важны не только ускорители, но и сбалансированная системная архитектура.",
+      "url": "https://newsroom.intel.com/data-center/intel-google-deepen-collaboration-to-advance-ai-infrastructure"
+    },
+    {
+      "section": "world",
+      "date": "2026-03-20",
+      "source": "Windows Insider Blog",
+      "tag": "Windows 11",
+      "regionLabel": "Мир",
+      "title": "Microsoft опубликовала дорожную карту качества Windows 11",
+      "summary": "В марте 2026 года Microsoft отдельно рассказала, что собирается улучшать в Windows 11: позиции панели задач, контроль обновлений, File Explorer, прозрачность Insider-программы, Feedback Hub и более аккуратную интеграцию AI.",
+      "note": "Это одна из самых прикладных Windows-новостей последних месяцев: компания публично проговорила, что именно будет исправлять и улучшать.",
+      "url": "https://blogs.windows.com/windows-insider/2026/03/20/our-commitment-to-windows-quality/"
+    },
+    {
+      "section": "world",
+      "date": "2026-01-13",
+      "source": "Windows Experience Blog",
+      "tag": "CES 2026",
+      "regionLabel": "Мир",
+      "title": "Microsoft подвела CES 2026 по новым Windows 11 PC и Copilot+ устройствам",
+      "summary": "На CES 2026 Microsoft собрала основные анонсы экосистемы Windows 11: новые AI-PC, Copilot+ модели, игровые ноутбуки и мониторы от Acer, ASUS, Dell, Lenovo и других производителей.",
+      "note": "Материал полезен как срез по всему рынку ПК: видно, в каком направлении движутся производители Windows-устройств в 2026 году.",
+      "url": "https://blogs.windows.com/windowsexperience/2026/01/13/ces-2026-showcasing-new-windows-11-pc-innovations-across-the-ecosystem/"
+    },
+    {
+      "section": "world",
+      "date": "2026-01-05",
+      "source": "AMD Newsroom",
+      "tag": "Ryzen / AI PC",
+      "regionLabel": "Мир",
+      "title": "AMD на CES 2026 расширила линейку Ryzen AI и Copilot+ PC",
+      "summary": "AMD представила Ryzen AI 400 Series, Ryzen AI PRO 400 Series и новые Ryzen AI Max+ для тонких ноутбуков, компактных ПК и рабочих станций. Компания отдельно делает ставку на локальные AI-нагрузки и сегмент Copilot+ устройств.",
+      "note": "Для рынка ПК это важный анонс: AMD усиливает не только CPU-позиции, но и именно AI-направление в ноутбуках и компактных системах.",
+      "url": "https://www.amd.com/en/newsroom/press-releases/2026-1-5-amd-expands-ai-leadership-across-client-graphics-.html"
+    },
+    {
+      "section": "world",
+      "date": "2026-01-05",
+      "source": "NVIDIA Blog",
+      "tag": "CES 2026",
+      "regionLabel": "Мир",
+      "title": "NVIDIA на CES 2026 показала платформу Rubin и новые сценарии AI на ПК",
+      "summary": "На CES 2026 NVIDIA представила платформу Rubin, открытые AI-модели по разным направлениям и обновления для персональных AI-сценариев, включая DGX Spark, RTX и DLSS 4.5.",
+      "note": "Материал интересен тем, что связывает дата-центр, локальный AI на ПК и игровую графику в одну экосистему.",
+      "url": "https://blogs.nvidia.com/blog/2026-ces-special-presentation/"
+    },
+    {
+      "section": "belarus",
+      "date": "2026-03-24",
+      "source": "Reform.news",
+      "tag": "Хостинг / Кибербезопасность",
+      "regionLabel": "Беларусь",
+      "title": "В Беларуси временно ограничивали доступ к части сайтов из-за киберугроз",
+      "summary": "24 марта 2026 года стало известно, что для shared-hosting площадок доступ из-за пределов Беларуси ограничивали на период с 24 по 26 марта по требованию защитных мер в киберпространстве.",
+      "note": "Это локально важная история для бизнеса и веб-проектов: она напрямую показывает, как вопросы кибербезопасности могут влиять на доступность сайтов.",
+      "url": "https://reform.news/na-den-voli-sajty-v-belarusi-zakrojut-dlja-polzovatelej-iz-za-granicy"
+    },
+    {
+      "section": "belarus",
+      "date": "2026-02-17",
+      "source": "Reform.news",
+      "tag": "Инновации / Производство",
+      "regionLabel": "Беларусь",
+      "title": "Беларусь определила 42 проекта госпрограммы инновационного развития",
+      "summary": "Правительство утвердило перечень из 42 крупных инновационных проектов на 2026-2030 годы и заложило отдельные мероприятия по развитию научно-технологических парков.",
+      "note": "Хотя новость шире чистого IT, она важна для локального технологического фона: это про производство, технопарки и инвестиции в инновационную инфраструктуру.",
+      "url": "https://reform.news/opredeleny-42-proekta-gosprogrammy-innovacionnogo-razvitija"
+    },
+    {
+      "section": "belarus",
+      "date": "2026-01-05",
+      "source": "devby",
+      "tag": "IT-рынок Беларуси",
+      "regionLabel": "Беларусь",
+      "title": "Минэкономики назвало факторы, которые тормозят развитие белорусского IT",
+      "summary": "devby пересказал отчёт Минэкономики Беларуси: среди проблем названы слабые стимулы для разработчиков, нехватка элементов национальной software-экосистемы и сложности экспорта. Отдельно упоминается и рост цен на RAM на фоне AI-бума.",
+      "note": "Это одна из самых содержательных локальных отраслевых новостей: она одновременно про рынок, железо, экспорт и внутренние ограничения IT-среды.",
+      "url": "https://devby.io/en/news/reputational-risks-ministry-of-economy-reveals-whats-hampering-belarusian-it-development.amp"
+    },
+    {
+      "section": "belarus",
+      "date": "2025-12-31",
+      "source": "Reform.news",
+      "tag": "Digital Belarus",
+      "regionLabel": "Беларусь",
+      "title": "Госпрограмма «Цифровая Беларусь» делает ставку на собственную software-экосистему",
+      "summary": "В конце 2025 года правительство утвердило программу «Цифровая Беларусь» на 2026-2030 годы. Среди задач — цифровые сервисы для государства и бизнеса, решения с AI и формирование импортонезависимой software-экосистемы.",
+      "note": "Это ключевой локальный документ для понимания того, куда Беларусь формально собирается двигаться в цифровой и IT-повестке ближайших лет.",
+      "url": "https://reform.news/gosprogramma-cifrovaja-belarus-predusmatrivaet-sozdanie-importonezavisimoj-jekosistemy-po"
+    },
+    {
+      "section": "belarus",
+      "date": "2025-09-15",
+      "source": "devby",
+      "tag": "Отрасль / Аналитика",
+      "regionLabel": "Беларусь",
+      "title": "devby: белорусская IT-отрасль входит в стагнацию",
+      "summary": "Согласно исследованию devby, миграция специалистов заметно замедлилась, отрасль стареет, новых кадров приходит мало, а рынок труда остаётся вялым даже для опытных специалистов.",
+      "note": "Это важная локальная аналитика не про один анонс, а про общее состояние белорусского IT-рынка и кадровой базы.",
+      "url": "https://devby.io/en/news/belarusian-it-industry-enters-stagnation-migration-halts-as-workforce-ages-and-new-talent-dries-up.amp"
+    },
+    {
+      "section": "belarus",
+      "date": "2025-04-30",
+      "source": "devby",
+      "tag": "Стартапы / ПВТ",
+      "regionLabel": "Беларусь",
+      "title": "В Беларуси пытаются перезапустить стартап-движение через ПВТ и университеты",
+      "summary": "devby описал план оживления стартап-среды: HTP Accelerator, университетское направление и попытки заново собрать точки роста для технологических проектов внутри страны.",
+      "note": "Эта новость полезна для локальной вкладки как фон по предпринимательской и продуктовой части белорусского IT.",
+      "url": "https://devby.io/en/news/startapy-v-belarusi-plan"
+    }
+  ]
+}
